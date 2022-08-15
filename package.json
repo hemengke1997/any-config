@@ -5,6 +5,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "scripts": {
+    "release": "pnpm -r publish --access public"
+  },
   "devDependencies": {
     "@minko-fe/eslint-config": "*",
     "eslint-define-config": "^1.6.0",
