@@ -6,7 +6,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@minko-fe/eslint-config": "*",
     "eslint-define-config": "^1.6.0",
-    "@minko-fe/eslint-config": "*"
+    "prettier": "^2.7.1"
   }
 }
