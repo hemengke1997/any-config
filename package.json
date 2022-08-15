@@ -1,8 +1,7 @@
 {
-  "name": "eslint-config",
+  "name": "@minko-fe/eslint-config-monorepo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
