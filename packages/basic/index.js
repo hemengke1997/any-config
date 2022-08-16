@@ -1,5 +1,5 @@
+const { builtinModules } = require('node:module')
 const { defineConfig } = require('eslint-define-config')
-
 module.exports = defineConfig({
   env: {
     es6: true,
@@ -102,37 +102,38 @@ module.exports = defineConfig({
         jsxSingleQuote: true,
         bracketSpacing: true,
         bracketSameLine: false,
+        arrowParens: 'always',
       },
     ],
     // import
     'import/order': 'error',
     'import/first': 'error',
+    'import/no-nodejs-modules': [
+      'error',
+      { allow: builtinModules.map((mod) => `node:${mod}`) },
+    ],
     'import/no-mutable-exports': 'error',
     'import/no-unresolved': 'off',
     'import/no-absolute-path': 'off',
     // Common
     'semi': ['error', 'never'],
-    'curly': ['error', 'multi-or-nest', 'consistent'],
-    'quotes': [
-      'error',
-      'single',
-      {
-        allowTemplateLiterals: true,
-      },
-    ],
+    'curly': ['error', 'multi-line'],
+    'quotes': 'off',
     'quote-props': ['error', 'consistent-as-needed'],
     'no-unused-vars': 'warn',
     'no-param-reassign': 'off',
     'array-bracket-spacing': ['error', 'never'],
-    'brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
+    'camelcase': 'off',
+    'brace-style': ['off'],
     'block-spacing': ['error', 'always'],
     'comma-spacing': ['error', { before: false, after: true }],
     'comma-style': ['error', 'last'],
     'comma-dangle': ['error', 'always-multiline'],
     'no-constant-condition': 'warn',
     'no-debugger': 'error',
-    'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-cond-assign': ['error', 'always'],
+    'no-console': 'off',
+    'no-empty': 'off',
     'func-call-spacing': ['off', 'never'],
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'indent': ['error', 2],
@@ -182,9 +183,8 @@ module.exports = defineConfig({
     'prefer-spread': 'error',
     'prefer-template': 'error',
     'template-curly-spacing': 'error',
-    'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
+    'arrow-parens': ['error', 'always'],
     'generator-star-spacing': 'off',
-
     // best-practice
     'array-callback-return': 'error',
     'block-scoped-var': 'error',
@@ -201,7 +201,7 @@ module.exports = defineConfig({
     'vars-on-top': 'error',
     'require-await': 'off',
     'no-return-assign': 'off',
-    'operator-linebreak': ['error', 'before'],
+    'operator-linebreak': ['off'],
 
     // unicorns
     // Pass error message when throwing errors
