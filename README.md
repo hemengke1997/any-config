@@ -1,38 +1,11 @@
-# @minko-fe/eslint-config
+# @minko-fe/any-config
 
 ## Usage
 
 ### Install
 
 ```bash
-pnpm add -D eslint @minko-fe/eslint-config
-```
-
-### Config `.eslintrc`
-
-```json
-{
-  "extends": "@minko-fe"
-}
-```
-
-```js
-module.exports = {
-  extends: ['@minko-fe'],
-}
-```
-
-### Add script for package.json
-
-For example:
-
-```json
-{
-  "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
-  }
-}
+pnpm add -D @minko-fe/any-config
 ```
 
 ### Config VS Code auto fix

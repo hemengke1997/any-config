@@ -1,5 +1,7 @@
 const { builtinModules } = require('node:module')
 const { defineConfig } = require('eslint-define-config')
+const prettierConfig = require('@minko-fe/prettier-config')
+
 module.exports = defineConfig({
   env: {
     es6: true,
@@ -90,21 +92,7 @@ module.exports = defineConfig({
     },
   ],
   rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        endOfLine: 'auto',
-        trailingComma: 'all',
-        quoteProps: 'consistent',
-        singleQuote: true,
-        semi: false,
-        tabWidth: 2,
-        jsxSingleQuote: true,
-        bracketSpacing: true,
-        bracketSameLine: false,
-        arrowParens: 'always',
-      },
-    ],
+    'prettier/prettier': ['error', prettierConfig],
     // import
     'import/order': 'error',
     'import/first': 'error',

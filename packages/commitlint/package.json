@@ -1,0 +1,9 @@
+{
+  "name": "@minko-fe/commitlint-config",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "dependencies": {
+    "@commitlint/config-conventional": "^17.0.3"
+  }
+}

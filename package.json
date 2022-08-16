@@ -1,18 +1,35 @@
 {
-  "name": "@minko-fe/eslint-config-monorepo",
-  "version": "1.0.5",
-  "description": "",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "name": "@minko-fe/any-config",
+  "version": "1.0.0",
+  "description": "minko's project config ✅",
+  "keywords": [
+    "eslint",
+    "prettier",
+    "commitlint",
+    "tsconfig",
+    "config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hemengke1997/any-config.git"
+  },
+  "author": "hemengke1997 <https://github.com/hemengke1997>",
+  "files": [
+    "./*"
+  ],
+  "license": "MIT",
   "scripts": {
     "lint": "eslint .",
-    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
+    "release": "bumpp package.json --commit --push --tag && pnpm publish --access public"
   },
   "devDependencies": {
-    "@minko-fe/eslint-config": "*",
+    "@minko-fe/any-config": "*",
     "bumpp": "^8.2.1",
     "eslint-define-config": "^1.6.0",
     "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "eslint": "^8.22.0",
+    "typescript": "^4.7.4"
   }
 }

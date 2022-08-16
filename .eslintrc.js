@@ -1,3 +1,1 @@
-module.exports = {
-  extends: ['@minko-fe'],
-}
+module.exports = require('@minko-fe/any-config/eslint')
