@@ -14,7 +14,7 @@ module.exports = defineConfig({
     },
   },
   overrides: [
-    ...basic.overrides,
+    ...(basic.overrides || []),
     {
       files: ['*.d.ts'],
       rules: {
