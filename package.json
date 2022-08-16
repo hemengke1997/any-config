@@ -18,8 +18,7 @@
     "eslint/*",
     "commitlint.js",
     "prettier.js",
-    "tsconfing.base.json",
-    "packages/*"
+    "tsconfing.base.json"
   ],
   "license": "MIT",
   "scripts": {
