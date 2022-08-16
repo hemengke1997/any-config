@@ -16,9 +16,9 @@ importers:
 
   packages/all:
     specifiers:
-      '@minko-fe/eslint-config-react': workspace:*
-      '@minko-fe/eslint-config-vue': workspace:*
-    dependencies:
+      '@minko-fe/eslint-config-react': workspace:1.0.1
+      '@minko-fe/eslint-config-vue': workspace:1.0.1
+    devDependencies:
       '@minko-fe/eslint-config-react': link:../react
       '@minko-fe/eslint-config-vue': link:../vue
 
