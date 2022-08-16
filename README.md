@@ -5,7 +5,7 @@
 ### Install
 
 ```bash
-pnpm add -D eslint @minko-fe/eslint-config-all
+pnpm add -D eslint @minko-fe/eslint-config
 ```
 
 ### Config `.eslintrc`

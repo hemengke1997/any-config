@@ -81,11 +81,22 @@ module.exports = defineConfig({
     'vue/no-extra-parens': ['error', 'functions'],
     'vue/no-irregular-whitespace': 'error',
     'vue/no-loss-of-precision': 'error',
-    'vue/no-restricted-syntax': ['error', 'DebuggerStatement', 'LabeledStatement', 'WithStatement'],
+    'vue/no-restricted-syntax': [
+      'error',
+      'DebuggerStatement',
+      'LabeledStatement',
+      'WithStatement',
+    ],
     'vue/no-sparse-arrays': 'error',
-    'vue/object-curly-newline': ['error', { multiline: true, consistent: true }],
+    'vue/object-curly-newline': [
+      'error',
+      { multiline: true, consistent: true },
+    ],
     'vue/object-curly-spacing': ['error', 'always'],
-    'vue/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
+    'vue/object-property-newline': [
+      'error',
+      { allowMultiplePropertiesPerLine: true },
+    ],
     'vue/object-shorthand': [
       'error',
       'always',
