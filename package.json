@@ -15,10 +15,11 @@
   },
   "author": "hemengke1997 <https://github.com/hemengke1997>",
   "files": [
-    "eslint/*",
+    "eslint",
     "commitlint.js",
     "prettier.js",
-    "tsconfing.base.json"
+    "tsconfing.base.json",
+    "packages"
   ],
   "license": "MIT",
   "scripts": {
