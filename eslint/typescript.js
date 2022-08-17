@@ -1,1 +1,1 @@
-module.exports = require('../packages/eslint/typescript')
+module.exports = require('../src/eslint/typescript')

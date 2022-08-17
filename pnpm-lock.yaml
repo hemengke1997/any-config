@@ -4,17 +4,57 @@ importers:
 
   .:
     specifiers:
-      '@minko-fe/any-config': '*'
+      '@commitlint/config-conventional': ^17.0.3
+      '@minko-fe/commitlint-config': workspace:*
+      '@minko-fe/eslint-config': workspace:*
+      '@minko-fe/prettier-config': workspace:*
+      '@minko-fe/tsconfig': workspace:*
+      '@typescript-eslint/eslint-plugin': ^5.33.1
+      '@typescript-eslint/parser': ^5.33.1
       bumpp: ^8.2.1
+      deepmerge: ^4.2.2
       eslint: ^8.22.0
+      eslint-config-prettier: ^8.5.0
+      eslint-config-standard: ^17.0.0
       eslint-define-config: ^1.6.0
+      eslint-plugin-html: ^7.1.0
+      eslint-plugin-import: ^2.26.0
+      eslint-plugin-jsonc: ^2.4.0
+      eslint-plugin-markdown: ^3.0.0
+      eslint-plugin-n: ^15.2.4
+      eslint-plugin-prettier: ^4.2.1
+      eslint-plugin-promise: ^6.0.0
+      eslint-plugin-react: ^7.30.1
+      eslint-plugin-unicorn: ^43.0.2
+      eslint-plugin-vue: ^9.3.0
+      jsonc-eslint-parser: ^2.1.0
       prettier: ^2.7.1
       typescript: ^4.7.4
     dependencies:
+      '@commitlint/config-conventional': 17.0.3
+      '@typescript-eslint/eslint-plugin': 5.33.1_vsoshirnpb7xw6mr7xomgfas2i
+      '@typescript-eslint/parser': 5.33.1_4rv7y5c6xz3vfxwhbrcxxi73bq
+      deepmerge: 4.2.2
       eslint: 8.22.0
+      eslint-config-prettier: 8.5.0_eslint@8.22.0
+      eslint-config-standard: 17.0.0_zbdqnta3mhnrvw4yywdsj5qdqy
+      eslint-plugin-html: 7.1.0
+      eslint-plugin-import: 2.26.0_3bh5nkk7utn7e74vrwtv6rxmt4
+      eslint-plugin-jsonc: 2.4.0_eslint@8.22.0
+      eslint-plugin-markdown: 3.0.0_eslint@8.22.0
+      eslint-plugin-n: 15.2.4_eslint@8.22.0
+      eslint-plugin-prettier: 4.2.1_i2cojdczqdiurzgttlwdgf764e
+      eslint-plugin-promise: 6.0.0_eslint@8.22.0
+      eslint-plugin-react: 7.30.1_eslint@8.22.0
+      eslint-plugin-unicorn: 43.0.2_eslint@8.22.0
+      eslint-plugin-vue: 9.3.0_eslint@8.22.0
+      jsonc-eslint-parser: 2.1.0
       typescript: 4.7.4
     devDependencies:
-      '@minko-fe/any-config': 'link:'
+      '@minko-fe/commitlint-config': link:packages/commitlint
+      '@minko-fe/eslint-config': link:packages/eslint/all
+      '@minko-fe/prettier-config': link:packages/prettier
+      '@minko-fe/tsconfig': link:packages/tsconfig
       bumpp: 8.2.1
       eslint-define-config: 1.6.0
       prettier: 2.7.1
@@ -129,6 +169,9 @@ importers:
       eslint: 8.22.0
 
   packages/prettier:
+    specifiers: {}
+
+  packages/tsconfig:
     specifiers: {}
 
 packages:
@@ -636,6 +679,11 @@ packages:
 
   /deep-is/0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
+
+  /deepmerge/4.2.2:
+    resolution: {integrity: sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==}
+    engines: {node: '>=0.10.0'}
+    dev: false
 
   /define-properties/1.1.4:
     resolution: {integrity: sha512-uckOqKcfaVvtBdsVkdPv3XjveQJsNQqmhXgRi8uhvWWuPYZCNlzT8qAyblUgNoXdHdjMTzAqeGjAoli8f+bzPA==}

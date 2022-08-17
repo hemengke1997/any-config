@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/any-config",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "minko's project config ✅",
   "keywords": [
     "eslint",
@@ -14,26 +14,39 @@
     "url": "git+https://github.com/hemengke1997/any-config.git"
   },
   "author": "hemengke1997 <https://github.com/hemengke1997>",
-  "files": [
-    "eslint",
-    "commitlint.js",
-    "prettier.js",
-    "tsconfing.base.json",
-    "packages"
-  ],
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
-    "release": "bumpp package.json --commit --push --tag && pnpm publish --access public"
+    "release": "bumpp package.json packages/*/package.json --commit --push && pnpm -r publish --access public"
   },
   "devDependencies": {
-    "@minko-fe/any-config": "*",
+    "@minko-fe/commitlint-config": "workspace:*",
+    "@minko-fe/eslint-config": "workspace:*",
+    "@minko-fe/prettier-config": "workspace:*",
+    "@minko-fe/tsconfig": "workspace:*",
     "bumpp": "^8.2.1",
     "eslint-define-config": "^1.6.0",
     "prettier": "^2.7.1"
   },
   "dependencies": {
+    "@commitlint/config-conventional": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "deepmerge": "^4.2.2",
     "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsonc": "^2.4.0",
+    "eslint-plugin-markdown": "^3.0.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-unicorn": "^43.0.2",
+    "eslint-plugin-vue": "^9.3.0",
+    "jsonc-eslint-parser": "^2.1.0",
     "typescript": "^4.7.4"
   }
 }

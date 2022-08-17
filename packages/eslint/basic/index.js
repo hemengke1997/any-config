@@ -35,10 +35,9 @@ module.exports = defineConfig({
   plugins: ['html', 'unicorn'],
   extends: [
     'standard',
-    'plugin:jsonc/recommended-with-jsonc',
     'plugin:import/recommended',
+    'plugin:jsonc/recommended-with-jsonc',
     'plugin:markdown/recommended',
-    'eslint:recommended',
     'plugin:prettier/recommended',
   ],
   overrides: [
@@ -50,20 +49,12 @@ module.exports = defineConfig({
         'jsonc/comma-dangle': ['error', 'never'],
         'jsonc/comma-style': ['error', 'last'],
         'jsonc/indent': ['error', 2],
-        'jsonc/key-spacing': [
-          'error',
-          { beforeColon: false, afterColon: true },
-        ],
+        'jsonc/key-spacing': ['error', { beforeColon: false, afterColon: true }],
         'jsonc/no-octal-escape': 'error',
-        'jsonc/object-curly-newline': [
-          'error',
-          { multiline: true, consistent: true },
-        ],
+        'jsonc/object-curly-newline': ['error', { multiline: true, consistent: true }],
         'jsonc/object-curly-spacing': ['error', 'always'],
-        'jsonc/object-property-newline': [
-          'error',
-          { allowMultiplePropertiesPerLine: true },
-        ],
+        'jsonc/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
+        'jsonc/quotes': ['error'],
       },
     },
     {
@@ -88,6 +79,7 @@ module.exports = defineConfig({
         'no-undef': 'off',
         'no-unused-expressions': 'off',
         'no-unused-vars': 'off',
+        'quote-props': 'off',
       },
     },
   ],
@@ -96,10 +88,7 @@ module.exports = defineConfig({
     // import
     'import/order': 'error',
     'import/first': 'error',
-    'import/no-nodejs-modules': [
-      'error',
-      { allow: builtinModules.map((mod) => `node:${mod}`) },
-    ],
+    'import/no-nodejs-modules': ['error', { allow: builtinModules.map((mod) => `node:${mod}`) }],
     'import/no-mutable-exports': 'error',
     'import/no-unresolved': 'off',
     'import/no-absolute-path': 'off',
@@ -107,7 +96,7 @@ module.exports = defineConfig({
     'semi': ['error', 'never'],
     'curly': ['error', 'multi-line'],
     'quotes': 'off',
-    'quote-props': ['error', 'consistent-as-needed'],
+    'quote-props': 'off',
     'no-unused-vars': 'warn',
     'no-param-reassign': 'off',
     'array-bracket-spacing': ['error', 'never'],
@@ -125,12 +114,7 @@ module.exports = defineConfig({
     'func-call-spacing': ['off', 'never'],
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'indent': ['error', 2],
-    'no-restricted-syntax': [
-      'error',
-      'DebuggerStatement',
-      'LabeledStatement',
-      'WithStatement',
-    ],
+    'no-restricted-syntax': ['error', 'DebuggerStatement', 'LabeledStatement', 'WithStatement'],
     'object-curly-spacing': ['error', 'always'],
     'no-return-await': 'off',
     'space-before-function-paren': [
@@ -214,10 +198,7 @@ module.exports = defineConfig({
     'unicorn/prefer-type-error': 'error',
     // Use new when throwing error
     'unicorn/throw-new-error': 'error',
-    'no-use-before-define': [
-      'error',
-      { functions: false, classes: false, variables: true },
-    ],
+    'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
     'import/no-named-as-default-member': 'off',
     'import/no-named-as-default': 'off',
     'import/namespace': 'off',

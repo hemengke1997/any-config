@@ -1,1 +1,1 @@
-module.exports = require('../packages/eslint/vue')
+module.exports = require('../src/eslint/vue')

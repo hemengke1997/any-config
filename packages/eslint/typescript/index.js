@@ -2,11 +2,7 @@ const { defineConfig } = require('eslint-define-config')
 const basic = require('@minko-fe/eslint-config-basic')
 
 module.exports = defineConfig({
-  extends: [
-    '@minko-fe/eslint-config-basic',
-    'plugin:import/typescript',
-    'plugin:@typescript-eslint/recommended',
-  ],
+  extends: ['plugin:import/typescript', 'plugin:@typescript-eslint/recommended', '@minko-fe/eslint-config-basic'],
   parser: '@typescript-eslint/parser',
   settings: {
     'import/resolver': {
@@ -44,15 +40,9 @@ module.exports = defineConfig({
     'import/named': 'off',
 
     // TS
-    '@typescript-eslint/member-delimiter-style': [
-      'error',
-      { multiline: { delimiter: 'none' } },
-    ],
+    '@typescript-eslint/member-delimiter-style': ['error', { multiline: { delimiter: 'none' } }],
     '@typescript-eslint/type-annotation-spacing': ['error', {}],
-    '@typescript-eslint/consistent-type-imports': [
-      'error',
-      { prefer: 'type-imports', disallowTypeAnnotations: false },
-    ],
+    '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports', disallowTypeAnnotations: false }],
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
     '@typescript-eslint/prefer-ts-expect-error': 'error',
     '@typescript-eslint/ban-ts-ignore': 'off',
@@ -97,15 +87,9 @@ module.exports = defineConfig({
     'space-infix-ops': 'off',
     '@typescript-eslint/space-infix-ops': 'error',
     'keyword-spacing': 'off',
-    '@typescript-eslint/keyword-spacing': [
-      'error',
-      { before: true, after: true },
-    ],
+    '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
     'comma-spacing': 'off',
-    '@typescript-eslint/comma-spacing': [
-      'error',
-      { before: false, after: true },
-    ],
+    '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
     'no-extra-parens': 'off',
     '@typescript-eslint/no-extra-parens': ['error', 'functions'],
     'no-dupe-class-members': 'off',
@@ -113,11 +97,7 @@ module.exports = defineConfig({
     'no-loss-of-precision': 'off',
     '@typescript-eslint/no-loss-of-precision': 'error',
     'lines-between-class-members': 'off',
-    '@typescript-eslint/lines-between-class-members': [
-      'error',
-      'always',
-      { exceptAfterSingleLine: true },
-    ],
+    '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
     // The following rule overrides require a parser service, aka. require a `typescript.json` path.
     // This needs to be done individually for each project, and it slows down linting significantly.
     // 'no-throw-literal': 'off',

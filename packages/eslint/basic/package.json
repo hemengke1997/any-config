@@ -2,9 +2,10 @@
   "name": "@minko-fe/eslint-config-basic",
   "description": "",
   "main": "index.js",
+  "version": "1.0.0",
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@minko-fe/prettier-config": "workspace:*",
     "eslint-config-prettier": "^8.5.0",
