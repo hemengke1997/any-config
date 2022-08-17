@@ -1,5 +1,3 @@
-const { defineConfig } = require('eslint-define-config')
-
-module.exports = defineConfig({
+module.exports = {
   extends: ['@minko-fe/eslint-config-react', '@minko-fe/eslint-config-vue'],
-})
+}
