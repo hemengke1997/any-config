@@ -17,7 +17,10 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
-    "release": "bumpp package.json packages/*/package.json packages/eslint/*/package.json --commit --push --no-tag && pnpm -r publish --access public"
+    "//": "发布包之前先bumpp",
+    "before:release": "bumpp package.json packages/*/package.json packages/eslint/*/package.json --commit --push --no-tag",
+    "//": "然后再手动发包",
+    "release": "pnpm -r publish --access public"
   },
   "devDependencies": {
     "@minko-fe/commitlint-config": "workspace:*",
