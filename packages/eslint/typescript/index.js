@@ -18,6 +18,12 @@ module.exports = defineConfig({
       },
     },
     {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        'no-undef': 'off',
+      },
+    },
+    {
       // Code blocks in markdown file
       files: ['**/*.md/*.*'],
       rules: {
