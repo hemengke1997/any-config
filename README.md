@@ -7,7 +7,7 @@
 #### install
 
 ```bash
-pnpm add eslint @minko-fe/eslint-config -D
+pnpm add eslint @minko-fe/eslint-config prettier -D
 ```
 
 ### .eslintrc.json
