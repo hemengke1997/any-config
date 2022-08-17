@@ -1,12 +1,14 @@
 {
   "name": "@minko-fe/eslint-config-basic",
-  "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "version": "1.0.0",
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
+    "@minko-fe/prettier-config": "workspace:*",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-import": "^2.26.0",

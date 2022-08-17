@@ -1,11 +1,11 @@
 {
   "name": "@minko-fe/eslint-config-react",
-  "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "version": "1.0.0",
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@minko-fe/eslint-config-ts": "workspace:*",
     "eslint-plugin-react": "^7.30.1"

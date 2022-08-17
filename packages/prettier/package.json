@@ -1,0 +1,9 @@
+{
+  "name": "@minko-fe/prettier-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

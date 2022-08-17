@@ -1,4 +1,6 @@
+const { builtinModules } = require('node:module')
 const { defineConfig } = require('eslint-define-config')
+const prettierConfig = require('@minko-fe/prettier-config')
 
 module.exports = defineConfig({
   env: {
@@ -15,8 +17,6 @@ module.exports = defineConfig({
     'LICENSE*',
     'output',
     'coverage',
-    'public',
-    'temp',
     'packages-lock.json',
     'pnpm-lock.yaml',
     'yarn.lock',
@@ -24,6 +24,7 @@ module.exports = defineConfig({
     '!.github',
     '!.vitepress',
     '!.vscode',
+    'node_modules',
   ],
   settings: {
     'import/resolver': {
@@ -33,10 +34,9 @@ module.exports = defineConfig({
   plugins: ['html', 'unicorn'],
   extends: [
     'standard',
-    'plugin:jsonc/recommended-with-jsonc',
     'plugin:import/recommended',
+    'plugin:jsonc/recommended-with-jsonc',
     'plugin:markdown/recommended',
-    'eslint:recommended',
     'plugin:prettier/recommended',
   ],
   overrides: [
@@ -48,20 +48,12 @@ module.exports = defineConfig({
         'jsonc/comma-dangle': ['error', 'never'],
         'jsonc/comma-style': ['error', 'last'],
         'jsonc/indent': ['error', 2],
-        'jsonc/key-spacing': [
-          'error',
-          { beforeColon: false, afterColon: true },
-        ],
+        'jsonc/key-spacing': ['error', { beforeColon: false, afterColon: true }],
         'jsonc/no-octal-escape': 'error',
-        'jsonc/object-curly-newline': [
-          'error',
-          { multiline: true, consistent: true },
-        ],
+        'jsonc/object-curly-newline': ['error', { multiline: true, consistent: true }],
         'jsonc/object-curly-spacing': ['error', 'always'],
-        'jsonc/object-property-newline': [
-          'error',
-          { allowMultiplePropertiesPerLine: true },
-        ],
+        'jsonc/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
+        'jsonc/quotes': ['error'],
       },
     },
     {
@@ -86,62 +78,42 @@ module.exports = defineConfig({
         'no-undef': 'off',
         'no-unused-expressions': 'off',
         'no-unused-vars': 'off',
+        'quote-props': 'off',
       },
     },
   ],
   rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        endOfLine: 'auto',
-        trailingComma: 'all',
-        quoteProps: 'consistent',
-        singleQuote: true,
-        semi: false,
-        tabWidth: 2,
-        jsxSingleQuote: true,
-        bracketSpacing: true,
-        bracketSameLine: false,
-      },
-    ],
+    'prettier/prettier': ['error', prettierConfig],
     // import
     'import/order': 'error',
     'import/first': 'error',
+    'import/no-nodejs-modules': ['error', { allow: builtinModules.map((mod) => `node:${mod}`) }],
     'import/no-mutable-exports': 'error',
     'import/no-unresolved': 'off',
     'import/no-absolute-path': 'off',
     // Common
     'semi': ['error', 'never'],
-    'curly': ['error', 'multi-or-nest', 'consistent'],
-    'quotes': [
-      'error',
-      'single',
-      {
-        allowTemplateLiterals: true,
-      },
-    ],
-    'quote-props': ['error', 'consistent-as-needed'],
+    'curly': ['error', 'multi-line'],
+    'quotes': 'off',
+    'quote-props': 'off',
     'no-unused-vars': 'warn',
     'no-param-reassign': 'off',
     'array-bracket-spacing': ['error', 'never'],
-    'brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
+    'camelcase': 'off',
+    'brace-style': ['off'],
     'block-spacing': ['error', 'always'],
     'comma-spacing': ['error', { before: false, after: true }],
     'comma-style': ['error', 'last'],
     'comma-dangle': ['error', 'always-multiline'],
     'no-constant-condition': 'warn',
     'no-debugger': 'error',
-    'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-cond-assign': ['error', 'always'],
+    'no-console': 'off',
+    'no-empty': 'off',
     'func-call-spacing': ['off', 'never'],
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'indent': ['error', 2],
-    'no-restricted-syntax': [
-      'error',
-      'DebuggerStatement',
-      'LabeledStatement',
-      'WithStatement',
-    ],
+    'no-restricted-syntax': ['error', 'DebuggerStatement', 'LabeledStatement', 'WithStatement'],
     'object-curly-spacing': ['error', 'always'],
     'no-return-await': 'off',
     'space-before-function-paren': [
@@ -182,9 +154,8 @@ module.exports = defineConfig({
     'prefer-spread': 'error',
     'prefer-template': 'error',
     'template-curly-spacing': 'error',
-    'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
+    'arrow-parens': ['error', 'always'],
     'generator-star-spacing': 'off',
-
     // best-practice
     'array-callback-return': 'error',
     'block-scoped-var': 'error',
@@ -201,7 +172,7 @@ module.exports = defineConfig({
     'vars-on-top': 'error',
     'require-await': 'off',
     'no-return-assign': 'off',
-    'operator-linebreak': ['error', 'before'],
+    'operator-linebreak': ['off'],
 
     // unicorns
     // Pass error message when throwing errors
@@ -226,10 +197,7 @@ module.exports = defineConfig({
     'unicorn/prefer-type-error': 'error',
     // Use new when throwing error
     'unicorn/throw-new-error': 'error',
-    'no-use-before-define': [
-      'error',
-      { functions: false, classes: false, variables: true },
-    ],
+    'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
     'import/no-named-as-default-member': 'off',
     'import/no-named-as-default': 'off',
     'import/namespace': 'off',

@@ -1,14 +1,16 @@
-# @minko-fe/eslint-config
+# @minko-fe/any-config
 
 ## Usage
 
-### Install
+### eslint
+
+#### install
 
 ```bash
-pnpm add -D eslint @minko-fe/eslint-config-all
+pnpm add eslint @minko-fe/eslint-config -D
 ```
 
-### Config `.eslintrc`
+### .eslintrc.json
 
 ```json
 {
@@ -16,36 +18,48 @@ pnpm add -D eslint @minko-fe/eslint-config-all
 }
 ```
 
+### prettier
+
+#### install
+
+```bash
+pnpm add prettier @minko-fe/prettier-config -D
+```
+
+#### .prettierrc.js
+
+```js
+module.exports = {
+  ...require('@minko-fe/any-config/prettier'),
+  semi: false,
+}
+```
+
+### commitlint
+
+#### install
+
+```bash
+pnpm add @minko-fe/commitlint-config
+```
+
+#### commitlint.config.js
+
 ```js
 module.exports = {
   extends: ['@minko-fe'],
 }
 ```
 
-### Add script for package.json
-
-For example:
+### tsconfig
+#### install
+```bash
+pnpm add @minko-fe/tsconfig
+```
+#### tsconfig.json
 
 ```json
 {
-  "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
-  }
+  "extends": "@minko-fe/tsconfig/tsconfig.base.json"
 }
 ```
-
-### Config VS Code auto fix
-
-Create `.vscode/settings.json`
-
-```json
-{
-  "prettier.enable": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  }
-}
-```
-
-

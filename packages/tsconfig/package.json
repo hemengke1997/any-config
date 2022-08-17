@@ -1,0 +1,9 @@
+{
+  "name": "@minko-fe/tsconfig",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tsconfig.base.json",
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

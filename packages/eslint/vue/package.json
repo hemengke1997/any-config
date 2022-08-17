@@ -1,11 +1,11 @@
 {
   "name": "@minko-fe/eslint-config-vue",
-  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "keywords": [],
+  "version": "1.0.0",
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@minko-fe/eslint-config-ts": "workspace:*",
     "eslint-plugin-vue": "^9.3.0"
