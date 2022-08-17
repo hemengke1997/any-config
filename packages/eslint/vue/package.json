@@ -8,11 +8,13 @@
   "license": "MIT",
   "dependencies": {
     "@minko-fe/eslint-config-ts": "workspace:*",
-    "eslint-plugin-vue": "^9.3.0",
     "eslint-plugin-n": "^15.2.4",
-    "eslint-plugin-promise": "^6.0.0"
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.3.0",
+    "prettier": "^2.7.1"
   },
   "devDependencies": {
-    "eslint": "^8.22.0"
+    "eslint": "^8.22.0",
+    "eslint-define-config": "^1.6.0"
   }
 }
