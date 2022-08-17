@@ -92,6 +92,16 @@ module.exports = defineConfig({
     'import/no-unresolved': 'off',
     'import/no-absolute-path': 'off',
     // Common
+    'no-restricted-syntax': [
+      'error',
+      {
+        selector: 'ExportDefaultDeclaration',
+        message: 'Prefer named exports',
+      },
+      'DebuggerStatement',
+      'LabeledStatement',
+      'WithStatement',
+    ],
     'semi': ['error', 'never'],
     'curly': ['error', 'multi-line'],
     'quotes': 'off',
@@ -113,7 +123,6 @@ module.exports = defineConfig({
     'func-call-spacing': ['off', 'never'],
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'indent': ['error', 2],
-    'no-restricted-syntax': ['error', 'DebuggerStatement', 'LabeledStatement', 'WithStatement'],
     'object-curly-spacing': ['error', 'always'],
     'no-return-await': 'off',
     'space-before-function-paren': [
