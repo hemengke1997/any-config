@@ -2,7 +2,7 @@
 
 ## Usage
 
-### eslint
+### <img style="width: 14px; height: 14px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_eslint.svg" /> eslint
 
 #### install
 
@@ -10,7 +10,9 @@
 pnpm add eslint @minko-fe/eslint-config prettier -D
 ```
 
-### .eslintrc.json
+#### eslintrc
+
+##### .eslintrc.json
 
 ```json
 {
@@ -18,7 +20,15 @@ pnpm add eslint @minko-fe/eslint-config prettier -D
 }
 ```
 
-### prettier
+##### .eslintrc.js
+
+```js
+module.exports = {
+  extends: '@minko-fe',
+}
+```
+
+### <img style="width: 14px; height: 14px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_light_prettier.svg" /> prettier
 
 #### install
 
@@ -26,23 +36,28 @@ pnpm add eslint @minko-fe/eslint-config prettier -D
 pnpm add prettier @minko-fe/prettier-config -D
 ```
 
-#### .prettierrc.js
+#### prettierrc
+
+##### .prettierrc.js
 
 ```js
 module.exports = {
   ...require('@minko-fe/any-config/prettier'),
-  semi: false,
 }
 ```
 
-### commitlint
+##### .prettierrc.json
+```json
+"@minko-fe/prettier-config"
+```
+
+### <img style="width: 14px; height: 14px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_commitlint.svg" /> commitlint
 
 #### install
 
 ```bash
 pnpm add @minko-fe/commitlint-config
 ```
-
 #### commitlint.config.js
 
 ```js
@@ -50,12 +65,14 @@ module.exports = {
   extends: ['@minko-fe'],
 }
 ```
+### <img style="width: 14px; height: 14px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_tsconfig.svg" /> tsconfig
 
-### tsconfig
 #### install
+
 ```bash
 pnpm add @minko-fe/tsconfig
 ```
+
 #### tsconfig.json
 
 ```json
