@@ -81,6 +81,21 @@ module.exports = defineConfig({
         'quote-props': 'off',
       },
     },
+    {
+      files: [
+        'index.js',
+        'index.ts',
+        'index.vue',
+        'index.jsx',
+        'index.tsx',
+        '*.config.js',
+        '*.config.ts',
+        '*.config.cjs',
+      ],
+      rules: {
+        'no-restricted-syntax': ['off', 'ExportDefaultDeclaration'],
+      },
+    },
   ],
   rules: {
     'prettier/prettier': ['error', prettierConfig],
