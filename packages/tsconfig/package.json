@@ -1,8 +1,12 @@
 {
   "name": "@minko-fe/tsconfig",
   "version": "1.1.8",
-  "description": "",
-  "main": "tsconfig.base.json",
+  "description": "minko's tsconfig",
+  "files": [
+    "tsconfig.base.json",
+    "tsconfig.lib.json",
+    "tsconfig.project.json"
+  ],
   "keywords": [],
   "author": "",
   "license": "MIT"

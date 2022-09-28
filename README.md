@@ -42,7 +42,7 @@ pnpm add prettier @minko-fe/prettier-config -D
 
 ```js
 module.exports = {
-  ...require('@minko-fe/any-config/prettier'),
+  ...require('@minko-fe/prettier-config'),
 }
 ```
 
@@ -75,8 +75,16 @@ pnpm add @minko-fe/tsconfig
 
 #### tsconfig.json
 
+##### lib
 ```json
 {
-  "extends": "@minko-fe/tsconfig/tsconfig.base.json"
+  "extends": "@minko-fe/tsconfig/tsconfig.lib.json"
+}
+```
+
+##### project
+```json
+{
+  "extends": "@minko-fe/tsconfig/tsconfig.project.json"
 }
 ```

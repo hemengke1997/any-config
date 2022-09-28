@@ -11,13 +11,10 @@
     "lib": ["esnext", "dom", "DOM.Iterable"],
     "strict": true,
     "jsx": "react-jsx",
-    "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "declaration": true,
-    "noImplicitAny": true,
     "noUnusedLocals": true,
   },
   "exclude": ["node_modules", "dist"]
