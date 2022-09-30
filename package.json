@@ -19,7 +19,7 @@
     "lint": "eslint .",
     "upgrade:deps": "pnpm update --i --L",
     "//": "然后再手动发包",
-    "before:release": "bumpp package.json packages/*/package.json packages/eslint/*/package.json --commit --no-push --no-tag",
+    "before:release": "bumpp package.json packages/*/package.json packages/eslint/*/package.json --commit --no-tag",
     "release": "pnpm -r publish --access public"
   },
   "devDependencies": {

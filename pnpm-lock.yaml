@@ -74,8 +74,10 @@ importers:
       eslint-plugin-prettier: ^4.2.1
       eslint-plugin-promise: ^6.0.0
       eslint-plugin-unicorn: ^43.0.2
+      eslint-plugin-yml: ^1.2.0
       jsonc-eslint-parser: ^2.1.0
       prettier: ^2.7.1
+      yaml-eslint-parser: ^1.1.0
     dependencies:
       '@minko-fe/prettier-config': link:../../prettier
       eslint-config-prettier: 8.5.0_eslint@8.22.0
@@ -89,8 +91,10 @@ importers:
       eslint-plugin-prettier: 4.2.1_i2cojdczqdiurzgttlwdgf764e
       eslint-plugin-promise: 6.0.0_eslint@8.22.0
       eslint-plugin-unicorn: 43.0.2_eslint@8.22.0
+      eslint-plugin-yml: 1.2.0_eslint@8.22.0
       jsonc-eslint-parser: 2.1.0
       prettier: 2.7.1
+      yaml-eslint-parser: 1.1.0
     devDependencies:
       eslint: 8.22.0
 
@@ -829,7 +833,7 @@ packages:
       eslint-plugin-promise: ^6.0.0
     dependencies:
       eslint: 8.22.0
-      eslint-plugin-import: 2.26.0_3bh5nkk7utn7e74vrwtv6rxmt4
+      eslint-plugin-import: 2.26.0_eslint@8.22.0
       eslint-plugin-n: 15.2.4_eslint@8.22.0
       eslint-plugin-promise: 6.0.0_eslint@8.22.0
     dev: false
@@ -1110,6 +1114,21 @@ packages:
       semver: 7.3.7
       vue-eslint-parser: 9.0.3_eslint@8.22.0
       xml-name-validator: 4.0.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /eslint-plugin-yml/1.2.0_eslint@8.22.0:
+    resolution: {integrity: sha512-v0jAU/F5SJg28zkpxwGpY04eGZMWFP6os8u2qaEAIRjSH2GqrNl0yBR5+sMHLU/026kAduxVbvLSqmT3Mu3O0g==}
+    engines: {node: ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: '>=6.0.0'
+    dependencies:
+      debug: 4.3.4
+      eslint: 8.22.0
+      lodash: 4.17.21
+      natural-compare: 1.4.0
+      yaml-eslint-parser: 1.1.0
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -2364,6 +2383,20 @@ packages:
 
   /yallist/4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
+
+  /yaml-eslint-parser/1.1.0:
+    resolution: {integrity: sha512-b464Q1fYiX1oYx2kE8k4mEp6S9Prk+tfDsY/IPxQ0FCjEuj3AKko5Skf3/yQJeYTTDyjDE+aWIJemnv29HvEWQ==}
+    engines: {node: ^14.17.0 || >=16.0.0}
+    dependencies:
+      eslint-visitor-keys: 3.3.0
+      lodash: 4.17.21
+      yaml: 2.1.1
+    dev: false
+
+  /yaml/2.1.1:
+    resolution: {integrity: sha512-o96x3OPo8GjWeSLF+wOAbrPfhFOGY0W00GNaxCDv+9hkcDJEnev1yh8S7pgHF0ik6zc8sQLuL8hjHjJULZp8bw==}
+    engines: {node: '>= 14'}
+    dev: false
 
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}

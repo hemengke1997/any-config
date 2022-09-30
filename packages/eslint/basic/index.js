@@ -36,6 +36,7 @@ module.exports = defineConfig({
     'standard',
     'plugin:import/recommended',
     'plugin:jsonc/recommended-with-jsonc',
+    'plugin:yml/standard',
     'plugin:markdown/recommended',
     'plugin:prettier/recommended',
   ],
@@ -60,6 +61,13 @@ module.exports = defineConfig({
       files: ['scripts/**/*.*', 'cli.*'],
       rules: {
         'no-console': 'off',
+      },
+    },
+    {
+      files: ['*.yaml', '*.yml'],
+      parser: 'yaml-eslint-parser',
+      rules: {
+        'spaced-comment': 'off',
       },
     },
     {
@@ -226,7 +234,9 @@ module.exports = defineConfig({
     'import/no-named-as-default': 'off',
     'import/namespace': 'off',
     'n/no-callback-literal': 'off',
-
+    // yml
+    'yml/quotes': ['error', { prefer: 'single', avoidEscape: false }],
+    'yml/no-empty-document': 'off',
     'sort-imports': [
       'error',
       {
