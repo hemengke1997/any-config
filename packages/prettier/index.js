@@ -1,8 +1,9 @@
+/** @type {import('prettier').Config} */
 module.exports = {
   singleQuote: true,
   trailingComma: 'all',
   tabWidth: 2,
-  endOfLine: 'auto',
+  endOfLine: 'crlf',
   printWidth: 120,
   semi: false,
   jsxSingleQuote: true,
