@@ -87,6 +87,7 @@ module.exports = defineConfig({
         'no-unused-expressions': 'off',
         'no-unused-vars': 'off',
         'quote-props': 'off',
+        'no-restricted-syntax': 'off',
       },
     },
     {
