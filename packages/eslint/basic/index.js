@@ -241,7 +241,7 @@ module.exports = defineConfig({
     'import/namespace': 'off',
     'n/no-callback-literal': 'off',
     // yml
-    'yml/quotes': ['error', { prefer: 'single', avoidEscape: false }],
+    'yml/quotes': 'off',
     'yml/no-empty-document': 'off',
     'sort-imports': [
       'error',
