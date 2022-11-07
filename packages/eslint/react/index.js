@@ -13,5 +13,6 @@ module.exports = defineConfig({
     'react/prop-types': 'off',
     'react/display-name': 'off',
     'react-hooks/exhaustive-deps': 'off',
+    'react/self-closing-comp': ['error'],
   },
 })
