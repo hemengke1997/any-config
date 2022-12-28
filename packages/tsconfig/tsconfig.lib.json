@@ -3,6 +3,6 @@
   "compilerOptions": {
     "sourceMap": true,
     "declaration": true,
-    "noImplicitAny": true,
+    "noImplicitAny": true
   }
 }

@@ -16,10 +16,9 @@
   "author": "hemengke1997 <https://github.com/hemengke1997>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "upgrade:deps": "pnpm update --i --L",
-    "before:release": "bumpp package.json packages/*/package.json packages/eslint/*/package.json --commit --no-tag --all",
-    "release": "pnpm -r publish --access public"
+    "release": "bumpp package.json packages/*/package.json packages/eslint/*/package.json --commit --tag --push --all"
   },
   "devDependencies": {
     "@minko-fe/commitlint-config": "workspace:*",
