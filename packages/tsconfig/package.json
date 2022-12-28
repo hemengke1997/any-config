@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/tsconfig",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "minko's tsconfig",
   "files": [
     "tsconfig.base.json",

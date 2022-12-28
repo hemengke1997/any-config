@@ -1,7 +1,7 @@
 {
   "name": "@minko-fe/eslint-config",
   "main": "index.js",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "keywords": [],
   "dependencies": {
     "@minko-fe/eslint-config-react": "workspace:*",
