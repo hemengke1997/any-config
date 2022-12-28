@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/any-config",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "minko's project config ✅",
   "keywords": [
     "eslint",
@@ -18,8 +18,7 @@
   "scripts": {
     "lint": "eslint .",
     "upgrade:deps": "pnpm update --i --L",
-    "//": "然后再手动发包",
-    "before:release": "bumpp package.json packages/*/package.json packages/eslint/*/package.json --commit --no-tag",
+    "before:release": "bumpp package.json packages/*/package.json packages/eslint/*/package.json --commit --no-tag --all",
     "release": "pnpm -r publish --access public"
   },
   "devDependencies": {
@@ -28,6 +27,6 @@
     "@minko-fe/prettier-config": "workspace:*",
     "@minko-fe/tsconfig": "workspace:*",
     "bumpp": "^8.2.1",
-    "prettier": "^2.7.1"
+    "prettier": "^2.8.1"
   }
 }

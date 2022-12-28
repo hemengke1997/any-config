@@ -41,6 +41,7 @@ module.exports = {
         'release',
         'merge',
         'deps',
+        'update',
       ],
     ],
   },

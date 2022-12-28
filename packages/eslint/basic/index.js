@@ -130,6 +130,7 @@ module.exports = defineConfig({
       'LabeledStatement',
       'WithStatement',
     ],
+    'no-irregular-whitespace': 'off',
     'semi': ['error', 'never'],
     'curly': ['error', 'multi-line'],
     'quotes': 'off',

@@ -9,14 +9,14 @@ importers:
       '@minko-fe/prettier-config': workspace:*
       '@minko-fe/tsconfig': workspace:*
       bumpp: ^8.2.1
-      prettier: ^2.7.1
+      prettier: ^2.8.1
     devDependencies:
       '@minko-fe/commitlint-config': link:packages/commitlint
       '@minko-fe/eslint-config': link:packages/eslint/all
       '@minko-fe/prettier-config': link:packages/prettier
       '@minko-fe/tsconfig': link:packages/tsconfig
       bumpp: 8.2.1
-      prettier: 2.7.1
+      prettier: 2.8.1
 
   packages/commitlint:
     specifiers:
@@ -1996,6 +1996,13 @@ packages:
     resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
     engines: {node: '>=10.13.0'}
     hasBin: true
+    dev: false
+
+  /prettier/2.8.1:
+    resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
 
   /prompts/2.4.2:
     resolution: {integrity: sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==}

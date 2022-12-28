@@ -14,5 +14,6 @@ module.exports = defineConfig({
     'react/display-name': 'off',
     'react-hooks/exhaustive-deps': 'off',
     'react/self-closing-comp': ['error'],
+    'react/no-unescaped-entities': 'off',
   },
 })
