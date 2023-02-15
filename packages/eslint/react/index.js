@@ -11,7 +11,7 @@ module.exports = defineConfig({
     'jsx-quotes': ['error', 'prefer-single'],
     'react/jsx-indent': ['error', 2],
     'react/jsx-indent-props': ['error', 2],
-    'react/jsx-tag-spacing': ['error', { beforeClosing: 'never', beforeSelfClosing: 'never', closingSlash: 'never', afterOpening: 'never' }],
+    'react/jsx-tag-spacing': ['error', { beforeClosing: 'never', beforeSelfClosing: 'always', closingSlash: 'never', afterOpening: 'never' }],
     'react/jsx-equals-spacing': ['error', 'never'],
     'react/jsx-props-no-multi-spaces': ['error'],
     'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
