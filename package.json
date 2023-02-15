@@ -10,7 +10,6 @@
   },
   "keywords": [
     "eslint",
-    "prettier",
     "commitlint",
     "tsconfig",
     "config"
@@ -24,7 +23,6 @@
     "@minko-fe/commitlint-config": "workspace:*",
     "@minko-fe/eslint-config": "workspace:*",
     "@minko-fe/tsconfig": "workspace:*",
-    "bumpp": "^8.2.1",
-    "prettier": "^2.8.4"
+    "bumpp": "^8.2.1"
   }
 }

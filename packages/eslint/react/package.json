@@ -9,8 +9,7 @@
     "lint": "eslint . --config=index.js"
   },
   "peerDependencies": {
-    "eslint": ">=7.4.0",
-    "prettier": ">=2.0.0"
+    "eslint": ">=7.4.0"
   },
   "dependencies": {
     "@minko-fe/eslint-config-ts": "workspace:*",

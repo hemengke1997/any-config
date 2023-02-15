@@ -1,5 +1,4 @@
 const { defineConfig } = require('eslint-define-config')
-const prettierConfig = require('@minko-fe/prettier-config')
 
 module.exports = defineConfig({
   env: {
@@ -15,7 +14,6 @@ module.exports = defineConfig({
     'plugin:jsonc/recommended-with-jsonc',
     'plugin:yml/standard',
     'plugin:markdown/recommended',
-    'plugin:prettier/recommended',
   ],
   ignorePatterns: [
     '*.min.*',
@@ -44,7 +42,7 @@ module.exports = defineConfig({
   },
   overrides: [
     {
-      files: ['*.json', '*.json5'],
+      files: ['*.json', '*.json5', '*.jsonc'],
       parser: 'jsonc-eslint-parser',
       rules: {
         'jsonc/array-bracket-spacing': ['error', 'never'],
@@ -167,7 +165,6 @@ module.exports = defineConfig({
         '@typescript-eslint/no-unused-vars': 'off',
         '@typescript-eslint/no-use-before-define': 'off',
         '@typescript-eslint/no-var-requires': 'off',
-        '@typescript-eslint/comma-dangle': 'off',
         '@typescript-eslint/consistent-type-imports': 'off',
         'import/no-unresolved': 'off',
         'unused-imports/no-unused-imports': 'off',
@@ -202,7 +199,6 @@ module.exports = defineConfig({
     },
   ],
   rules: {
-    'prettier/prettier': ['error', prettierConfig],
     // import
     'import/order': 'error',
     'import/first': 'error',
@@ -259,7 +255,7 @@ module.exports = defineConfig({
         asyncArrow: 'always',
       },
     ],
-    'no-multiple-empty-lines': 'off', // prettier got this. @see: https://github.com/prettier/prettier-eslint/issues/176
+    'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 0 }],
 
     // es6
     'no-var': 'error',
