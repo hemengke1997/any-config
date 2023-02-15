@@ -37,7 +37,7 @@ module.exports = defineConfig({
     'object-curly-spacing': 'off',
     '@typescript-eslint/object-curly-spacing': ['error', 'always'],
     'semi': 'off',
-    '@typescript-eslint/semi': ['error', 'never'],
+    '@typescript-eslint/semi': 'off',
     'quotes': 'off',
     '@typescript-eslint/quotes': 'off',
     'space-before-blocks': 'off',

@@ -223,7 +223,7 @@ module.exports = defineConfig({
     ],
     'no-irregular-whitespace': 'off',
     'semi': ['error', 'never'],
-    'curly': ['error', 'multi-or-nest', 'consistent'],
+    'curly': ['error', 'multi-line', 'consistent'],
     'quotes': 'off',
     'quote-props': 'off',
 
