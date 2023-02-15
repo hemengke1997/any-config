@@ -2,6 +2,12 @@
   "name": "@minko-fe/any-config",
   "version": "1.2.4",
   "description": "minko's project config ✅",
+  "author": "hemengke1997 <https://github.com/hemengke1997>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hemengke1997/any-config.git"
+  },
   "keywords": [
     "eslint",
     "prettier",
@@ -9,12 +15,6 @@
     "tsconfig",
     "config"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hemengke1997/any-config.git"
-  },
-  "author": "hemengke1997 <https://github.com/hemengke1997>",
-  "license": "MIT",
   "scripts": {
     "lint": "eslint . --fix",
     "upgrade:deps": "pnpm update --i --L",
@@ -23,7 +23,6 @@
   "devDependencies": {
     "@minko-fe/commitlint-config": "workspace:*",
     "@minko-fe/eslint-config": "workspace:*",
-    "@minko-fe/prettier-config": "workspace:*",
     "@minko-fe/tsconfig": "workspace:*",
     "bumpp": "^8.2.1",
     "prettier": "^2.8.1"
