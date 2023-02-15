@@ -25,6 +25,6 @@
     "@minko-fe/eslint-config": "workspace:*",
     "@minko-fe/tsconfig": "workspace:*",
     "bumpp": "^8.2.1",
-    "prettier": "^2.8.1"
+    "prettier": "^2.8.4"
   }
 }
