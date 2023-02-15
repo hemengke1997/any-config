@@ -2,83 +2,44 @@ const { defineConfig } = require('eslint-define-config')
 const basic = require('@minko-fe/eslint-config-basic')
 
 module.exports = defineConfig({
-  extends: ['plugin:import/typescript', 'plugin:@typescript-eslint/recommended', '@minko-fe/eslint-config-basic'],
+  extends: ['@minko-fe/eslint-config-basic', 'plugin:import/typescript', 'plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   settings: {
     'import/resolver': {
       node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] },
     },
   },
-  overrides: [
-    ...(basic.overrides || []),
-    {
-      files: ['*.d.ts'],
-      rules: {
-        'import/no-duplicates': 'off',
-      },
-    },
-    {
-      files: ['*.ts', '*.tsx'],
-      rules: {
-        'no-undef': 'off',
-      },
-    },
-    {
-      // Code blocks in markdown file
-      files: ['**/*.md/*.*'],
-      rules: {
-        '@typescript-eslint/no-redeclare': 'off',
-        '@typescript-eslint/no-unused-vars': 'off',
-        '@typescript-eslint/no-use-before-define': 'off',
-        '@typescript-eslint/no-var-requires': 'off',
-        '@typescript-eslint/comma-dangle': 'off',
-        'import/no-unresolved': 'off',
-        'no-alert': 'off',
-        'no-console': 'off',
-        'no-restricted-imports': 'off',
-        'no-undef': 'off',
-        'no-unused-expressions': 'off',
-        'no-unused-vars': 'off',
-      },
-    },
-  ],
+  overrides: [...(basic.overrides || [])],
   rules: {
     'import/named': 'off',
 
     // TS
+    '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
     '@typescript-eslint/member-delimiter-style': ['error', { multiline: { delimiter: 'none' } }],
     '@typescript-eslint/type-annotation-spacing': ['error', {}],
     '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports', disallowTypeAnnotations: false }],
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
     '@typescript-eslint/prefer-ts-expect-error': 'error',
-    '@typescript-eslint/ban-ts-ignore': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/no-use-before-define': 'off',
-    '@typescript-eslint/ban-ts-comment': 'off',
-    '@typescript-eslint/no-unused-vars': [
-      'error',
-      {
-        argsIgnorePattern: '^_',
-        varsIgnorePattern: '^_',
-      },
-    ],
 
     // Override JS
+    // Override JS
     'no-useless-constructor': 'off',
-    'no-use-before-define': 'off',
     'indent': 'off',
     '@typescript-eslint/indent': 'off',
-    'no-unused-vars': 'off',
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': 'error',
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
     'brace-style': 'off',
-    '@typescript-eslint/brace-style': ['off'],
+    '@typescript-eslint/brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
     'comma-dangle': 'off',
     '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
     'object-curly-spacing': 'off',
     '@typescript-eslint/object-curly-spacing': ['error', 'always'],
+    'semi': 'off',
     '@typescript-eslint/semi': ['error', 'never'],
-    '@typescript-eslint/quotes': 'off',
+    'quotes': 'off',
+    '@typescript-eslint/quotes': ['error', 'single'],
     'space-before-blocks': 'off',
     '@typescript-eslint/space-before-blocks': ['error', 'always'],
     'space-before-function-paren': 'off',
@@ -104,14 +65,6 @@ module.exports = defineConfig({
     '@typescript-eslint/no-loss-of-precision': 'error',
     'lines-between-class-members': 'off',
     '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
-    // The following rule overrides require a parser service, aka. require a `typescript.json` path.
-    // This needs to be done individually for each project, and it slows down linting significantly.
-    // 'no-throw-literal': 'off',
-    // '@typescript-eslint/no-throw-literal': 'error',
-    // 'no-implied-eval': 'off',
-    // '@typescript-eslint/no-implied-eval': 'error',
-    // 'dot-notation': 'off',
-    // '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
 
     // off
     '@typescript-eslint/consistent-indexed-object-style': 'off',
@@ -121,11 +74,14 @@ module.exports = defineConfig({
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/parameter-properties': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
+    '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/no-namespace': 'off',
     '@typescript-eslint/triple-slash-reference': 'off',
+    // handled by unused-imports/no-unused-imports
+    '@typescript-eslint/no-unused-vars': 'off',
   },
 })

@@ -1,8 +1,12 @@
 {
   "name": "@minko-fe/eslint-config",
-  "main": "index.js",
   "version": "1.2.4",
-  "keywords": [],
+  "description": "eslint-config",
+  "main": "index.js",
+  "peerDependencies": {
+    "eslint": ">=7.4.0",
+    "prettier": ">=2.0.0"
+  },
   "dependencies": {
     "@minko-fe/eslint-config-react": "workspace:*",
     "@minko-fe/eslint-config-vue": "workspace:*",

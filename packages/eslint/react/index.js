@@ -9,11 +9,11 @@ module.exports = defineConfig({
   },
   rules: {
     'jsx-quotes': ['error', 'prefer-single'],
+    'react/self-closing-comp': 'warn',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'react/display-name': 'off',
     'react-hooks/exhaustive-deps': 'off',
-    'react/self-closing-comp': ['error'],
     'react/no-unescaped-entities': 'off',
   },
 })

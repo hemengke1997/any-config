@@ -1,4 +1,3 @@
-const { builtinModules } = require('node:module')
 const { defineConfig } = require('eslint-define-config')
 const prettierConfig = require('@minko-fe/prettier-config')
 
@@ -9,6 +8,15 @@ module.exports = defineConfig({
     node: true,
   },
   reportUnusedDisableDirectives: true,
+  extends: [
+    'standard',
+    'plugin:import/recommended',
+    'plugin:eslint-comments/recommended',
+    'plugin:jsonc/recommended-with-jsonc',
+    'plugin:yml/standard',
+    'plugin:markdown/recommended',
+    'plugin:prettier/recommended',
+  ],
   ignorePatterns: [
     '*.min.*',
     '*.d.ts',
@@ -16,30 +24,24 @@ module.exports = defineConfig({
     'dist',
     'LICENSE*',
     'output',
+    'out',
     'coverage',
-    'packages-lock.json',
+    'public',
+    'temp',
+    'package-lock.json',
     'pnpm-lock.yaml',
     'yarn.lock',
     '__snapshots__',
     '!.github',
     '!.vitepress',
     '!.vscode',
-    'node_modules',
   ],
+  plugins: ['html', 'unicorn', 'unused-imports'],
   settings: {
     'import/resolver': {
       node: { extensions: ['.js', '.mjs'] },
     },
   },
-  plugins: ['html', 'unicorn'],
-  extends: [
-    'standard',
-    'plugin:import/recommended',
-    'plugin:jsonc/recommended-with-jsonc',
-    'plugin:yml/standard',
-    'plugin:markdown/recommended',
-    'plugin:prettier/recommended',
-  ],
   overrides: [
     {
       files: ['*.json', '*.json5'],
@@ -54,7 +56,6 @@ module.exports = defineConfig({
         'jsonc/object-curly-newline': ['error', { multiline: true, consistent: true }],
         'jsonc/object-curly-spacing': ['error', 'always'],
         'jsonc/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
-        'jsonc/quotes': ['error'],
       },
     },
     {
@@ -71,6 +72,89 @@ module.exports = defineConfig({
       },
     },
     {
+      files: ['package.json'],
+      parser: 'jsonc-eslint-parser',
+      rules: {
+        'jsonc/sort-keys': [
+          'error',
+          {
+            pathPattern: '^$',
+            order: [
+              'publisher',
+              'name',
+              'displayName',
+              'type',
+              'version',
+              'private',
+              'packageManager',
+              'description',
+              'author',
+              'license',
+              'funding',
+              'homepage',
+              'repository',
+              'bugs',
+              'keywords',
+              'categories',
+              'sideEffects',
+              'exports',
+              'main',
+              'module',
+              'unpkg',
+              'jsdelivr',
+              'types',
+              'typesVersions',
+              'bin',
+              'icon',
+              'files',
+              'engines',
+              'activationEvents',
+              'contributes',
+              'scripts',
+              'peerDependencies',
+              'peerDependenciesMeta',
+              'dependencies',
+              'optionalDependencies',
+              'devDependencies',
+              'pnpm',
+              'overrides',
+              'resolutions',
+              'husky',
+              'simple-git-hooks',
+              'lint-staged',
+              'eslintConfig',
+            ],
+          },
+          {
+            pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
+            order: { type: 'asc' },
+          },
+          {
+            pathPattern: '^exports.*$',
+            order: ['types', 'require', 'import'],
+          },
+        ],
+      },
+    },
+    {
+      files: ['*.d.ts'],
+      rules: {
+        'import/no-duplicates': 'off',
+      },
+    },
+    {
+      files: ['scripts/**/*.*', 'cli.*'],
+      rules: {
+        'no-console': 'off',
+      },
+    },
+    {
+      files: ['*.js', '*.cjs'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+    {
       files: ['*.test.ts', '*.test.js', '*.spec.ts', '*.spec.js'],
       rules: {
         'no-unused-expressions': 'off',
@@ -79,15 +163,21 @@ module.exports = defineConfig({
     {
       files: ['**/*.md/*.*'],
       rules: {
+        '@typescript-eslint/no-redeclare': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-use-before-define': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/comma-dangle': 'off',
+        '@typescript-eslint/consistent-type-imports': 'off',
         'import/no-unresolved': 'off',
+        'unused-imports/no-unused-imports': 'off',
+        'unused-imports/no-unused-vars': 'off',
         'no-alert': 'off',
         'no-console': 'off',
         'no-restricted-imports': 'off',
         'no-undef': 'off',
         'no-unused-expressions': 'off',
         'no-unused-vars': 'off',
-        'quote-props': 'off',
-        'no-restricted-syntax': 'off',
       },
     },
     {
@@ -116,10 +206,10 @@ module.exports = defineConfig({
     // import
     'import/order': 'error',
     'import/first': 'error',
-    'import/no-nodejs-modules': ['error', { allow: builtinModules.map((mod) => `node:${mod}`) }],
     'import/no-mutable-exports': 'error',
     'import/no-unresolved': 'off',
     'import/no-absolute-path': 'off',
+
     // Common
     'no-restricted-syntax': [
       'error',
@@ -133,10 +223,16 @@ module.exports = defineConfig({
     ],
     'no-irregular-whitespace': 'off',
     'semi': ['error', 'never'],
-    'curly': ['error', 'multi-line'],
+    'curly': ['error', 'multi-or-nest', 'consistent'],
     'quotes': 'off',
     'quote-props': 'off',
-    'no-unused-vars': 'warn',
+
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'warn',
+      { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
+    ],
+
     'no-param-reassign': 'off',
     'array-bracket-spacing': ['error', 'never'],
     'camelcase': 'off',
@@ -152,7 +248,7 @@ module.exports = defineConfig({
     'no-empty': 'off',
     'func-call-spacing': ['off', 'never'],
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
-    'indent': ['error', 2],
+    'indent': ['error', 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
     'object-curly-spacing': ['error', 'always'],
     'no-return-await': 'off',
     'space-before-function-paren': [
@@ -164,10 +260,11 @@ module.exports = defineConfig({
       },
     ],
     'no-multiple-empty-lines': 'off', // prettier got this. @see: https://github.com/prettier/prettier-eslint/issues/176
+
     // es6
     'no-var': 'error',
     'prefer-const': [
-      'error',
+      'warn',
       {
         destructuring: 'any',
         ignoreReadBeforeAssign: true,
@@ -195,6 +292,22 @@ module.exports = defineConfig({
     'template-curly-spacing': 'error',
     'arrow-parens': ['error', 'always'],
     'generator-star-spacing': 'off',
+    'spaced-comment': [
+      'error',
+      'always',
+      {
+        line: {
+          markers: ['/'],
+          exceptions: ['/', '#'],
+        },
+        block: {
+          markers: ['!'],
+          exceptions: ['*'],
+          balanced: true,
+        },
+      },
+    ],
+
     // best-practice
     'array-callback-return': 'error',
     'block-scoped-var': 'error',
@@ -211,7 +324,8 @@ module.exports = defineConfig({
     'vars-on-top': 'error',
     'require-await': 'off',
     'no-return-assign': 'off',
-    'operator-linebreak': ['off'],
+    'operator-linebreak': ['error', 'before'],
+    'max-statements-per-line': ['error', { max: 1 }],
 
     // unicorns
     // Pass error message when throwing errors
@@ -236,7 +350,9 @@ module.exports = defineConfig({
     'unicorn/prefer-type-error': 'error',
     // Use new when throwing error
     'unicorn/throw-new-error': 'error',
+
     'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
+    'eslint-comments/disable-enable-pair': 'off',
     'import/no-named-as-default-member': 'off',
     'import/no-named-as-default': 'off',
     'import/namespace': 'off',
