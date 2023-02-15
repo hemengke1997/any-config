@@ -25,6 +25,9 @@ jobs:
         with:
           version: 6.31.0
 
+      - name: Install Dependencies
+        run: pnpm install --no-frozen-lockfile
+
       - name: Publish to NPM
         run: pnpm -r publish --access public --no-git-checks
         env:
