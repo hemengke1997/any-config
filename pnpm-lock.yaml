@@ -162,7 +162,10 @@ importers:
       prettier: 2.8.1
 
   packages/tsconfig:
-    specifiers: {}
+    specifiers:
+      typescript: '>=3.9'
+    dependencies:
+      typescript: 4.9.5
 
 packages:
 
