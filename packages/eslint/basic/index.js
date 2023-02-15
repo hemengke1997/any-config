@@ -198,6 +198,7 @@ module.exports = defineConfig({
       },
     },
   ],
+
   rules: {
     // import
     'import/order': 'error',
