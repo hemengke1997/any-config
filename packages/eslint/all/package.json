@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/eslint-config",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "eslint-config",
   "main": "index.js",
   "peerDependencies": {
