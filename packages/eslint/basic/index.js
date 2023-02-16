@@ -1,4 +1,5 @@
 const { defineConfig } = require('eslint-define-config')
+const prettierConfig = require('@minko-fe/prettier-config')
 
 module.exports = defineConfig({
   env: {
@@ -14,6 +15,7 @@ module.exports = defineConfig({
     'plugin:jsonc/recommended-with-jsonc',
     'plugin:yml/standard',
     'plugin:markdown/recommended',
+    'plugin:prettier/recommended',
   ],
   ignorePatterns: [
     '*.min.*',
@@ -48,7 +50,6 @@ module.exports = defineConfig({
         'jsonc/array-bracket-spacing': ['error', 'never'],
         'jsonc/comma-dangle': ['error', 'never'],
         'jsonc/comma-style': ['error', 'last'],
-        'jsonc/indent': ['error', 2],
         'jsonc/key-spacing': ['error', { beforeColon: false, afterColon: true }],
         'jsonc/no-octal-escape': 'error',
         'jsonc/object-curly-newline': ['error', { multiline: true, consistent: true }],
@@ -200,6 +201,7 @@ module.exports = defineConfig({
   ],
 
   rules: {
+    'prettier/prettier': ['error', prettierConfig],
     // import
     'import/order': 'error',
     'import/first': 'error',
@@ -219,25 +221,23 @@ module.exports = defineConfig({
       'WithStatement',
     ],
     'no-irregular-whitespace': 'off',
-    'semi': ['error', 'never'],
+    'semi': 'off',
     'curly': ['error', 'multi-line', 'consistent'],
     'quotes': 'off',
-    'quote-props': ['error', 'consistent-as-needed'],
-
+    'quote-props': 'off',
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': [
       'warn',
       { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
     ],
-
     'no-param-reassign': 'off',
     'array-bracket-spacing': ['error', 'never'],
     'camelcase': 'off',
-    'brace-style': ['off'],
+    'brace-style': 'off',
     'block-spacing': ['error', 'always'],
     'comma-spacing': ['error', { before: false, after: true }],
-    'comma-style': ['error', 'last'],
-    'comma-dangle': ['error', 'always-multiline'],
+    'comma-style': 'off',
+    'comma-dangle': 'off',
     'no-constant-condition': 'warn',
     'no-debugger': 'error',
     'no-cond-assign': ['error', 'always'],
@@ -245,7 +245,7 @@ module.exports = defineConfig({
     'no-empty': 'off',
     'func-call-spacing': ['off', 'never'],
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
-    'indent': ['error', 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
+    'indent': 'off',
     'object-curly-spacing': ['error', 'always'],
     'no-return-await': 'off',
     'space-before-function-paren': [
