@@ -96,7 +96,7 @@ module.exports = defineConfig({
     ],
     'vue/operator-linebreak': ['off'],
     'vue/prefer-template': 'error',
-    'vue/quote-props': 'off',
+    'vue/quote-props': ['error', 'consistent-as-needed'],
     'vue/space-in-parens': ['error', 'never'],
     'vue/space-infix-ops': 'error',
     'vue/space-unary-ops': ['error', { words: true, nonwords: false }],

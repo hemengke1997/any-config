@@ -222,7 +222,7 @@ module.exports = defineConfig({
     'semi': ['error', 'never'],
     'curly': ['error', 'multi-line', 'consistent'],
     'quotes': 'off',
-    'quote-props': 'off',
+    'quote-props': ['error', 'consistent-as-needed'],
 
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': [
