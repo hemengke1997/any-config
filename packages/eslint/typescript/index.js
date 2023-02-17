@@ -25,6 +25,8 @@ module.exports = defineConfig({
     'no-useless-constructor': 'off',
     'indent': 'off',
     '@typescript-eslint/indent': 'off',
+    'no-extra-semi': 'off',
+    '@typescript-eslint/no-extra-semi': 'off',
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': 'error',
     'no-use-before-define': 'off',

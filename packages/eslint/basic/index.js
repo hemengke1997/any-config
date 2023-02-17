@@ -321,9 +321,8 @@ module.exports = defineConfig({
     'vars-on-top': 'error',
     'require-await': 'off',
     'no-return-assign': 'off',
-    'operator-linebreak': ['error', 'before'],
+    'operator-linebreak': 'off',
     'max-statements-per-line': ['error', { max: 1 }],
-
     // unicorns
     // Pass error message when throwing errors
     'unicorn/error-message': 'error',
