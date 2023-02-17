@@ -256,7 +256,7 @@ module.exports = defineConfig({
         asyncArrow: 'always',
       },
     ],
-    'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 0 }],
+    'no-multiple-empty-lines': 'off', // prettier conflict
 
     // es6
     'no-var': 'error',
