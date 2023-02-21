@@ -2,7 +2,11 @@
   "name": "@minko-fe/eslint-config-basic",
   "version": "1.2.18",
   "description": "eslint-config",
-  "author": "hemengke1997",
+  "author": "hemengke1997 <https://github.com/hemengke1997>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hemengke1997/any-config.git"
+  },
   "keywords": [],
   "main": "index.js",
   "files": [

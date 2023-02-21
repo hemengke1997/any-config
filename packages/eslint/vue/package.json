@@ -2,8 +2,12 @@
   "name": "@minko-fe/eslint-config-vue",
   "version": "1.2.18",
   "description": "",
-  "author": "",
+  "author": "hemengke1997 <https://github.com/hemengke1997>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hemengke1997/any-config.git"
+  },
   "keywords": [],
   "main": "index.js",
   "peerDependencies": {

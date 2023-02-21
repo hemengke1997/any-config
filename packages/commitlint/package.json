@@ -1,9 +1,11 @@
 {
   "name": "@minko-fe/commitlint-config",
   "version": "1.2.18",
-  "description": "",
-  "author": "",
-  "license": "MIT",
+  "author": "hemengke1997 <https://github.com/hemengke1997>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hemengke1997/any-config.git"
+  },
   "keywords": [],
   "main": "index.js",
   "dependencies": {
