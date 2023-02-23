@@ -139,6 +139,7 @@ module.exports = defineConfig({
       files: ['*.d.ts'],
       rules: {
         'import/no-duplicates': 'off',
+        'no-restricted-syntax': 'off',
       },
     },
     {
@@ -176,6 +177,7 @@ module.exports = defineConfig({
         'no-undef': 'off',
         'no-unused-expressions': 'off',
         'no-unused-vars': 'off',
+        'no-restricted-syntax': 'off',
       },
     },
     {
