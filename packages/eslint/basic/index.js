@@ -19,7 +19,6 @@ module.exports = defineConfig({
   ],
   ignorePatterns: [
     '*.min.*',
-    '*.d.ts',
     'CHANGELOG.md',
     'dist',
     'LICENSE*',
@@ -140,6 +139,7 @@ module.exports = defineConfig({
       rules: {
         'import/no-duplicates': 'off',
         'no-restricted-syntax': 'off',
+        'prettier/prettier': ['error', prettierConfig],
       },
     },
     {
