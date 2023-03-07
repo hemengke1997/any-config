@@ -88,6 +88,3 @@ pnpm add @minko-fe/tsconfig
   "extends": "@minko-fe/tsconfig/tsconfig.project.json"
 }
 ```
-
-
-❤️ [antfu](https://github.com/antfu/eslint-config)
