@@ -9,6 +9,6 @@
   "keywords": [],
   "main": "index.js",
   "dependencies": {
-    "@commitlint/config-conventional": "^17.4.3"
+    "@commitlint/config-conventional": "^17.4.4"
   }
 }

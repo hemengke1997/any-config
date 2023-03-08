@@ -1,3 +1,5 @@
+const fs = require('fs')
+const path = require('path')
 const { defineConfig } = require('eslint-define-config')
 const basic = require('@minko-fe/eslint-config-basic')
 
@@ -9,7 +11,34 @@ module.exports = defineConfig({
       node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] },
     },
   },
-  overrides: [...(basic.overrides || [])],
+  overrides: basic.overrides.concat(
+    !fs.existsSync(path.join(process.cwd(), 'tsconfig.json'))
+      ? []
+      : [
+          {
+            parserOptions: {
+              tsconfigRootDir: process.cwd(),
+              project: ['tsconfig.json'],
+            },
+            parser: '@typescript-eslint/parser',
+            excludedFiles: ['**/*.md/*.*'],
+            files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
+            // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended-requiring-type-checking.ts
+            rules: {
+              'no-throw-literal': 'off',
+              '@typescript-eslint/no-throw-literal': 'error',
+              'no-implied-eval': 'off',
+              '@typescript-eslint/no-implied-eval': 'error',
+              'dot-notation': 'off',
+              '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
+              '@typescript-eslint/no-floating-promises': 'off',
+              'require-await': 'off',
+              '@typescript-eslint/consistent-type-exports': 'error',
+              '@typescript-eslint/consistent-type-imports': 'error',
+            },
+          },
+        ],
+  ),
   rules: {
     'import/named': 'off',
 
