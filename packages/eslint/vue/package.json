@@ -15,10 +15,10 @@
   },
   "dependencies": {
     "@minko-fe/eslint-config-ts": "workspace:*",
-    "eslint-define-config": "^1.15.0",
+    "eslint-define-config": "^1.16.0",
     "eslint-plugin-vue": "^9.9.0"
   },
   "devDependencies": {
-    "eslint": "^8.35.0"
+    "eslint": "^8.36.0"
   }
 }
