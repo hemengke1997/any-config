@@ -139,6 +139,9 @@ module.exports = defineConfig({
       rules: {
         'import/no-duplicates': 'off',
         'no-restricted-syntax': 'off',
+        'unused-imports/no-unused-imports': 'off',
+        'unused-imports/no-unused-vars': 'off',
+        'no-unused-vars': 'off',
         'prettier/prettier': ['error', prettierConfig],
       },
     },
