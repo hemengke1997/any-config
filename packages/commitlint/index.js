@@ -5,20 +5,7 @@ module.exports = {
     'footer-leading-blank': [1, 'always'],
     'header-max-length': [2, 'always', 108],
     'subject-empty': [2, 'never'],
-    'subject-case': [
-      2,
-      'always',
-      [
-        'lower-case', // default
-        'upper-case', // UPPERCASE
-        'camel-case', // camelCase
-        'kebab-case', // kebab-case
-        'pascal-case', // PascalCase
-        'sentence-case', // Sentence case
-        'snake-case', // snake_case
-        'start-case', // Start Case
-      ],
-    ],
+    'subject-case': [0],
     'type-empty': [2, 'never'],
     'type-enum': [
       2,

@@ -307,7 +307,6 @@ module.exports = defineConfig({
       },
     ],
 
-    // best-practice
     'array-callback-return': 'error',
     'block-scoped-var': 'error',
     'consistent-return': 'off',
@@ -347,7 +346,7 @@ module.exports = defineConfig({
     // Enforce throwing type error when throwing error while checking typeof
     'unicorn/prefer-type-error': 'error',
     // Use new when throwing error
-    'unicorn/throw-new-error': 'error',
+    'unicorn/throw-new-error': 'off',
 
     'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
     'eslint-comments/disable-enable-pair': 'off',

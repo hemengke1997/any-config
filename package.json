@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "lint": "eslint . --fix",
-    "upgrade": "taze -r -w",
+    "up": "taze -r -w -I",
     "release": "bumpp package.json packages/*/package.json packages/eslint/*/package.json --commit --tag --push --all"
   },
   "devDependencies": {
