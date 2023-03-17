@@ -10,7 +10,6 @@ module.exports = defineConfig({
   reportUnusedDisableDirectives: true,
   extends: [
     'standard',
-    'eslint:recommended',
     'plugin:import/recommended',
     'plugin:eslint-comments/recommended',
     'plugin:jsonc/recommended-with-jsonc',

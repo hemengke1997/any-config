@@ -6,17 +6,27 @@
 
 #### install
 
+
+##### React
+
 ```bash
 pnpm add eslint @minko-fe/eslint-config -D
 ```
 
-#### eslintrc
+##### Vue
+
+```bash
+pnpm add eslint @minko-fe/eslint-config-vue -D
+```
+
+#### React
 
 ##### .eslintrc.json
 
 ```json
 {
-  "extends": "@minko-fe"
+  "extends": "@minko-fe" // React
+  // "extends": "@minko-fe/eslint-config-vue" // vue
 }
 ```
 
@@ -25,8 +35,10 @@ pnpm add eslint @minko-fe/eslint-config -D
 ```js
 module.exports = {
   extends: '@minko-fe',
+  // extends: '@minko-fe/eslint-config-vue' // vue
 }
 ```
+
 
 ### <img style="width: 14px; height: 14px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_light_prettier.svg" /> prettier
 
