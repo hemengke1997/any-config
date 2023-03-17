@@ -169,12 +169,12 @@ module.exports = defineConfig({
         'import/no-unresolved': 'off',
         'unused-imports/no-unused-imports': 'off',
         'unused-imports/no-unused-vars': 'off',
+        'no-unused-vars': 'off',
         'no-alert': 'off',
         'no-console': 'off',
         'no-restricted-imports': 'off',
         'no-undef': 'off',
         'no-unused-expressions': 'off',
-        'no-unused-vars': 'off',
         'no-restricted-syntax': 'off',
       },
     },
@@ -226,6 +226,7 @@ module.exports = defineConfig({
     'quotes': 'off',
     'quote-props': 'off',
     'unused-imports/no-unused-imports': 'warn',
+    'no-unused-vars': 'off',
     'unused-imports/no-unused-vars': [
       'warn',
       {
