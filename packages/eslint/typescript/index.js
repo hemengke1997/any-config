@@ -4,8 +4,8 @@ const { defineConfig } = require('eslint-define-config')
 const basic = require('@minko-fe/eslint-config-basic')
 
 module.exports = defineConfig({
-  extends: ['@minko-fe/eslint-config-basic', 'plugin:import/typescript', 'plugin:@typescript-eslint/recommended'],
-  parser: '@typescript-eslint/parser',
+  extends: ['plugin:import/typescript', 'plugin:@typescript-eslint/recommended', '@minko-fe/eslint-config-basic'],
+  plugins: ['@typescript-eslint'],
   settings: {
     'import/resolver': {
       node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] },
@@ -47,7 +47,7 @@ module.exports = defineConfig({
     '@typescript-eslint/member-delimiter-style': ['error', { multiline: { delimiter: 'none' } }],
     '@typescript-eslint/type-annotation-spacing': ['error', {}],
     '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports', disallowTypeAnnotations: false }],
-    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+    '@typescript-eslint/consistent-type-definitions': 'off',
     '@typescript-eslint/prefer-ts-expect-error': 'off',
 
     // Override JS

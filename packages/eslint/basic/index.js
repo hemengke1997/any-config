@@ -10,6 +10,7 @@ module.exports = defineConfig({
   reportUnusedDisableDirectives: true,
   extends: [
     'standard',
+    'eslint:recommended',
     'plugin:import/recommended',
     'plugin:eslint-comments/recommended',
     'plugin:jsonc/recommended-with-jsonc',
@@ -146,12 +147,6 @@ module.exports = defineConfig({
       },
     },
     {
-      files: ['scripts/**/*.*', 'cli.*'],
-      rules: {
-        'no-console': 'off',
-      },
-    },
-    {
       files: ['*.js', '*.cjs'],
       rules: {
         '@typescript-eslint/no-var-requires': 'off',
@@ -230,10 +225,15 @@ module.exports = defineConfig({
     'curly': ['error', 'multi-line', 'consistent'],
     'quotes': 'off',
     'quote-props': 'off',
-    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-imports': 'warn',
     'unused-imports/no-unused-vars': [
       'warn',
-      { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
+      {
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
+      },
     ],
     'no-param-reassign': 'off',
     'array-bracket-spacing': ['error', 'never'],
@@ -265,13 +265,7 @@ module.exports = defineConfig({
 
     // es6
     'no-var': 'error',
-    'prefer-const': [
-      'warn',
-      {
-        destructuring: 'any',
-        ignoreReadBeforeAssign: true,
-      },
-    ],
+    'prefer-const': 'off',
     'prefer-arrow-callback': [
       'error',
       {
