@@ -35,6 +35,7 @@ module.exports = defineConfig({
               'require-await': 'off',
               '@typescript-eslint/consistent-type-exports': 'error',
               '@typescript-eslint/consistent-type-imports': 'error',
+              'no-undef': ['off'],
             },
           },
         ],

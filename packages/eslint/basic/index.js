@@ -142,6 +142,7 @@ module.exports = defineConfig({
         'unused-imports/no-unused-imports': 'off',
         'unused-imports/no-unused-vars': 'off',
         'no-unused-vars': 'off',
+        'no-undef': ['off'],
         'prettier/prettier': ['error', prettierConfig],
       },
     },
