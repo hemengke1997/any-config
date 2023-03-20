@@ -35,7 +35,7 @@ module.exports = defineConfig({
     '!.vitepress',
     '!.vscode',
   ],
-  plugins: ['html', 'unicorn', 'unused-imports'],
+  plugins: ['html', 'unicorn'],
   settings: {
     'import/resolver': {
       node: { extensions: ['.js', '.mjs'] },
@@ -139,8 +139,6 @@ module.exports = defineConfig({
       rules: {
         'import/no-duplicates': 'off',
         'no-restricted-syntax': 'off',
-        'unused-imports/no-unused-imports': 'off',
-        'unused-imports/no-unused-vars': 'off',
         'no-unused-vars': 'off',
         'no-undef': ['off'],
         'prettier/prettier': ['error', prettierConfig],
@@ -167,8 +165,6 @@ module.exports = defineConfig({
         '@typescript-eslint/no-var-requires': 'off',
         '@typescript-eslint/consistent-type-imports': 'off',
         'import/no-unresolved': 'off',
-        'unused-imports/no-unused-imports': 'off',
-        'unused-imports/no-unused-vars': 'off',
         'no-unused-vars': 'off',
         'no-alert': 'off',
         'no-console': 'off',
@@ -225,9 +221,7 @@ module.exports = defineConfig({
     'curly': ['error', 'multi-line', 'consistent'],
     'quotes': 'off',
     'quote-props': 'off',
-    'unused-imports/no-unused-imports': 'warn',
-    'no-unused-vars': 'off',
-    'unused-imports/no-unused-vars': [
+    'no-unused-vars': [
       'warn',
       {
         vars: 'all',
