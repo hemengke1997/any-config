@@ -221,15 +221,7 @@ module.exports = defineConfig({
     'curly': ['error', 'multi-line', 'consistent'],
     'quotes': 'off',
     'quote-props': 'off',
-    'no-unused-vars': [
-      'warn',
-      {
-        vars: 'all',
-        varsIgnorePattern: '^_',
-        args: 'after-used',
-        argsIgnorePattern: '^_',
-      },
-    ],
+    'no-unused-vars': 'off',
     'no-param-reassign': 'off',
     'array-bracket-spacing': ['error', 'never'],
     'camelcase': 'off',
