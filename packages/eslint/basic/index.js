@@ -141,6 +141,7 @@ module.exports = defineConfig({
         'no-restricted-syntax': 'off',
         'no-unused-vars': 'off',
         'no-undef': ['off'],
+        '@typescript-eslint/no-unused-vars': 'off',
         'prettier/prettier': ['error', prettierConfig],
       },
     },
