@@ -18,7 +18,7 @@
   "scripts": {
     "lint": "eslint . --fix",
     "up": "taze -r -w -I",
-    "release": "bumpp package.json packages/*/package.json packages/eslint/*/package.json -c --all -p -t"
+    "release": "bumpp packages/*/package.json packages/eslint/*/package.json -c --all -p -t"
   },
   "devDependencies": {
     "@minko-fe/commitlint-config": "workspace:*",
