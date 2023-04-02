@@ -184,12 +184,12 @@ module.exports = defineConfig({
         'index.ts',
         'index.vue',
         'index.jsx',
-        'index.tsx',
         'index.*.js',
         'index.*.ts',
         'index.*.vue',
-        'index.*.jsx',
-        'index.*.tsx',
+        // ignore tsx(nextjs, react context)
+        '*.jsx',
+        '*.tsx',
         '*.config.js',
         '*.config.ts',
         '*.config.cjs',
@@ -348,6 +348,7 @@ module.exports = defineConfig({
 
     'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
     'eslint-comments/disable-enable-pair': 'off',
+    'eslint-comments/no-unlimited-disable': 'off',
     'import/no-named-as-default-member': 'off',
     'import/no-named-as-default': 'off',
     'import/namespace': 'off',
