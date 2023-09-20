@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/eslint-config-ts",
-  "version": "1.2.34",
+  "version": "1.2.35",
   "description": "eslint-config",
   "author": "hemengke1997 <https://github.com/hemengke1997>",
   "license": "MIT",
