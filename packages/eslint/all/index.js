@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['@minko-fe/eslint-config-react', 'plugin:tailwindcss/recommended'],
+  extends: ['@minko-fe/eslint-config-react'],
 }
