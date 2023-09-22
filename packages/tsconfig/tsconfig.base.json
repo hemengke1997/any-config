@@ -1,25 +1,25 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "baseUrl": ".",
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "allowJs": true,
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
     "noEmit": true,
     "isolatedModules": true,
+    "verbatimModuleSyntax": true,
     "allowSyntheticDefaultImports": true,
-    "lib": ["esnext", "dom", "DOM.Iterable"],
-    "strict": true,
-    "jsx": "react-jsx",
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
     "esModuleInterop": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true
   },
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist", ".next", ".nuxt"]
 }

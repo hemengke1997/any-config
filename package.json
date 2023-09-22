@@ -3,19 +3,21 @@
   "version": "1.2.35",
   "private": true,
   "description": "minko's project config ✅",
-  "author": "hemengke1997 <https://github.com/hemengke1997>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hemengke1997/any-config.git"
-  },
+  "type": "module",
   "keywords": [
     "eslint",
     "commitlint",
     "tsconfig",
     "config"
   ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hemengke1997/any-config.git"
+  },
+  "author": "hemengke1997 <https://github.com/hemengke1997>",
   "scripts": {
+    "build": "pnpm -r --filter \"./packages/*\" build",
     "lint": "eslint . --fix",
     "up": "taze -r -w -I",
     "release": "bumpp package.json packages/*/package.json packages/eslint/*/package.json -c --all -p -t"
@@ -24,7 +26,12 @@
     "@minko-fe/commitlint-config": "workspace:*",
     "@minko-fe/eslint-config": "workspace:*",
     "@minko-fe/tsconfig": "workspace:*",
-    "bumpp": "^9.0.0",
-    "taze": "^0.9.0"
+    "@types/node": "^20.6.3",
+    "bumpp": "^9.2.0",
+    "eslint": "^8.49.0",
+    "sucrase": "^3.34.0",
+    "taze": "^0.11.2",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
   }
 }

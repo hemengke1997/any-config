@@ -1,11 +1,16 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "react-jsx",
+    "moduleResolution": "Bundler",
     "declaration": false,
     "sourceMap": false,
     "noImplicitAny": false,
     "noImplicitReturns": false,
     "noImplicitThis": false
-  },
-  "exclude": ["**/*.js"]
+    // Required in Vue projects
+    //  "jsx": "preserve",
+    //  "jsxImportSource": "vue",
+  }
 }

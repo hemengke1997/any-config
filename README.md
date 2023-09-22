@@ -5,42 +5,35 @@
 ### <img style="width: 14px; height: 14px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_eslint.svg" /> eslint
 
 #### install
-
-
-##### React
-
 ```bash
 pnpm add eslint @minko-fe/eslint-config -D
 ```
 
-##### Vue
-
-```bash
-pnpm add eslint @minko-fe/eslint-config-vue -D
-```
-
-#### React
-
-##### .eslintrc.json
-
+.vscode settings.json
 ```json
 {
-  "extends": "@minko-fe" // React
-  // "extends": "@minko-fe/eslint-config-vue" // vue
+  "editor.formatOnSave": true,
+  "eslint.experimental.useFlatConfig": true
 }
 ```
 
-##### .eslintrc.js
-
+##### eslint.config.js
 ```js
-module.exports = {
-  extends: '@minko-fe',
-  // extends: '@minko-fe/eslint-config-vue' // vue
-}
+import { defineConfig } from '@minko-fe/eslint-config'
+
+export default defineConfig([
+  // your config
+], {
+  react: false, // up to you
+  vue: false, // up to you
+  // ...
+})
 ```
 
 
-### <img style="width: 14px; height: 14px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_light_prettier.svg" /> prettier
+<img style="width: 14px; height: 14px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_light_prettier.svg" />
+
+###  prettier
 
 #### install
 
@@ -68,7 +61,7 @@ module.exports = {
 #### install
 
 ```bash
-pnpm add @minko-fe/commitlint-config
+pnpm add @minko-fe/commitlint-config -D
 ```
 #### commitlint.config.js
 
@@ -94,9 +87,9 @@ pnpm add @minko-fe/tsconfig
 }
 ```
 
-##### project
+##### app
 ```json
 {
-  "extends": "@minko-fe/tsconfig/tsconfig.project.json"
+  "extends": "@minko-fe/tsconfig/tsconfig.app.json"
 }
 ```

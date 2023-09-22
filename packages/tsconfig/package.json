@@ -2,18 +2,24 @@
   "name": "@minko-fe/tsconfig",
   "version": "1.2.35",
   "description": "tsconfig",
-  "author": "hemengke1997 <https://github.com/hemengke1997>",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hemengke1997/any-config.git"
   },
+  "author": "hemengke1997 <https://github.com/hemengke1997>",
   "files": [
+    "tsconfig.app.json",
     "tsconfig.base.json",
-    "tsconfig.lib.json",
-    "tsconfig.project.json"
+    "tsconfig.lib.json"
   ],
   "peerDependencies": {
-    "typescript": ">=3.9"
+    "typescript": ">=4.0.0"
+  },
+  "devDependencies": {
+    "@tsconfig/next": "^2.0.0",
+    "@tsconfig/node18": "^18.2.2",
+    "@tsconfig/nuxt": "^2.0.2",
+    "@tsconfig/vite-react": "^2.0.1"
   }
 }

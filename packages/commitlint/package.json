@@ -1,14 +1,20 @@
 {
   "name": "@minko-fe/commitlint-config",
   "version": "1.2.35",
-  "author": "hemengke1997 <https://github.com/hemengke1997>",
+  "keywords": [
+    "commitlint",
+    "config"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hemengke1997/any-config.git"
   },
-  "keywords": [],
-  "main": "index.js",
+  "author": "hemengke1997 <https://github.com/hemengke1997>",
+  "files": [
+    "index.js"
+  ],
+  "main": "./index.js",
   "dependencies": {
-    "@commitlint/config-conventional": "^17.4.4"
+    "@commitlint/config-conventional": "^17.7.0"
   }
 }
