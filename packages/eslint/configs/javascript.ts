@@ -125,7 +125,16 @@ export const javascript: FlatESLintConfigItem[] = [
       ],
       'unicode-bom': ['error', 'never'],
       'unused-imports/no-unused-imports': isInEditor ? 'off' : 'error',
-      'unused-imports/no-unused-vars': ['warn', { args: 'after-used', ignoreRestSiblings: true }],
+      'unused-imports/no-unused-vars': [
+        'warn',
+        {
+          args: 'after-used',
+          argsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+          varsIgnorePattern: '^_',
+        },
+      ],
       'use-isnan': ['error', { enforceForIndexOf: true, enforceForSwitchCase: true }],
       'valid-typeof': ['error', { requireStringLiterals: true }],
       'vars-on-top': 'error',
