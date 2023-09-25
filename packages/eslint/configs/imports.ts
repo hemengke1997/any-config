@@ -14,7 +14,7 @@ export const imports: FlatESLintConfigItem[] = [
       'import/first': 'error',
       'import/namespace': 'off',
       'import/no-absolute-path': 'off',
-      'import/no-default-export': 'error',
+      'import/no-default-export': 'off',
       'import/no-duplicates': 'error',
       'import/no-mutable-exports': 'error',
       'import/no-named-default': 'error',
@@ -33,6 +33,7 @@ export const imports: FlatESLintConfigItem[] = [
   },
   {
     files: [
+      `**/src/${GLOB_SRC}`,
       `**/*config*.${GLOB_SRC_EXT}`,
       `**/views/${GLOB_SRC}`,
       `**/pages/${GLOB_SRC}`,

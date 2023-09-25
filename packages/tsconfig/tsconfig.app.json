@@ -5,10 +5,7 @@
     "jsx": "react-jsx",
     "moduleResolution": "Bundler",
     "declaration": false,
-    "sourceMap": false,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false
+    "sourceMap": false
     // Required in Vue projects
     //  "jsx": "preserve",
     //  "jsxImportSource": "vue",

@@ -1,6 +1,6 @@
-/** @type {import('prettier').Config} */
 module.exports = {
   $schema: 'https://json.schemastore.org/prettierrc',
+  arrowParens: 'always',
   bracketSameLine: false,
   bracketSpacing: true,
   endOfLine: 'auto',
@@ -40,6 +40,6 @@ module.exports = {
   semi: false,
   singleQuote: true,
   tabWidth: 2,
-  trailingComma: 'es5',
+  trailingComma: 'all',
   vueIndentScriptAndStyle: true,
 }

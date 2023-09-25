@@ -12,7 +12,6 @@ pnpm add eslint @minko-fe/eslint-config -D
 .vscode settings.json
 ```json
 {
-  "editor.formatOnSave": true,
   "eslint.experimental.useFlatConfig": true
 }
 ```

@@ -58,7 +58,7 @@ export const javascript: FlatESLintConfigItem[] = [
       'no-func-assign': 'error',
       'no-global-assign': 'error',
       'no-import-assign': 'error',
-      'no-inner-declarations': 'error',
+      'no-inner-declarations': 'off',
       'no-invalid-regexp': 'error',
       'no-irregular-whitespace': 'error',
       'no-lonely-if': 'error',

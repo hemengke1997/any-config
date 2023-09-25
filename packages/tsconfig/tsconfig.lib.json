@@ -2,6 +2,6 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "declaration": true,
-    "sourceMap": true,
+    "sourceMap": true
   }
 }

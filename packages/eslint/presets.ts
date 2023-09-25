@@ -19,7 +19,7 @@ import {
 
 export const presetJavaScript = [...ignores, ...javascript, ...comments, ...imports, ...unicorn]
 
-export const presetLangsExtensions = [...markdown, ...yml, ...jsonc, ...sortPackageJson, ...sortTsconfig, ...sortKey]
+export const presetLangsExtensions = [...markdown, ...yml, ...jsonc, ...sortPackageJson, ...sortTsconfig]
 
 export const basic = [...presetJavaScript, ...typescript, ...presetLangsExtensions]
 export { basic as presetBasic }
@@ -31,14 +31,16 @@ export function defineConfig(
   {
     react: enableReact = false,
     vue: enableVue = false,
+    sortKey: enableSortKey = false,
     prettier: enablePrettier = true,
     markdown: enableMarkdown = true,
   }: Partial<{
     react: boolean
     vue: boolean
+    sortKey: boolean
     prettier: boolean
     markdown: boolean
-  }> = {}
+  }> = {},
 ): FlatESLintConfigItem[] {
   const configs = []
   configs.push(...basic)
@@ -47,6 +49,9 @@ export function defineConfig(
   }
   if (enableVue) {
     configs.push(...vue)
+  }
+  if (enableSortKey) {
+    configs.push(...sortKey)
   }
   if (enableMarkdown) {
     configs.push(...markdown)

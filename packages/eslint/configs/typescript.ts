@@ -24,13 +24,7 @@ export const typescript: FlatESLintConfigItem[] = [
       '@typescript-eslint/brace-style': 'off',
       '@typescript-eslint/comma-dangle': 'off',
       '@typescript-eslint/consistent-indexed-object-style': 'off',
-      '@typescript-eslint/consistent-type-assertions': [
-        'error',
-        {
-          assertionStyle: 'as',
-          objectLiteralTypeAssertions: 'allow-as-parameter',
-        },
-      ],
+      '@typescript-eslint/consistent-type-assertions': 'off',
       '@typescript-eslint/consistent-type-definitions': 'off',
       '@typescript-eslint/consistent-type-imports': [
         'error',
@@ -40,6 +34,7 @@ export const typescript: FlatESLintConfigItem[] = [
       '@typescript-eslint/explicit-member-accessibility': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/naming-convention': 'off',
+      '@typescript-eslint/no-dynamic-delete': 'off',
       '@typescript-eslint/no-empty-function': 'off',
       '@typescript-eslint/no-empty-interface': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
