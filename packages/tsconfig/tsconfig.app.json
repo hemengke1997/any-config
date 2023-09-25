@@ -1,3 +1,4 @@
+// strict tsconfig for project files
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
@@ -5,7 +6,8 @@
     "jsx": "react-jsx",
     "moduleResolution": "Bundler",
     "declaration": false,
-    "sourceMap": false
+    "sourceMap": false,
+    "noEmit": true
     // Required in Vue projects
     //  "jsx": "preserve",
     //  "jsxImportSource": "vue",

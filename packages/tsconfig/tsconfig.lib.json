@@ -1,3 +1,4 @@
+// strict tsconfig for library files
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {

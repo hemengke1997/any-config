@@ -1,3 +1,4 @@
+// base tsconfig for all projects
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
@@ -16,5 +17,5 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "exclude": ["node_modules", "dist", ".next", ".nuxt"]
+  "exclude": ["node_modules", "dist"]
 }

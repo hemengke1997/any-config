@@ -54,7 +54,7 @@ export const unicorn: FlatESLintConfigItem[] = [
       'unicorn/prefer-query-selector': 'error',
       'unicorn/prefer-reflect-apply': 'error',
       'unicorn/prefer-regexp-test': 'error',
-      'unicorn/prefer-string-replace-all': 'error',
+      'unicorn/prefer-string-replace-all': 'off',
       'unicorn/prefer-string-slice': 'error',
       'unicorn/prefer-string-starts-ends-with': 'error',
       'unicorn/prefer-string-trim-start-end': 'error',

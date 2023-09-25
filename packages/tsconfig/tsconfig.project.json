@@ -1,0 +1,17 @@
+// non-strict tsconfig for project files
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noStrictGenericChecks": false
+    // Required in Vue projects
+    //  "jsx": "preserve",
+    //  "jsxImportSource": "vue",
+  },
+  "exclude": [".next", ".nuxt"]
+}
