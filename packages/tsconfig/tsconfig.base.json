@@ -3,7 +3,8 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["ESNext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "react-jsx",
     "useDefineForClassFields": true,
     "module": "ESNext",
     "moduleResolution": "Node",

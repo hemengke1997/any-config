@@ -1,15 +1,10 @@
-// strict tsconfig for project files
+// strict tsconfig for project
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "jsx": "react-jsx",
     "moduleResolution": "Bundler",
     "declaration": false,
     "sourceMap": false,
     "noEmit": true
-    // Required in Vue projects
-    //  "jsx": "preserve",
-    //  "jsxImportSource": "vue",
   }
 }

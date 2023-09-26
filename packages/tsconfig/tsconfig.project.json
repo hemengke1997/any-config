@@ -1,7 +1,8 @@
-// non-strict tsconfig for project files
+// non-strict tsconfig for project
 {
   "extends": "./tsconfig.app.json",
   "compilerOptions": {
+    "isolatedModules": false,
     "strictNullChecks": false,
     "noImplicitAny": false,
     "noImplicitReturns": false,
