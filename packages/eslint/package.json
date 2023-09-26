@@ -29,6 +29,7 @@
     "@minko-fe/prettier-config": "workspace:*",
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "@typescript-eslint/parser": "^6.7.2",
+    "eslint-config-flat-gitignore": "^0.1.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-define-config": "^1.23.0",
