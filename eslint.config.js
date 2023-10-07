@@ -5,6 +5,5 @@ require('sucrase/register')
 const { defineConfig } = require('./packages/eslint/index.ts')
 
 export default defineConfig([], {
-  react: false,
   sortKey: true,
 })

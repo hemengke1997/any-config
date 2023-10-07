@@ -12,6 +12,9 @@
     "index.js"
   ],
   "main": "./index.js",
+  "scripts": {
+    "release": "bumpp package.json -c --all -p -t"
+  },
   "peerDependencies": {
     "prettier": ">=2.0.0"
   }
