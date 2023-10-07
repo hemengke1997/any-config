@@ -20,13 +20,15 @@
     "build": "pnpm -r --filter \"./packages/*\" build",
     "lint": "eslint . --fix",
     "up": "taze -r -w -I",
-    "release": "pnpm -r --filter \"./packages/*\" release"
+    "release": "pnpm --filter \"./packages/*\" release",
+    "t": "tsx script"
   },
   "devDependencies": {
     "@minko-fe/commitlint-config": "workspace:*",
     "@minko-fe/eslint-config": "workspace:*",
     "@minko-fe/tsconfig": "workspace:*",
     "@types/node": "^20.7.0",
+    "@vitejs/release-scripts": "^1.3.1",
     "bumpp": "^9.2.0",
     "eslint": "^8.50.0",
     "sucrase": "^3.34.0",
