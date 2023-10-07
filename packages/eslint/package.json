@@ -28,8 +28,8 @@
   },
   "dependencies": {
     "@minko-fe/prettier-config": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "^6.7.3",
-    "@typescript-eslint/parser": "^6.7.3",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-define-config": "^1.23.0",
@@ -51,7 +51,7 @@
     "eslint-plugin-vue": "^9.17.0",
     "eslint-plugin-yml": "^1.9.0",
     "find-up": "5.0.0",
-    "globals": "^13.22.0",
+    "globals": "^13.23.0",
     "jsonc-eslint-parser": "^2.3.0",
     "local-pkg": "^0.4.3",
     "parse-gitignore": "^2.0.0",
@@ -60,7 +60,7 @@
     "yaml-eslint-parser": "^1.2.2"
   },
   "devDependencies": {
-    "eslint": "^8.50.0",
+    "eslint": "^8.51.0",
     "sucrase": "^3.34.0"
   }
 }
