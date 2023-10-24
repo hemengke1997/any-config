@@ -104,13 +104,6 @@ export const javascript: FlatESLintConfigItem[] = [
       'no-with': 'error',
       'object-shorthand': ['error', 'always', { avoidQuotes: true, ignoreConstructors: false }],
       'operator-linebreak': 'off',
-      'perfectionist/sort-objects': [
-        'error',
-        {
-          order: 'asc',
-          type: 'natural',
-        },
-      ],
       'prefer-arrow-callback': ['error', { allowNamedFunctions: false, allowUnboundThis: true }],
       'prefer-const': ['warn', { destructuring: 'all', ignoreReadBeforeAssign: true }],
       'prefer-exponentiation-operator': 'error',
