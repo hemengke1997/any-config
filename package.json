@@ -20,18 +20,24 @@
     "build": "pnpm -r --filter \"./packages/*\" build",
     "lint": "eslint . --fix",
     "up": "taze -r -w -I",
-    "release": "bumpp package.json packages/*/package.json -c --all -p -t"
+    "release": "bumpp package.json packages/*/package.json -c --all -p -t",
+    "postinstall": "simple-git-hooks"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.0.0",
     "@minko-fe/commitlint-config": "workspace:*",
     "@minko-fe/eslint-config": "workspace:*",
     "@minko-fe/tsconfig": "workspace:*",
     "@types/node": "^20.8.3",
     "bumpp": "^9.2.0",
     "eslint": "^8.51.0",
+    "simple-git-hooks": "^2.9.0",
     "sucrase": "^3.34.0",
     "taze": "^0.11.3",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "pnpm exec commitlint -e"
   }
 }
