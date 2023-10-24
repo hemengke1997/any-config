@@ -1,5 +1,5 @@
-import globals from 'globals'
 import { type FlatESLintConfigItem } from 'eslint-define-config'
+import globals from 'globals'
 import { isInEditor } from '../env'
 import { pluginUnusedImports } from '../plugins'
 
@@ -48,7 +48,7 @@ export const javascript: FlatESLintConfigItem[] = [
       'no-dupe-else-if': 'error',
       'no-dupe-keys': 'error',
       'no-duplicate-case': 'error',
-      'no-duplicate-imports': 'error',
+      'no-duplicate-imports': 'off',
       'no-empty': ['error', { allowEmptyCatch: true }],
       'no-empty-character-class': 'error',
       'no-empty-pattern': 'error',
@@ -75,7 +75,7 @@ export const javascript: FlatESLintConfigItem[] = [
       'no-regex-spaces': 'error',
       'no-restricted-syntax': ['error', 'ForInStatement', 'LabeledStatement', 'WithStatement'],
       'no-return-assign': 'off',
-      'no-return-await': 'warn',
+      'no-return-await': 'off',
       'no-self-assign': 'error',
       'no-setter-return': 'error',
       'no-shadow-restricted-names': 'error',
@@ -104,6 +104,13 @@ export const javascript: FlatESLintConfigItem[] = [
       'no-with': 'error',
       'object-shorthand': ['error', 'always', { avoidQuotes: true, ignoreConstructors: false }],
       'operator-linebreak': 'off',
+      'perfectionist/sort-objects': [
+        'error',
+        {
+          order: 'asc',
+          type: 'natural',
+        },
+      ],
       'prefer-arrow-callback': ['error', { allowNamedFunctions: false, allowUnboundThis: true }],
       'prefer-const': ['warn', { destructuring: 'all', ignoreReadBeforeAssign: true }],
       'prefer-exponentiation-operator': 'error',
@@ -113,18 +120,8 @@ export const javascript: FlatESLintConfigItem[] = [
       'prefer-template': 'error',
       'require-await': 'off',
       'require-yield': 'error',
-      'sort-imports': [
-        'error',
-        {
-          allowSeparatedGroups: false,
-          ignoreCase: false,
-          ignoreDeclarationSort: true,
-          ignoreMemberSort: false,
-          memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-        },
-      ],
       'unicode-bom': ['error', 'never'],
-      'unused-imports/no-unused-imports': isInEditor ? 'off' : 'error',
+      'unused-imports/no-unused-imports': isInEditor ? 'warn' : 'error',
       'unused-imports/no-unused-vars': [
         'warn',
         {

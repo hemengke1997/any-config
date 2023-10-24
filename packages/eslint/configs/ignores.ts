@@ -1,8 +1,8 @@
-import fs from 'node:fs'
 import { type FlatESLintConfigItem } from 'eslint-define-config'
+import findUp from 'find-up'
+import fs from 'node:fs'
 // @ts-expect-error missing types
 import parse from 'parse-gitignore'
-import findUp from 'find-up'
 import { GLOB_EXCLUDE } from '../globs'
 
 interface FlatGitignoreOptions {

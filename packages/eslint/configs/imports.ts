@@ -1,12 +1,13 @@
 import { type FlatESLintConfigItem } from 'eslint-define-config'
-import { pluginAntfu, pluginImport } from '../plugins'
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT } from '../globs'
+import { pluginAntfu, pluginImport, pluginPerfectionist } from '../plugins'
 
 export const imports: FlatESLintConfigItem[] = [
   {
     plugins: {
       antfu: pluginAntfu,
       import: pluginImport,
+      perfectionist: pluginPerfectionist,
     },
     rules: {
       'antfu/import-dedupe': 'error',
@@ -15,18 +16,41 @@ export const imports: FlatESLintConfigItem[] = [
       'import/namespace': 'off',
       'import/no-absolute-path': 'off',
       'import/no-default-export': 'off',
-      'import/no-duplicates': 'error',
+      'import/no-duplicates': ['error', { 'prefer-inline': true }],
       'import/no-mutable-exports': 'error',
       'import/no-named-default': 'error',
       'import/no-self-import': 'error',
       'import/no-unresolved': 'off',
       'import/no-webpack-loader-syntax': 'error',
-      'import/order': [
+      'import/order': 'off',
+      'perfectionist/sort-imports': [
         'error',
         {
-          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
-          pathGroups: [{ group: 'internal', pattern: '{{@,~}/,#}**' }],
-          pathGroupsExcludedImportTypes: ['type'],
+          'groups': [
+            'type',
+            'react',
+            'nanostores',
+            ['builtin', 'external'],
+            'internal-type',
+            'internal',
+            ['parent-type', 'sibling-type', 'index-type'],
+            ['parent', 'sibling', 'index'],
+            'side-effect',
+            'style',
+            'object',
+            'unknown',
+          ],
+          'internal-pattern': ['{{@,~}/,#}**'],
+          'newlines-between': 'never',
+          'order': 'asc',
+          'type': 'natural',
+        },
+      ],
+      'perfectionist/sort-named-imports': [
+        'error',
+        {
+          order: 'asc',
+          type: 'natural',
         },
       ],
     },
@@ -46,7 +70,6 @@ export const imports: FlatESLintConfigItem[] = [
     },
     rules: {
       'import/no-default-export': 'off',
-      'import/no-duplicates': 'off',
     },
   },
 ]

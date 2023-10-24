@@ -1,5 +1,5 @@
-import { getPackageInfoSync } from 'local-pkg'
 import { type FlatESLintConfigItem, type Rules } from 'eslint-define-config'
+import { getPackageInfoSync } from 'local-pkg'
 import { GLOB_VUE } from '../globs'
 import { parserVue, pluginTypeScript, pluginVue } from '../plugins'
 import { typescript } from './typescript'

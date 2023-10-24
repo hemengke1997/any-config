@@ -1,6 +1,7 @@
 import { type FlatESLintConfigItem } from 'eslint-define-config'
 import { isPackageExists } from 'local-pkg'
 import {
+  _exports,
   comments,
   ignores,
   imports,
@@ -9,7 +10,7 @@ import {
   markdown,
   prettier,
   react,
-  sortKey,
+  sortObjects,
   sortPackageJson,
   sortTsconfig,
   typescript,
@@ -18,7 +19,7 @@ import {
   yml,
 } from './configs'
 
-export const presetJavaScript = [...ignores, ...javascript, ...comments, ...imports, ...unicorn]
+export const presetJavaScript = [...ignores, ...javascript, ...comments, ...imports, ..._exports, ...unicorn]
 
 export const presetLangsExtensions = [...markdown, ...yml, ...jsonc, ...sortPackageJson]
 
@@ -35,17 +36,17 @@ const ReactPackages = ['react', 'next']
 export function defineConfig(
   config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],
   {
-    react: enableReact = ReactPackages.some((i) => isPackageExists(i)),
-    vue: enableVue = VuePackages.some((i) => isPackageExists(i)),
-    typescript: enableTypescript = isPackageExists('typescript'),
-    sortKey: enableSortKey = false,
-    prettier: enablePrettier = true,
     markdown: enableMarkdown = true,
+    prettier: enablePrettier = true,
+    react: enableReact = ReactPackages.some((i) => isPackageExists(i)),
+    sortObjects: enableSortObjects = false,
+    typescript: enableTypescript = isPackageExists('typescript'),
+    vue: enableVue = VuePackages.some((i) => isPackageExists(i)),
   }: Partial<{
     react: boolean
     vue: boolean
     typescript: boolean
-    sortKey: boolean
+    sortObjects: boolean
     prettier: boolean
     markdown: boolean
   }> = {},
@@ -62,8 +63,8 @@ export function defineConfig(
   if (enableTypescript) {
     configs.push(...presetTypescript)
   }
-  if (enableSortKey) {
-    configs.push(...sortKey)
+  if (enableSortObjects) {
+    configs.push(...sortObjects)
   }
   if (enableMarkdown) {
     configs.push(...markdown)

@@ -1,6 +1,6 @@
 import { type FlatESLintConfigItem } from 'eslint-define-config'
 import { GLOB_PACKAGEJSON, GLOB_SRC, GLOB_TSCONFIG } from '../globs'
-import { pluginSortKey } from '../plugins'
+import { pluginPerfectionist } from '../plugins'
 
 export const sortPackageJson: FlatESLintConfigItem[] = [
   {
@@ -199,14 +199,14 @@ export const sortTsconfig: FlatESLintConfigItem[] = [
   },
 ]
 
-export const sortKey: FlatESLintConfigItem[] = [
+export const sortObjects: FlatESLintConfigItem[] = [
   {
     files: [GLOB_SRC],
     plugins: {
-      'sort-keys': pluginSortKey,
+      perfectionist: pluginPerfectionist,
     },
     rules: {
-      'sort-keys/sort-keys-fix': 'error',
+      'perfectionist/sort-objects': 'error',
     },
   },
 ]

@@ -1,6 +1,6 @@
 import { type FlatESLintConfigItem } from 'eslint-define-config'
-import { pluginMarkdown } from '../plugins'
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_VUE } from '../globs'
+import { pluginMarkdown } from '../plugins'
 
 export const markdown: FlatESLintConfigItem[] = [
   {
@@ -31,14 +31,12 @@ export const markdown: FlatESLintConfigItem[] = [
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-use-before-define': 'off',
       '@typescript-eslint/no-var-requires': 'off',
-
       'no-alert': 'off',
       'no-console': 'off',
       'no-restricted-imports': 'off',
       'no-undef': 'off',
       'no-unused-expressions': 'off',
       'no-unused-vars': 'off',
-
       'unused-imports/no-unused-imports': 'off',
       'unused-imports/no-unused-vars': 'off',
     },

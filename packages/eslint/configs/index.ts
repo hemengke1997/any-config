@@ -1,6 +1,7 @@
 export * from './comments'
 export * from './ignores'
 export * from './imports'
+export * from './exports'
 export * from './javascript'
 export * from './jsonc'
 export * from './markdown'
