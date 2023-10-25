@@ -1,4 +1,4 @@
-// strict tsconfig for project
+// tsconfig for project
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {

@@ -1,8 +1,7 @@
-// strict tsconfig for third-library
+// tsconfig for third-library
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "declaration": true,
     "sourceMap": true
   }
 }
