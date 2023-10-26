@@ -21,6 +21,7 @@ export const react: FlatESLintConfigItem[] = [
     },
     rules: {
       ...typescript[0].rules,
+      'react-hooks/exhaustive-deps': 'off',
       'react/display-name': 'off',
       'react/jsx-child-element-spacing': 'off',
       'react/jsx-closing-tag-location': 'off',
@@ -28,7 +29,6 @@ export const react: FlatESLintConfigItem[] = [
       'react/no-unescaped-entities': 'off',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
-      'react-hooks/exhaustive-deps': 'off',
     },
   },
 ]

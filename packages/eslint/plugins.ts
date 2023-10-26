@@ -34,6 +34,10 @@ export const pluginReact = interopDefault(_pluginReact)
 import * as _pluginReactHooks from 'eslint-plugin-react-hooks'
 export const pluginReactHooks = interopDefault(_pluginReactHooks)
 
+// @ts-expect-error missing types
+import * as _pluginDisableAutofix from 'eslint-plugin-disable-autofix'
+export const pluginDisableAutofix = interopDefault(_pluginDisableAutofix)
+
 import * as _pluginPrettier from 'eslint-plugin-prettier'
 export const pluginPrettier = interopDefault(_pluginPrettier)
 
@@ -45,17 +49,18 @@ export const configPrettier = interopDefault(_configPrettier)
 
 // @ts-expect-error missing types
 export * as parserTypeScript from '@typescript-eslint/parser'
+
 // @ts-expect-error missing types
 export * as pluginImport from 'eslint-plugin-import'
 export * as pluginJsonc from 'eslint-plugin-jsonc'
+
 // @ts-expect-error missing types
 export * as pluginPerfectionist from 'eslint-plugin-perfectionist'
-
 // @ts-expect-error missing types
 export * as pluginUnusedImports from 'eslint-plugin-unused-imports'
 // @ts-expect-error missing types
 export * as pluginYml from 'eslint-plugin-yml'
 export * as parserJsonc from 'jsonc-eslint-parser'
-export * as parserVue from 'vue-eslint-parser'
 
+export * as parserVue from 'vue-eslint-parser'
 export * as parserYml from 'yaml-eslint-parser'

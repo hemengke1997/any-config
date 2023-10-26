@@ -1,7 +1,7 @@
 import { type FlatESLintConfigItem } from 'eslint-define-config'
 import globals from 'globals'
 import { isInEditor } from '../env'
-import { pluginUnusedImports } from '../plugins'
+import { pluginDisableAutofix, pluginUnusedImports } from '../plugins'
 
 export const javascript: FlatESLintConfigItem[] = [
   {
@@ -20,6 +20,7 @@ export const javascript: FlatESLintConfigItem[] = [
       sourceType: 'module',
     },
     plugins: {
+      'disable-autofix': pluginDisableAutofix,
       'unused-imports': pluginUnusedImports,
     },
     rules: {
@@ -27,6 +28,7 @@ export const javascript: FlatESLintConfigItem[] = [
       'block-scoped-var': 'error',
       'consistent-return': 'off',
       'constructor-super': 'error',
+      'disable-autofix/unused-imports/no-unused-imports': isInEditor ? 'warn' : 'error',
       'dot-notation': 'off',
       'eqeqeq': ['error', 'smart'],
       'for-direction': 'error',
@@ -114,7 +116,7 @@ export const javascript: FlatESLintConfigItem[] = [
       'require-await': 'off',
       'require-yield': 'error',
       'unicode-bom': ['error', 'never'],
-      'unused-imports/no-unused-imports': isInEditor ? 'warn' : 'error',
+      'unused-imports/no-unused-imports': 'off',
       'unused-imports/no-unused-vars': [
         'warn',
         {
