@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/commitlint-config",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "keywords": [
     "commitlint",
     "config"
