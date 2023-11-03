@@ -1,12 +1,13 @@
 import { type FlatESLintConfigItem } from 'eslint-define-config'
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_VUE } from '../globs'
-import { pluginMarkdown } from '../plugins'
+import { pluginDisableAutofix, pluginMarkdown } from '../plugins'
 
 export const markdown: FlatESLintConfigItem[] = [
   {
     files: [GLOB_MARKDOWN],
     plugins: {
-      markdown: pluginMarkdown,
+      'disable-autofix': pluginDisableAutofix,
+      'markdown': pluginMarkdown,
     },
     processor: 'markdown/markdown',
   },
@@ -31,6 +32,7 @@ export const markdown: FlatESLintConfigItem[] = [
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-use-before-define': 'off',
       '@typescript-eslint/no-var-requires': 'off',
+      'disable-autofix/unused-imports/no-unused-imports': 'off',
       'no-alert': 'off',
       'no-console': 'off',
       'no-restricted-imports': 'off',
