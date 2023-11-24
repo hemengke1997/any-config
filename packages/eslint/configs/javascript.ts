@@ -1,9 +1,9 @@
-import { type FlatESLintConfigItem } from 'eslint-define-config'
+import { type FlatESLintConfig } from 'eslint-define-config'
 import globals from 'globals'
 import { isInEditor } from '../env'
 import { pluginDisableAutofix, pluginUnusedImports } from '../plugins'
 
-export const javascript: FlatESLintConfigItem[] = [
+export const javascript: FlatESLintConfig[] = [
   {
     languageOptions: {
       globals: {
