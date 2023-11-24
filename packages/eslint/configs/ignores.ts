@@ -1,4 +1,4 @@
-import { type FlatESLintConfig } from 'eslint-define-config'
+import { type FlatESLintConfigItem } from 'eslint-define-config'
 import findUp from 'find-up'
 import fs from 'node:fs'
 // @ts-expect-error missing types
@@ -36,4 +36,4 @@ function gitignore(options: FlatGitignoreOptions = {}): FlatConfigItem {
   }
 }
 
-export const ignores: FlatESLintConfig[] = [{ ignores: [...GLOB_EXCLUDE, ...gitignore().ignores] }]
+export const ignores: FlatESLintConfigItem[] = [{ ignores: [...GLOB_EXCLUDE, ...gitignore().ignores] }]

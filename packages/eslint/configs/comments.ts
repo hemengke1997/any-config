@@ -1,7 +1,7 @@
-import { type FlatESLintConfig } from 'eslint-define-config'
+import { type FlatESLintConfigItem } from 'eslint-define-config'
 import { pluginComments } from '../plugins'
 
-export const comments: FlatESLintConfig[] = [
+export const comments: FlatESLintConfigItem[] = [
   {
     plugins: {
       'eslint-comments': pluginComments,

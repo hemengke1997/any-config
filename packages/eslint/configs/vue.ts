@@ -1,4 +1,4 @@
-import { type FlatESLintConfig, type Rules } from 'eslint-define-config'
+import { type FlatESLintConfigItem, type Rules } from 'eslint-define-config'
 import { getPackageInfoSync } from 'local-pkg'
 import { GLOB_VUE } from '../globs'
 import { parserVue, pluginTypeScript, pluginVue } from '../plugins'
@@ -13,7 +13,7 @@ export function getVueVersion() {
 }
 const isVue3 = getVueVersion() === 3
 
-export const reactivityTransform: FlatESLintConfig[] = [
+export const reactivityTransform: FlatESLintConfigItem[] = [
   {
     languageOptions: {
       globals: {
@@ -89,7 +89,7 @@ const vue2Rules: Rules = {
   ...pluginVue.configs.recommended.rules,
 }
 
-export const vue: FlatESLintConfig[] = [
+export const vue: FlatESLintConfigItem[] = [
   {
     files: [GLOB_VUE],
     languageOptions: {

@@ -1,8 +1,8 @@
-import { type FlatESLintConfig } from 'eslint-define-config'
+import { type FlatESLintConfigItem } from 'eslint-define-config'
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT } from '../globs'
 import { pluginAntfu, pluginImport, pluginPerfectionist } from '../plugins'
 
-export const imports: FlatESLintConfig[] = [
+export const imports: FlatESLintConfigItem[] = [
   {
     plugins: {
       antfu: pluginAntfu,

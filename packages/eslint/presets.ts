@@ -1,4 +1,4 @@
-import { type FlatESLintConfig } from 'eslint-define-config'
+import { type FlatESLintConfigItem } from 'eslint-define-config'
 import { isPackageExists } from 'local-pkg'
 import {
   _exports,
@@ -34,7 +34,7 @@ const VuePackages = ['vue', 'nuxt', 'vitepress']
 const ReactPackages = ['react', 'next']
 
 export function defineConfig(
-  config: FlatESLintConfig | FlatESLintConfig[] = [],
+  config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],
   {
     markdown: enableMarkdown = true,
     prettier: enablePrettier = true,
@@ -50,7 +50,7 @@ export function defineConfig(
     prettier: boolean
     markdown: boolean
   }> = {},
-): FlatESLintConfig[] {
+): FlatESLintConfigItem[] {
   const configs = []
 
   configs.push(...presetBasic)

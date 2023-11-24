@@ -1,12 +1,12 @@
 // @ts-expect-error missing types
 import prettierConfig from '@minko-fe/prettier-config'
-import { type FlatESLintConfig } from 'eslint-define-config'
+import { type FlatESLintConfigItem } from 'eslint-define-config'
 import { configPrettier, pluginPrettier } from '../plugins'
 
 const prettierConflictRules = { ...configPrettier.rules }
 delete prettierConflictRules['vue/html-self-closing']
 
-export const prettier: FlatESLintConfig[] = [
+export const prettier: FlatESLintConfigItem[] = [
   {
     plugins: {
       prettier: pluginPrettier,

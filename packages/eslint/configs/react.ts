@@ -1,9 +1,9 @@
-import { type FlatESLintConfig } from 'eslint-define-config'
+import { type FlatESLintConfigItem } from 'eslint-define-config'
 import { GLOB_JSX, GLOB_TSX } from '../globs'
 import { pluginReact, pluginReactHooks, pluginTypeScript } from '../plugins'
 import { typescript } from './typescript'
 
-export const react: FlatESLintConfig[] = [
+export const react: FlatESLintConfigItem[] = [
   {
     files: [GLOB_JSX, GLOB_TSX],
     languageOptions: {

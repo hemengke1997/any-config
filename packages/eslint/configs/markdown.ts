@@ -1,8 +1,8 @@
-import { type FlatESLintConfig } from 'eslint-define-config'
+import { type FlatESLintConfigItem } from 'eslint-define-config'
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_VUE } from '../globs'
 import { pluginDisableAutofix, pluginMarkdown } from '../plugins'
 
-export const markdown: FlatESLintConfig[] = [
+export const markdown: FlatESLintConfigItem[] = [
   {
     files: [GLOB_MARKDOWN],
     plugins: {

@@ -1,8 +1,8 @@
-import { type FlatESLintConfig, type Rules } from 'eslint-define-config'
+import { type FlatESLintConfigItem, type Rules } from 'eslint-define-config'
 import { GLOB_JSON, GLOB_JSON5, GLOB_JSONC } from '../globs'
 import { parserJsonc, pluginJsonc } from '../plugins'
 
-export const jsonc: FlatESLintConfig[] = [
+export const jsonc: FlatESLintConfigItem[] = [
   {
     files: [GLOB_JSON, GLOB_JSON5, GLOB_JSONC],
     languageOptions: {
