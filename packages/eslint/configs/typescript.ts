@@ -34,7 +34,18 @@ export const typescript: FlatESLintConfigItem[] = [
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-member-accessibility': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
-      '@typescript-eslint/naming-convention': 'off',
+      '@typescript-eslint/naming-convention': [
+        'error',
+        {
+          custom: {
+            match: false,
+            // no $ prefix
+            regex: '^\\$[a-zA-Z][\\w\\d]*$',
+          },
+          format: null,
+          selector: ['variable', 'variableLike'],
+        },
+      ],
       '@typescript-eslint/no-dynamic-delete': 'off',
       '@typescript-eslint/no-empty-function': 'off',
       '@typescript-eslint/no-empty-interface': 'off',

@@ -1,6 +1,6 @@
 import { type FlatESLintConfigItem } from 'eslint-define-config'
 import { GLOB_JSX, GLOB_TSX } from '../globs'
-import { pluginReact, pluginReactHooks, pluginTypeScript } from '../plugins'
+import { pluginReact, pluginReactHooks, pluginReactRefresh, pluginTypeScript } from '../plugins'
 import { typescript } from './typescript'
 
 export const react: FlatESLintConfigItem[] = [
@@ -18,10 +18,14 @@ export const react: FlatESLintConfigItem[] = [
       '@typescript-eslint': pluginTypeScript,
       'react': pluginReact,
       'react-hooks': pluginReactHooks,
+      'react-refresh': pluginReactRefresh,
     },
     rules: {
       ...typescript[0].rules,
       'react-hooks/exhaustive-deps': 'off',
+      // 先不用react-refresh plugin，不好用
+      // 但记住：react-refresh的前提是，tsx文件中，必须有一个默认导出的组件
+      'react-refresh/only-export-components': ['off', { allowConstantExport: true, checkJs: false }],
       'react/display-name': 'off',
       'react/jsx-child-element-spacing': 'off',
       'react/jsx-closing-tag-location': 'off',

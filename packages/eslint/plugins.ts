@@ -19,6 +19,10 @@ import * as _pluginTypeScript from '@typescript-eslint/eslint-plugin'
 export const pluginTypeScript = interopDefault(_pluginTypeScript)
 
 // @ts-expect-error missing types
+import * as _pluginReactRefresh from 'eslint-plugin-react-refresh'
+export const pluginReactRefresh = interopDefault(_pluginReactRefresh)
+
+// @ts-expect-error missing types
 import * as _pluginUnicorn from 'eslint-plugin-unicorn'
 export const pluginUnicorn = interopDefault(_pluginUnicorn)
 
@@ -51,13 +55,20 @@ export const configPrettier = interopDefault(_configPrettier)
 export * as parserTypeScript from '@typescript-eslint/parser'
 
 // @ts-expect-error missing types
+export * as pluginHtml from 'eslint-plugin-html'
+// @ts-expect-error missing types
 export * as pluginImport from 'eslint-plugin-import'
+
 export * as pluginJsonc from 'eslint-plugin-jsonc'
 
+// @ts-expect-error missing types
+import * as _pluginTailwindcss from 'eslint-plugin-tailwindcss'
+export const pluginTailwindcss = interopDefault(_pluginTailwindcss)
 // @ts-expect-error missing types
 export * as pluginPerfectionist from 'eslint-plugin-perfectionist'
 // @ts-expect-error missing types
 export * as pluginUnusedImports from 'eslint-plugin-unused-imports'
+
 // @ts-expect-error missing types
 export * as pluginYml from 'eslint-plugin-yml'
 export * as parserJsonc from 'jsonc-eslint-parser'

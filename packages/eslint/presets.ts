@@ -13,6 +13,7 @@ import {
   sortObjects,
   sortPackageJson,
   sortTsconfig,
+  tailwindcss,
   typescript,
   unicorn,
   vue,
@@ -40,6 +41,7 @@ export function defineConfig(
     prettier: enablePrettier = true,
     react: enableReact = ReactPackages.some((i) => isPackageExists(i)),
     sortObjects: enableSortObjects = false,
+    tailwindcss: enableTailwindcss = isPackageExists('tailwindcss'),
     typescript: enableTypescript = isPackageExists('typescript'),
     vue: enableVue = VuePackages.some((i) => isPackageExists(i)),
   }: Partial<{
@@ -49,6 +51,7 @@ export function defineConfig(
     sortObjects: boolean
     prettier: boolean
     markdown: boolean
+    tailwindcss: boolean
   }> = {},
 ): FlatESLintConfigItem[] {
   const configs = []
@@ -62,6 +65,9 @@ export function defineConfig(
   }
   if (enableTypescript) {
     configs.push(...presetTypescript)
+  }
+  if (enableTailwindcss) {
+    configs.push(...tailwindcss)
   }
   if (enableSortObjects) {
     configs.push(...sortObjects)

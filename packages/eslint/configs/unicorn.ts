@@ -11,16 +11,10 @@ export const unicorn: FlatESLintConfigItem[] = [
       'unicorn/error-message': 'error',
       // Uppercase regex escapes
       'unicorn/escape-case': 'error',
-      // Ban `new Array` as `Array` constructor's params are ambiguous
-      'unicorn/no-new-array': 'error',
       // Prevent deprecated `new Buffer()`
       'unicorn/no-new-buffer': 'error',
       // Lowercase number formatting for octal, hex, binary (0x1'error' instead of 0X1'error')
       'unicorn/number-literal-case': 'error',
-      // textContent instead of innerText
-      'unicorn/prefer-dom-node-text-content': 'error',
-      // includes over indexOf when checking for existence
-      'unicorn/prefer-includes': 'error',
       // Prefer using the node: protocol
       'unicorn/prefer-node-protocol': 'error',
       // Prefer using number properties like `Number.isNaN` rather than `isNaN`
