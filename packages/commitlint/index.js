@@ -1,9 +1,12 @@
 module.exports = {
   extends: ['@commitlint/config-conventional'],
+  // 'rule': [0 (no-check) | 1 (warning) | 2 (error), 'always' | 'never', 'value']
   rules: {
-    'body-leading-blank': [2, 'always'],
+    'body-leading-blank': [1, 'always'],
+    'body-max-line-length': [2, 'always', 1000],
     'footer-leading-blank': [1, 'always'],
-    'header-max-length': [2, 'always', 108],
+    'footer-max-line-length': [2, 'always', 500],
+    'header-max-length': [2, 'always', 500],
     'subject-case': [0],
     'subject-empty': [2, 'never'],
     'type-empty': [2, 'never'],
