@@ -20,7 +20,7 @@ import {
   yml,
 } from './configs'
 
-export const presetJavaScript = [...ignores, ...javascript, ...comments, ...imports, ..._exports, ...unicorn]
+export const presetJavaScript = [...javascript, ...comments, ...imports, ..._exports, ...unicorn]
 
 export const presetLangsExtensions = [...markdown, ...yml, ...jsonc, ...sortPackageJson]
 
@@ -37,6 +37,7 @@ const ReactPackages = ['react', 'next']
 export function defineConfig(
   config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],
   {
+    gitignore: enableGitignore = true,
     markdown: enableMarkdown = true,
     prettier: enablePrettier = true,
     react: enableReact = ReactPackages.some((i) => isPackageExists(i)),
@@ -52,11 +53,15 @@ export function defineConfig(
     prettier: boolean
     markdown: boolean
     tailwindcss: boolean
+    gitignore: boolean
   }> = {},
 ): FlatESLintConfigItem[] {
   const configs = []
 
   configs.push(...presetBasic)
+  if (enableGitignore) {
+    configs.push(...ignores)
+  }
   if (enableReact) {
     configs.push(...react)
   }
