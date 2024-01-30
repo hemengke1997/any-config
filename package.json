@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/any-config",
-  "version": "2.0.7",
+  "version": "0.0.0",
   "private": true,
   "description": "minko's project config ✅",
   "type": "module",
@@ -22,7 +22,7 @@
     "up": "taze -r -w -I",
     "prepare": "simple-git-hooks",
     "bump": "changeset",
-    "version": "changeset version"
+    "version": "changeset version && changeset tag"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",
