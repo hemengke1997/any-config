@@ -26,6 +26,7 @@ export const markdown: FlatESLintConfigItem[] = [
       '@typescript-eslint/comma-dangle': 'off',
       '@typescript-eslint/consistent-type-imports': 'off',
       '@typescript-eslint/no-extraneous-class': 'off',
+      '@typescript-eslint/no-invalid-void-type': 'off',
       '@typescript-eslint/no-namespace': 'off',
       '@typescript-eslint/no-redeclare': 'off',
       '@typescript-eslint/no-require-imports': 'off',

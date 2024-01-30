@@ -75,7 +75,7 @@ export const javascript: FlatESLintConfigItem[] = [
       'no-prototype-builtins': 'error',
       'no-redeclare': 'error',
       'no-regex-spaces': 'error',
-      'no-restricted-syntax': ['error', 'ForInStatement', 'LabeledStatement', 'WithStatement'],
+      'no-restricted-syntax': 'off',
       'no-return-assign': 'off',
       'no-return-await': 'off',
       'no-self-assign': 'error',
