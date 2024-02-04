@@ -1,4 +1,4 @@
-# @minko-fe/any-config
+# any-config
 
 ## Usage
 
