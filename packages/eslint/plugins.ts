@@ -1,9 +1,5 @@
 /* eslint-disable import/first */
 
-function interopDefault(m: any) {
-  return m.default || m
-}
-
 import * as _pluginAntfu from 'eslint-plugin-antfu'
 export const pluginAntfu = interopDefault(_pluginAntfu)
 
@@ -47,25 +43,22 @@ export const pluginPrettier = interopDefault(_pluginPrettier)
 
 // @ts-expect-error missing types
 import * as _configPrettier from 'eslint-config-prettier'
+import { interopDefault } from './utils'
 export const configPrettier = interopDefault(_configPrettier)
-
-// export * as pluginSortKey from 'eslint-plugin-sort-keys'
 
 // @ts-expect-error missing types
 export * as parserTypeScript from '@typescript-eslint/parser'
 
 // @ts-expect-error missing types
 export * as pluginHtml from 'eslint-plugin-html'
+
 // @ts-expect-error missing types
 export * as pluginImport from 'eslint-plugin-import'
-
 export * as pluginJsonc from 'eslint-plugin-jsonc'
 
 // @ts-expect-error missing types
-import * as _pluginTailwindcss from 'eslint-plugin-tailwindcss'
-export const pluginTailwindcss = interopDefault(_pluginTailwindcss)
-// @ts-expect-error missing types
 export * as pluginPerfectionist from 'eslint-plugin-perfectionist'
+
 // @ts-expect-error missing types
 export * as pluginUnusedImports from 'eslint-plugin-unused-imports'
 

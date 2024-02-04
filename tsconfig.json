@@ -1,3 +1,7 @@
 {
-  "extends": "@minko-fe/tsconfig/tsconfig.lib.json"
+  "extends": "@minko-fe/tsconfig/tsconfig.lib.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+  },
+  "exclude": ["demo"],
 }
