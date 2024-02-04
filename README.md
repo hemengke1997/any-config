@@ -1,5 +1,7 @@
 # any-config
 
+> A collection of configuration files for eslint, prettier, commitlint, and tsconfig.
+
 ## Usage
 
 ### <img style="width: 14px; height: 14px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_eslint.svg" /> eslint
