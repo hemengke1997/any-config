@@ -1,3 +1,5 @@
+import { interopDefault } from './utils'
+
 /* eslint-disable import/first */
 
 import * as _pluginAntfu from 'eslint-plugin-antfu'
@@ -43,7 +45,7 @@ export const pluginPrettier = interopDefault(_pluginPrettier)
 
 // @ts-expect-error missing types
 import * as _configPrettier from 'eslint-config-prettier'
-import { interopDefault } from './utils'
+
 export const configPrettier = interopDefault(_configPrettier)
 
 // @ts-expect-error missing types
