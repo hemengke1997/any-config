@@ -14,9 +14,7 @@
     "tsconfig.lib.json",
     "tsconfig.project.json"
   ],
-  "scripts": {
-    "release": "bumpp package.json -c --all -p -t"
-  },
+  "scripts": {},
   "peerDependencies": {
     "typescript": ">=4.0.0"
   },

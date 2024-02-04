@@ -22,7 +22,7 @@
     "build": "tsup index.ts",
     "lint": "eslint .",
     "up": "pnpm up -i -L",
-    "release": "bumpp package.json -c --all -p -t"
+    "release": "pnpm build & pnpm publish --no-git-checks"
   },
   "peerDependencies": {
     "eslint": "^8.0.0"

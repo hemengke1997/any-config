@@ -14,9 +14,7 @@
     "index.js"
   ],
   "main": "./index.js",
-  "scripts": {
-    "release": "bumpp package.json -c --all -p -t"
-  },
+  "scripts": {},
   "dependencies": {
     "@commitlint/config-conventional": "^17.7.0"
   }
