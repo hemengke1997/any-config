@@ -1,5 +1,11 @@
 # @minko-fe/eslint-config
 
+## 2.1.1
+
+### Patch Changes
+
+- try to fix tailwind plugin peer dependency warning
+
 ## 2.1.0
 
 ### Minor Changes

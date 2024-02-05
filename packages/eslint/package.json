@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/eslint-config",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "eslint-config",
   "type": "module",
   "repository": {
@@ -49,9 +49,9 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "eslint-plugin-tailwindcss": "^3.14.1",
     "eslint-plugin-tailwindcss-3.11.0": "npm:eslint-plugin-tailwindcss@3.11.0",
     "eslint-plugin-tailwindcss-3.13.1": "npm:eslint-plugin-tailwindcss@3.13.1",
+    "eslint-plugin-tailwindcss-3.14.1": "npm:eslint-plugin-tailwindcss@3.14.1",
     "eslint-plugin-unicorn": "^50.0.1",
     "eslint-plugin-unused-imports": "^3.0.0",
     "eslint-plugin-vue": "^9.21.1",
