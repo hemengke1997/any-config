@@ -1,0 +1,48 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  typescript:
+    specifier: '>=4.0.0'
+    version: 5.3.3
+
+devDependencies:
+  '@tsconfig/next':
+    specifier: ^2.0.0
+    version: 2.0.1
+  '@tsconfig/node18':
+    specifier: ^18.2.2
+    version: 18.2.2
+  '@tsconfig/nuxt':
+    specifier: ^2.0.2
+    version: 2.0.2
+  '@tsconfig/vite-react':
+    specifier: ^2.0.1
+    version: 2.0.1
+
+packages:
+
+  /@tsconfig/next@2.0.1:
+    resolution: {integrity: sha512-8Za+6fv85ipdoO1u/Xknyurab8T92LbS0/KzRB0/GHvPh3xl0L4yf5+VmSxXNwjF1uS/xLSqf+BPhfaqasCpZw==}
+    dev: true
+
+  /@tsconfig/node18@18.2.2:
+    resolution: {integrity: sha512-d6McJeGsuoRlwWZmVIeE8CUA27lu6jLjvv1JzqmpsytOYYbVi1tHZEnwCNVOXnj4pyLvneZlFlpXUK+X9wBWyw==}
+    dev: true
+
+  /@tsconfig/nuxt@2.0.2:
+    resolution: {integrity: sha512-cOToSPs1EcXnbeKtLlapMhldobd44MIDmvhWIgYRk5mFzelpCp+e9N9goJiiEYaS9IOiDvtURFilTs4cu1rTaA==}
+    dev: true
+
+  /@tsconfig/vite-react@2.0.1:
+    resolution: {integrity: sha512-Sxt6vfbhgEzV2TH/02wLEiM7RJVYGx1mn2INlzovXS6/Fnm7G+CyOHZUD5c5fOlQvH54LNhdGgfI/9fuK6+kuQ==}
+    dev: true
+
+  /typescript@5.3.3:
+    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: false

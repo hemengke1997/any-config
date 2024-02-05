@@ -1,5 +1,11 @@
 # @minko-fe/eslint-config
 
+## 2.1.2
+
+### Patch Changes
+
+- peer deps deal
+
 ## 2.1.1
 
 ### Patch Changes
