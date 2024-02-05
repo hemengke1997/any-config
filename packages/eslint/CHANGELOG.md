@@ -1,5 +1,11 @@
 # @minko-fe/eslint-config
 
+## 2.1.0
+
+### Minor Changes
+
+- remove html related plugin
+
 ## 2.0.9
 
 ### Patch Changes

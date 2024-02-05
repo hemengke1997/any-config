@@ -7,7 +7,7 @@ import * as pluginTailwindcss3_11 from 'eslint-plugin-tailwindcss-3.11.0'
 import * as pluginTailwindcss3_13_1 from 'eslint-plugin-tailwindcss-3.13.1'
 import { getPackageInfoSync } from 'local-pkg'
 import semver from 'semver'
-import { GLOB_HTML, GLOB_JSX, GLOB_TSX, GLOB_VUE } from '../globs'
+import { GLOB_JSX, GLOB_TSX, GLOB_VUE } from '../globs'
 import { interopDefault } from '../utils'
 
 const EslintTailwindVersionMap = new Map([
@@ -33,7 +33,7 @@ function resolveRightTwVersion() {
 
 export const tailwindcss: FlatESLintConfigItem[] = [
   {
-    files: [GLOB_VUE, GLOB_JSX, GLOB_TSX, GLOB_HTML],
+    files: [GLOB_VUE, GLOB_JSX, GLOB_TSX],
     plugins: {
       tailwindcss: resolveRightTwVersion(),
     },

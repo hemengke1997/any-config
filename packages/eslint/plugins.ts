@@ -52,9 +52,6 @@ export const configPrettier = interopDefault(_configPrettier)
 export * as parserTypeScript from '@typescript-eslint/parser'
 
 // @ts-expect-error missing types
-export * as pluginHtml from 'eslint-plugin-html'
-
-// @ts-expect-error missing types
 export * as pluginImport from 'eslint-plugin-import'
 export * as pluginJsonc from 'eslint-plugin-jsonc'
 
