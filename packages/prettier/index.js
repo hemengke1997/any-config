@@ -1,10 +1,12 @@
+/** @type {import("prettier").Config} */
 module.exports = {
   $schema: 'https://json.schemastore.org/prettierrc',
   arrowParens: 'always',
   bracketSameLine: false,
   bracketSpacing: true,
+  embeddedLanguageFormatting: 'auto',
   endOfLine: 'auto',
-  htmlWhitespaceSensitivity: 'strict',
+  htmlWhitespaceSensitivity: 'css',
   jsxSingleQuote: true,
   overrides: [
     {
@@ -18,6 +20,8 @@ module.exports = {
         '**/.nuxt/**',
         '**/.next/**',
         '**/.vercel/**',
+        '**/.svelte-kit/**',
+        '**/.astro/**',
         '**/.changeset/**',
         '**/.idea/**',
         '**/.output/**',
@@ -38,6 +42,7 @@ module.exports = {
   printWidth: 120,
   quoteProps: 'consistent',
   semi: false,
+  singleAttributePerLine: false,
   singleQuote: true,
   tabWidth: 2,
   trailingComma: 'all',

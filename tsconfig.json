@@ -1,6 +1,6 @@
 {
   "extends": "@minko-fe/tsconfig/tsconfig.lib.json",
   "compilerOptions": {
-    "baseUrl": ".",
-  },
+    "baseUrl": "."
+  }
 }

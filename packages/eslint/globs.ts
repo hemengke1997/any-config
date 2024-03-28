@@ -7,6 +7,9 @@ export const GLOB_JSX = '**/*.?([cm])jsx'
 export const GLOB_TS = '**/*.?([cm])ts'
 export const GLOB_TSX = '**/*.?([cm])tsx'
 
+export const GLOB_ASTRO = '**/*.astro'
+export const GLOB_SVELTE = '**/*.svelte'
+
 export const GLOB_STYLE = '**/*.{c,le,sc}ss'
 export const GLOB_CSS = '**/*.css'
 export const GLOB_LESS = '**/*.less'
@@ -36,7 +39,12 @@ export const GLOB_TSCONFIG = /** @type {const} */ ['**/tsconfig.json', '**/tscon
 export const GLOB_PACKAGEJSON = /** @type {const} */ '**/package.json'
 export const GLOB_NODE_MODULES = /** @type {const} */ '**/node_modules'
 export const GLOB_DIST = /** @type {const} */ '**/dist'
-export const GLOB_LOCKFILE = /** @type {const} */ ['**/package-lock.json', '**/yarn.lock', '**/pnpm-lock.yaml']
+export const GLOB_LOCKFILE = /** @type {const} */ [
+  '**/package-lock.json',
+  '**/yarn.lock',
+  '**/pnpm-lock.yaml',
+  '**/bun.lockb',
+]
 
 export const GLOB_EXCLUDE = /** @type {const} */ [
   GLOB_NODE_MODULES,
@@ -59,6 +67,8 @@ export const GLOB_EXCLUDE = /** @type {const} */ [
   '**/.idea',
   '**/.output',
   '**/.vite-inspect',
+  '**/.astro',
+  '**/.svelte-kit',
 
   '**/CHANGELOG*.md',
   '**/*.min.*',

@@ -20,7 +20,11 @@ pnpm add eslint @minko-fe/eslint-config -D
 
 ##### eslint.config.js
 ```js
-import { defineConfig } from '@minko-fe/eslint-config'
+import { createRequire } from 'node:module'
+const require = createRequire(import.meta.url)
+
+const { defineConfig } = require('@minko-fe/eslint-config')
+
 
 export default defineConfig([
   // your config
@@ -30,6 +34,51 @@ export default defineConfig([
   // ...
 })
 ```
+
+#### astro
+```bash
+pnpm add prettier-plugin-astro -D
+```
+
+`.prettierrc.js`
+```js
+/** @type {import("prettier").Config} */
+export default {
+  overrides: [
+    {
+      files: '*.astro',
+      options: {
+        parser: 'astro',
+      },
+    },
+  ],
+  plugins: ['prettier-plugin-astro'],
+}
+
+```
+
+#### svelte
+
+```bash
+pnpm add prettier-plugin-svelte -D
+```
+
+`.prettierrc.js`
+```js
+/** @type {import("prettier").Config} */
+export default {
+  overrides: [
+    {
+      files: '*.svelte',
+      options: {
+        parser: 'svelte',
+      },
+    },
+  ],
+  plugins: ['prettier-plugin-svelte'],
+}
+```
+
 
 
 <img style="width: 14px; height: 14px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_light_prettier.svg" />

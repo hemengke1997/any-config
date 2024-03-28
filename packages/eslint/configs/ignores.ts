@@ -36,4 +36,5 @@ function gitignore(options: FlatGitignoreOptions = {}): FlatConfigItem {
   }
 }
 
-export const ignores: FlatESLintConfigItem[] = [{ ignores: [...GLOB_EXCLUDE, ...gitignore().ignores] }]
+export const ignores: FlatESLintConfigItem[] = [{ ignores: GLOB_EXCLUDE }]
+export const gitignores: FlatConfigItem[] = [{ ignores: gitignore().ignores }]

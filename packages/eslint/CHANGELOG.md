@@ -1,5 +1,16 @@
 # @minko-fe/eslint-config
 
+## 2.2.0
+
+### Minor Changes
+
+- feat: support astro/svelte/node
+
+### Patch Changes
+
+- Updated dependencies
+  - @minko-fe/prettier-config@2.1.0
+
 ## 2.1.2
 
 ### Patch Changes

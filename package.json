@@ -21,7 +21,7 @@
     "lint": "eslint . --fix",
     "up": "taze -r -w -I",
     "prepare": "simple-git-hooks",
-    "bump": "changeset",
+    "changeset": "changeset",
     "version": "changeset version && changeset tag"
   },
   "devDependencies": {
@@ -31,7 +31,9 @@
     "@minko-fe/eslint-config": "workspace:*",
     "@minko-fe/tsconfig": "workspace:*",
     "@types/node": "^20.8.3",
-    "eslint": "^8.55.0",
+    "eslint": "^8.56.0",
+    "prettier-plugin-astro": "^0.13.0",
+    "prettier-plugin-svelte": "^3.2.2",
     "simple-git-hooks": "^2.9.0",
     "sucrase": "^3.34.0",
     "taze": "^0.11.3",

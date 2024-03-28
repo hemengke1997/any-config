@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/prettier-config",
-  "version": "2.0.7",
+  "version": "2.1.0",
   "description": "prettier-config",
   "license": "MIT",
   "repository": {
@@ -9,7 +9,9 @@
   },
   "author": "hemengke1997 <https://github.com/hemengke1997>",
   "files": [
-    "index.js"
+    "astro.js",
+    "index.js",
+    "svelte.js"
   ],
   "main": "./index.js",
   "scripts": {},
