@@ -2,11 +2,10 @@
 
 > A collection of configuration files for eslint, prettier, commitlint, and tsconfig.
 
-## Usage
 
-### <img style="width: 14px; height: 14px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_eslint.svg" /> eslint
+## <img style="width: 20px; height: 20px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_eslint.svg" /> eslint
 
-#### install
+### install
 ```bash
 pnpm add eslint @minko-fe/eslint-config -D
 ```
@@ -18,7 +17,7 @@ pnpm add eslint @minko-fe/eslint-config -D
 }
 ```
 
-##### eslint.config.js
+#### eslint.config.js
 ```js
 import { createRequire } from 'node:module'
 const require = createRequire(import.meta.url)
@@ -35,65 +34,63 @@ export default defineConfig([
 })
 ```
 
-#### astro
+### <img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/673d2e0299287a61f16033025fdcda9b097ea19e/icons/file_type_astro.svg" style="width: 14px;height:14px;" /> astro
 ```bash
 pnpm add prettier-plugin-astro -D
 ```
 
-`.prettierrc.js`
-```js
-/** @type {import("prettier").Config} */
-export default {
-  overrides: [
+`.prettierrc`
+```json
+{
+  "overrides": [
     {
-      files: '*.astro',
-      options: {
-        parser: 'astro',
-      },
-    },
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
   ],
-  plugins: ['prettier-plugin-astro'],
+  "plugins": ["prettier-plugin-astro"]
 }
-
 ```
 
-#### svelte
+### <img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/673d2e0299287a61f16033025fdcda9b097ea19e/icons/file_type_svelte.svg" style="width: 14px;height:14px;" /> svelte
 
 ```bash
 pnpm add prettier-plugin-svelte -D
 ```
 
-`.prettierrc.js`
-```js
-/** @type {import("prettier").Config} */
-export default {
-  overrides: [
+`.prettierrc`
+
+```json
+{
+  "overrides": [
     {
-      files: '*.svelte',
-      options: {
-        parser: 'svelte',
-      },
-    },
+      "files": "*.svelte",
+      "options": {
+        "parser": "svelte"
+      }
+    }
   ],
-  plugins: ['prettier-plugin-svelte'],
+  "plugins": ["prettier-plugin-svelte"]
 }
 ```
 
 
 
-<img style="width: 14px; height: 14px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_light_prettier.svg" />
+## <img style="width: 20px; height: 20px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_light_prettier.svg" /> prettier
 
-###  prettier
+> eslint 中已经集成了prettier，除非不使用eslint，否则不需要单独安装
 
-#### install
+### install
 
 ```bash
 pnpm add prettier @minko-fe/prettier-config -D
 ```
 
-#### prettierrc
+### prettierrc
 
-##### .prettierrc.js
+#### .prettierrc.js
 
 ```js
 module.exports = {
@@ -101,43 +98,43 @@ module.exports = {
 }
 ```
 
-##### .prettierrc.json
+#### .prettierrc.json
 ```json
 "@minko-fe/prettier-config"
 ```
 
-### <img style="width: 14px; height: 14px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_commitlint.svg" /> commitlint
+## <img style="width: 20px; height: 20px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_commitlint.svg" /> commitlint
 
-#### install
+### install
 
 ```bash
 pnpm add @minko-fe/commitlint-config -D
 ```
-#### commitlint.config.js
+### commitlint.config.js
 
 ```js
 module.exports = {
   extends: ['@minko-fe'],
 }
 ```
-### <img style="width: 14px; height: 14px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_tsconfig.svg" /> tsconfig
+### <img style="width: 20px; height: 20px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_tsconfig.svg" /> tsconfig
 
-#### install
+### install
 
 ```bash
 pnpm add @minko-fe/tsconfig
 ```
 
-#### tsconfig.json
+### tsconfig.json
 
-##### lib
+#### lib
 ```json
 {
   "extends": "@minko-fe/tsconfig/tsconfig.lib.json"
 }
 ```
 
-##### app
+#### app
 ```json
 {
   "extends": "@minko-fe/tsconfig/tsconfig.app.json"
