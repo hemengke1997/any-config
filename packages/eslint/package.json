@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/eslint-config",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "eslint-config",
   "type": "module",
   "repository": {
@@ -77,6 +77,7 @@
     "parse-gitignore": "^2.0.0",
     "prettier": "^3.2.4",
     "semver": "^7.5.4",
+    "svelte": "^4.2.7",
     "svelte-eslint-parser": "^0.33.1",
     "typescript": "^5.3.3",
     "yaml-eslint-parser": "^1.2.2"
@@ -85,7 +86,6 @@
     "@types/semver": "^7.5.6",
     "eslint": "^8.56.0",
     "sucrase": "^3.35.0",
-    "svelte": "^4.2.7",
     "tailwindcss": "3.3.2"
   },
   "pnpm": {
