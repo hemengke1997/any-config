@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/prettier-config",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "prettier-config",
   "license": "MIT",
   "repository": {
@@ -9,13 +9,16 @@
   },
   "author": "hemengke1997 <https://github.com/hemengke1997>",
   "files": [
-    "astro.js",
-    "index.js",
-    "svelte.js"
+    "index.js"
   ],
   "main": "./index.js",
   "scripts": {},
   "peerDependencies": {
     "prettier": ">=2.0.0"
+  },
+  "dependencies": {
+    "prettier-plugin-astro": "^0.13.0",
+    "prettier-plugin-svelte": "^3.2.2",
+    "prettier-plugin-tailwindcss": "^0.5.13"
   }
 }

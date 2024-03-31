@@ -34,53 +34,8 @@ export default defineConfig([
 })
 ```
 
-### <img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/673d2e0299287a61f16033025fdcda9b097ea19e/icons/file_type_astro.svg" style="width: 14px;height:14px;" /> astro
-```bash
-pnpm add prettier-plugin-astro -D
-```
-
-`.prettierrc`
-```json
-{
-  "overrides": [
-    {
-      "files": "*.astro",
-      "options": {
-        "parser": "astro"
-      }
-    }
-  ],
-  "plugins": ["prettier-plugin-astro"]
-}
-```
-
-### <img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/673d2e0299287a61f16033025fdcda9b097ea19e/icons/file_type_svelte.svg" style="width: 14px;height:14px;" /> svelte
-
-```bash
-pnpm add prettier-plugin-svelte -D
-```
-
-`.prettierrc`
-
-```json
-{
-  "overrides": [
-    {
-      "files": "*.svelte",
-      "options": {
-        "parser": "svelte"
-      }
-    }
-  ],
-  "plugins": ["prettier-plugin-svelte"]
-}
-```
-
-
-
 ## <img style="width: 20px; height: 20px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_light_prettier.svg" /> prettier
 
-> eslint 中已经集成了prettier，除非不使用eslint，否则不需要单独安装
 
 ### install
 
@@ -88,20 +43,27 @@ pnpm add prettier-plugin-svelte -D
 pnpm add prettier @minko-fe/prettier-config -D
 ```
 
-### prettierrc
+如果你的项目中使用到了 `svelte` 或 `astro`，请安装 `@minko-fe/prettier-config`
+
+
+### prettier配置 (<img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/673d2e0299287a61f16033025fdcda9b097ea19e/icons/file_type_svelte.svg" style="width: 14px;height:14px;" /> <img src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/673d2e0299287a61f16033025fdcda9b097ea19e/icons/file_type_astro.svg" style="width: 14px;height:14px;" />)
+
+#### .prettierrc
+```json
+"@minko-fe/prettier-config"
+```
 
 #### .prettierrc.js
+
+如果你需要重写或新增一些配置，请使用此方式
 
 ```js
 module.exports = {
   ...require('@minko-fe/prettier-config'),
+  // 在这里加配置
 }
 ```
 
-#### .prettierrc.json
-```json
-"@minko-fe/prettier-config"
-```
 
 ## <img style="width: 20px; height: 20px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_commitlint.svg" /> commitlint
 

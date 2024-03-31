@@ -38,6 +38,23 @@ module.exports = {
         requirePragma: true,
       },
     },
+    {
+      files: '*.astro',
+      options: {
+        parser: 'astro',
+      },
+    },
+    {
+      files: '*.svelte',
+      options: {
+        parser: 'svelte',
+      },
+    },
+  ],
+  plugins: [
+    require.resolve('prettier-plugin-astro'),
+    require.resolve('prettier-plugin-svelte'),
+    require.resolve('prettier-plugin-tailwindcss'),
   ],
   printWidth: 120,
   quoteProps: 'consistent',
@@ -45,6 +62,7 @@ module.exports = {
   singleAttributePerLine: false,
   singleQuote: true,
   tabWidth: 2,
+  tailwindFunctions: ['tw', 'clsx', 'className', 'tv', 'class'],
   trailingComma: 'all',
   vueIndentScriptAndStyle: true,
 }

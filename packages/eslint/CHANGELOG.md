@@ -1,5 +1,13 @@
 # @minko-fe/eslint-config
 
+## 2.2.2
+
+### Patch Changes
+
+- remove astro/svelte prettier, disable autofix `prefer-const`
+- Updated dependencies
+  - @minko-fe/prettier-config@2.2.0
+
 ## 2.2.1
 
 ### Patch Changes

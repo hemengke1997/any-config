@@ -21,6 +21,7 @@ export const typescript: FlatESLintConfigItem[] = [
 
       '@typescript-eslint/ban-ts-comment': 'off',
       '@typescript-eslint/ban-ts-ignore': 'off',
+
       '@typescript-eslint/ban-types': 'off',
       '@typescript-eslint/brace-style': 'off',
       '@typescript-eslint/comma-dangle': 'off',
@@ -48,6 +49,7 @@ export const typescript: FlatESLintConfigItem[] = [
       ],
       '@typescript-eslint/no-dynamic-delete': 'off',
       '@typescript-eslint/no-empty-function': 'off',
+
       '@typescript-eslint/no-empty-interface': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-extra-semi': 'off',
@@ -67,6 +69,7 @@ export const typescript: FlatESLintConfigItem[] = [
       '@typescript-eslint/quotes': 'off',
       '@typescript-eslint/semi': 'off',
       '@typescript-eslint/triple-slash-reference': 'off',
+      'prefer-const': 'off',
     },
   },
   {

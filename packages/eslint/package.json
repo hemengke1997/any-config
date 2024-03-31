@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/eslint-config",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "eslint-config",
   "type": "module",
   "repository": {
@@ -27,8 +27,6 @@
   },
   "peerDependencies": {
     "eslint": "^8.56.0",
-    "prettier-plugin-astro": "^0.13.0",
-    "prettier-plugin-svelte": "^3.2.2",
     "tailwindcss": "^3.2.2"
   },
   "peerDependenciesMeta": {

@@ -1,10 +1,9 @@
 import { defineConfig } from 'tsup'
 
-export default defineConfig({
-  clean: true,
-  dts: true,
+export default defineConfig((option) => ({
+  dts: !option.watch,
   format: ['esm', 'cjs'],
   splitting: true,
   target: 'node16',
   treeshake: true,
-})
+}))
