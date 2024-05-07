@@ -1,17 +1,17 @@
 import { type FlatESLintConfigItem } from 'eslint-define-config'
-// @ts-expect-error missing types
-import * as pluginTailwindcss from 'eslint-plugin-tailwindcss'
-// @ts-expect-error missing types
-import * as pluginTailwindcss3_11 from 'eslint-plugin-tailwindcss-3.11.0'
-// @ts-expect-error missing types
-import * as pluginTailwindcss3_13_1 from 'eslint-plugin-tailwindcss-3.13.1'
 import { getPackageInfoSync } from 'local-pkg'
 import semver from 'semver'
 import { GLOB_JSX, GLOB_TSX, GLOB_VUE } from '../globs'
 import { interopDefault } from '../utils'
 import logger from '../utils/logger'
 
-export const tailwindcss = (): FlatESLintConfigItem[] => {
+export const tailwindcss = async (): Promise<FlatESLintConfigItem[]> => {
+  // @ts-expect-error missing types
+  const pluginTailwindcss = await import('eslint-plugin-tailwindcss')
+  // @ts-expect-error missing types
+  const pluginTailwindcss3_11 = await import('eslint-plugin-tailwindcss-3.11.0')
+  // @ts-expect-error missing types
+  const pluginTailwindcss3_13_1 = await import('eslint-plugin-tailwindcss-3.13.1')
   const EslintTailwindVersionMap = new Map([
     ['^3.4.0', pluginTailwindcss],
     ['^3.3.2', pluginTailwindcss3_13_1],

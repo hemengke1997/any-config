@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/eslint-config",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "eslint-config",
   "type": "module",
   "repository": {
@@ -16,7 +16,8 @@
   "types": "./dist/index.d.ts",
   "exports": {
     "require": "./dist/index.cjs",
-    "import": "./dist/index.js"
+    "import": "./dist/index.js",
+    "default": "./dist/index.cjs"
   },
   "scripts": {
     "dev": "tsup index.ts --watch",

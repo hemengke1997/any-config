@@ -23,6 +23,7 @@ import {
   yml,
 } from './configs'
 import { hasAstro, hasReact, hasSvelte, hasTailwindcss, hasTypeScript, hasVue } from './env'
+import logger from './utils/logger'
 
 export const presetJavaScript = [...javascript, ...comments, ...imports, ..._exports, ...unicorn, ...node, ...ignores]
 
@@ -76,7 +77,8 @@ export async function defineConfig(
     configs.push(...presetTypescript)
   }
   if (enableTailwindcss) {
-    configs.push(...tailwindcss())
+    logger.debug('Tailwindcss enabled')
+    configs.push(...(await tailwindcss()))
   }
   if (enableSortObjects) {
     configs.push(...sortObjects)
@@ -97,5 +99,6 @@ export async function defineConfig(
   if (Object.keys(config).length > 0) {
     configs.push(...(Array.isArray(config) ? config : [config]))
   }
+  logger.debug('configs:', configs)
   return configs
 }

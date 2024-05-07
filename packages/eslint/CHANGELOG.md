@@ -1,5 +1,11 @@
 # @minko-fe/eslint-config
 
+## 3.0.1
+
+### Patch Changes
+
+- tw version bug
+
 ## 3.0.0
 
 ### Major Changes
