@@ -1,4 +1,3 @@
-/* eslint-disable perfectionist/sort-exports */
 /* eslint-disable import/first  */
 // @ts-nocheck
 
@@ -36,7 +35,7 @@ export const pluginDisableAutofix = interopDefault(_pluginDisableAutofix)
 
 export * as parserTypeScript from '@typescript-eslint/parser'
 
-export * as pluginImport from 'eslint-plugin-import'
+export * as pluginImport from 'eslint-plugin-import-x'
 export * as pluginJsonc from 'eslint-plugin-jsonc'
 
 export * as pluginPerfectionist from 'eslint-plugin-perfectionist'

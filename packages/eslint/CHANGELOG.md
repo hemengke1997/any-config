@@ -1,5 +1,11 @@
 # @minko-fe/eslint-config
 
+## 3.0.2
+
+### Patch Changes
+
+- fix: markdown/import error
+
 ## 3.0.1
 
 ### Patch Changes

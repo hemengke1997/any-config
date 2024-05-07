@@ -3,23 +3,11 @@ import { GLOB_MARKDOWN, GLOB_SRC, GLOB_VUE } from '../globs'
 import { pluginDisableAutofix, pluginMarkdown } from '../plugins'
 
 export const markdown: FlatESLintConfigItem[] = [
+  ...pluginMarkdown.configs.recommended,
   {
-    files: [GLOB_MARKDOWN],
+    files: [`${GLOB_MARKDOWN}/${GLOB_SRC}`, `${GLOB_MARKDOWN}/${GLOB_VUE}`],
     plugins: {
       'disable-autofix': pluginDisableAutofix,
-      'markdown': pluginMarkdown,
-    },
-    processor: 'markdown/markdown',
-  },
-  {
-    ...pluginMarkdown.configs.recommended,
-    files: [`${GLOB_MARKDOWN}/${GLOB_SRC}`, `${GLOB_MARKDOWN}/${GLOB_VUE}`],
-    languageOptions: {
-      parserOptions: {
-        ecmaFeatures: {
-          impliedStrict: true,
-        },
-      },
     },
     rules: {
       '@typescript-eslint/comma-dangle': 'off',

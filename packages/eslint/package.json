@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/eslint-config",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "eslint-config",
   "type": "module",
   "repository": {
@@ -53,9 +53,9 @@
     "eslint-plugin-astro": "^0.33.1",
     "eslint-plugin-disable-autofix": "^4.3.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-import-x": "^0.5.0",
     "eslint-plugin-jsonc": "^2.15.1",
-    "eslint-plugin-markdown": "^4.0.1",
+    "eslint-plugin-markdown": "^5.0.0",
     "eslint-plugin-n": "^17.2.1",
     "eslint-plugin-perfectionist": "^2.9.0",
     "eslint-plugin-prettier": "^5.1.3",
