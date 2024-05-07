@@ -76,7 +76,7 @@ export async function defineConfig(
     configs.push(...presetTypescript)
   }
   if (enableTailwindcss) {
-    configs.push(...tailwindcss)
+    configs.push(...tailwindcss())
   }
   if (enableSortObjects) {
     configs.push(...sortObjects)

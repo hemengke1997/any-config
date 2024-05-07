@@ -12,6 +12,7 @@ export const markdown: FlatESLintConfigItem[] = [
     processor: 'markdown/markdown',
   },
   {
+    ...pluginMarkdown.configs.recommended,
     files: [`${GLOB_MARKDOWN}/${GLOB_SRC}`, `${GLOB_MARKDOWN}/${GLOB_VUE}`],
     languageOptions: {
       parserOptions: {
@@ -21,8 +22,6 @@ export const markdown: FlatESLintConfigItem[] = [
       },
     },
     rules: {
-      ...pluginMarkdown.configs.recommended.overrides[1].rules,
-
       '@typescript-eslint/comma-dangle': 'off',
       '@typescript-eslint/consistent-type-imports': 'off',
       '@typescript-eslint/no-extraneous-class': 'off',

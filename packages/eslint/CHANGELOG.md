@@ -1,5 +1,11 @@
 # @minko-fe/eslint-config
 
+## 3.0.0
+
+### Major Changes
+
+- feat: support eslint@9
+
 ## 2.2.2
 
 ### Patch Changes

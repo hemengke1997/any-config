@@ -8,7 +8,7 @@ export const node: FlatESLintConfigItem[] = [
     },
     rules: {
       'node/handle-callback-err': ['error', '^(err|error)$'],
-      'node/no-deprecated-api': 'error',
+      'node/no-deprecated-api': 'off',
       'node/no-exports-assign': 'error',
       'node/no-new-require': 'error',
       'node/no-path-concat': 'error',

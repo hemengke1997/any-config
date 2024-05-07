@@ -2,7 +2,7 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "moduleResolution": "Node",
+    "moduleResolution": "NodeNext",
     "declaration": false,
     "sourceMap": false,
     "noEmit": true
