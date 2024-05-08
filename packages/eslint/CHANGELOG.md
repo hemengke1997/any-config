@@ -1,5 +1,11 @@
 # @minko-fe/eslint-config
 
+## 3.1.5-beta.0
+
+### Patch Changes
+
+- wip
+
 ## 3.1.4
 
 ### Patch Changes
