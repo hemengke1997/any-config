@@ -1,7 +1,7 @@
 import type { FlatESLintConfigItem } from 'eslint-define-config'
 import globals from 'globals'
-// import { isInEditor } from '../env'
-import { pluginUnusedImports } from '../plugins'
+import { isInEditor } from '../env'
+import { pluginDisableAutofix, pluginUnusedImports } from '../plugins'
 
 export const javascript: FlatESLintConfigItem[] = [
   {
@@ -21,7 +21,7 @@ export const javascript: FlatESLintConfigItem[] = [
     },
     plugins: {
       // 'no-autofix': pluginNoAutofix,
-      // 'disable-autofix': pluginDisableAutofix,
+      'disable-autofix': pluginDisableAutofix,
       'unused-imports': pluginUnusedImports,
     },
     rules: {
@@ -29,8 +29,8 @@ export const javascript: FlatESLintConfigItem[] = [
       'block-scoped-var': 'error',
       'consistent-return': 'off',
       'constructor-super': 'error',
-      // 'disable-autofix/prefer-const': ['warn', { destructuring: 'all', ignoreReadBeforeAssign: true }],
-      // 'disable-autofix/unused-imports/no-unused-imports': isInEditor ? 'warn' : 'error',
+      'disable-autofix/prefer-const': ['warn', { destructuring: 'all', ignoreReadBeforeAssign: true }],
+      'disable-autofix/unused-imports/no-unused-imports': isInEditor ? 'warn' : 'error',
       'dot-notation': 'off',
       'eqeqeq': ['error', 'smart'],
       'for-direction': 'error',

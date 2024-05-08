@@ -1,5 +1,13 @@
 # @minko-fe/eslint-config
 
+## 3.1.5
+
+### Patch Changes
+
+- fixed pkg version which not support eslint9
+- Updated dependencies
+  - @minko-fe/prettier-config@2.2.1
+
 ## 3.1.5-beta.0
 
 ### Patch Changes

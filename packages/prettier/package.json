@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/prettier-config",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "prettier-config",
   "license": "MIT",
   "repository": {
@@ -14,9 +14,23 @@
   "main": "./index.js",
   "scripts": {},
   "peerDependencies": {
-    "prettier": ">=2.0.0"
+    "prettier": ">=2.0.0",
+    "prettier-plugin-astro": ">=0.13.0",
+    "prettier-plugin-svelte": ">=3.2.2",
+    "prettier-plugin-tailwindcss": ">=0.5.13"
   },
-  "dependencies": {
+  "peerDependenciesMeta": {
+    "prettier-plugin-astro": {
+      "optional": true
+    },
+    "prettier-plugin-svelte": {
+      "optional": true
+    },
+    "prettier-plugin-tailwindcss": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
     "prettier-plugin-astro": "^0.13.0",
     "prettier-plugin-svelte": "^3.2.2",
     "prettier-plugin-tailwindcss": "^0.5.13"

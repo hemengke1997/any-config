@@ -52,9 +52,9 @@ module.exports = {
     },
   ],
   plugins: [
-    require.resolve('prettier-plugin-astro'),
-    require.resolve('prettier-plugin-svelte'),
-    require.resolve('prettier-plugin-tailwindcss'),
+    resolvePeerDependency('prettier-plugin-astro'),
+    resolvePeerDependency('prettier-plugin-svelte'),
+    resolvePeerDependency('prettier-plugin-tailwindcss'),
   ],
   printWidth: 120,
   quoteProps: 'consistent',
@@ -65,4 +65,12 @@ module.exports = {
   tailwindFunctions: ['tw', 'clsx', 'className', 'tv', 'class'],
   trailingComma: 'all',
   vueIndentScriptAndStyle: true,
+}
+
+function resolvePeerDependency(name) {
+  try {
+    return require.resolve(name)
+  } catch (error) {
+    return ''
+  }
 }
