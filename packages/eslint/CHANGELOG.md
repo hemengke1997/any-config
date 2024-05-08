@@ -1,5 +1,11 @@
 # @minko-fe/eslint-config
 
+## 3.1.1
+
+### Patch Changes
+
+- fix: type
+
 ## 3.1.0
 
 ### Minor Changes
