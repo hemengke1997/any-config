@@ -43,27 +43,27 @@ export const sortKeys: FlatESLintConfigItem[] = [
 ]
 
 export const _exports: FlatESLintConfigItem[] = [
-  {
-    plugins: {
-      perfectionist: pluginPerfectionist,
-    },
-    rules: {
-      'perfectionist/sort-exports': [
-        'error',
-        {
-          order: 'asc',
-          type: 'natural',
-        },
-      ],
-      'perfectionist/sort-named-exports': [
-        'error',
-        {
-          order: 'asc',
-          type: 'natural',
-        },
-      ],
-    },
-  },
+  // {
+  //   plugins: {
+  //     perfectionist: pluginPerfectionist,
+  //   },
+  //   rules: {
+  //     'perfectionist/sort-exports': [
+  //       'error',
+  //       {
+  //         order: 'asc',
+  //         type: 'natural',
+  //       },
+  //     ],
+  //     'perfectionist/sort-named-exports': [
+  //       'error',
+  //       {
+  //         order: 'asc',
+  //         type: 'natural',
+  //       },
+  //     ],
+  //   },
+  // },
 ]
 
 export const sortObjects: FlatESLintConfigItem[] = [

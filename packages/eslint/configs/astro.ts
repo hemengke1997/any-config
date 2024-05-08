@@ -1,7 +1,7 @@
 import type { FlatESLintConfigItem, Rules } from 'eslint-define-config'
 import globals from 'globals'
 import { GLOB_ASTRO } from '../globs'
-import { parserAstro, parserTypeScript, pluginAstro } from '../plugins'
+import { parserAstro, pluginAstro } from '../plugins'
 
 export function resolveAstro(ts?: boolean): FlatESLintConfigItem[] {
   return [
@@ -18,7 +18,7 @@ export function resolveAstro(ts?: boolean): FlatESLintConfigItem[] {
         parser: parserAstro,
         parserOptions: {
           extraFileExtensions: ['.astro'],
-          parser: parserTypeScript,
+          parser: '@typescript-eslint/parser',
         },
         // The script of Astro components uses ESM.
         sourceType: 'module',
@@ -56,7 +56,7 @@ export function resolveAstro(ts?: boolean): FlatESLintConfigItem[] {
         globals: {
           ...globals.browser,
         },
-        parser: parserTypeScript,
+        parser: '@typescript-eslint/parser',
         parserOptions: {
           project: null,
         },

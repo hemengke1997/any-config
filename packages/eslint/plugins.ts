@@ -27,6 +27,11 @@ export const pluginReact = interopDefault(_pluginReact)
 import * as _pluginReactHooks from 'eslint-plugin-react-hooks'
 export const pluginReactHooks = interopDefault(_pluginReactHooks)
 
+// TODO: eslint 9 support
+import * as _pluginDisableAutofix from 'eslint-plugin-disable-autofix'
+export const pluginDisableAutofix = interopDefault(_pluginDisableAutofix)
+
+// TODO: eslint 9
 import * as _pluginNoAutofix from 'eslint-plugin-no-autofix'
 export const pluginNoAutofix = interopDefault(_pluginNoAutofix)
 
@@ -58,9 +63,6 @@ export { tseslint }
 
 import * as _pluginAstro from 'eslint-plugin-astro'
 export const pluginAstro = interopDefault(_pluginAstro)
-
-import * as _parserTypeScript from '@typescript-eslint/parser'
-export const parserTypeScript = interopDefault(_parserTypeScript)
 
 import * as _parserAstro from 'astro-eslint-parser'
 export const parserAstro = interopDefault(_parserAstro)

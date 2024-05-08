@@ -1,5 +1,11 @@
 # @minko-fe/eslint-config
 
+## 3.1.4
+
+### Patch Changes
+
+- fallback to eslint@8 as some package do not support eslint9 currently
+
 ## 3.1.3
 
 ### Patch Changes

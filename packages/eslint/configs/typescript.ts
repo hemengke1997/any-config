@@ -1,7 +1,6 @@
 import type { FlatESLintConfigItem } from 'eslint-define-config'
 import { GLOB_JS, GLOB_TS, GLOB_TSX } from '../globs'
 import { tseslint } from '../plugins'
-import { restrictedSyntaxJs } from './javascript'
 
 export const typescriptCore = tseslint.config({
   extends: [...tseslint.configs.recommended],
@@ -52,7 +51,7 @@ export const typescriptCore = tseslint.config({
     '@typescript-eslint/no-extra-semi': 'off',
     '@typescript-eslint/no-extraneous-class': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
-    '@typescript-eslint/no-import-type-side-effects': 'error',
+    '@typescript-eslint/no-import-type-side-effects': 'off',
     '@typescript-eslint/no-invalid-void-type': 'off',
     '@typescript-eslint/no-namespace': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
@@ -67,7 +66,7 @@ export const typescriptCore = tseslint.config({
     '@typescript-eslint/quotes': 'off',
     '@typescript-eslint/semi': 'off',
     '@typescript-eslint/triple-slash-reference': 'off',
-    'no-restricted-syntax': ['error', ...restrictedSyntaxJs, 'TSEnumDeclaration[const=true]'],
+    'no-restricted-syntax': 'off',
     'prefer-const': 'off',
   },
 }) as FlatESLintConfigItem[]

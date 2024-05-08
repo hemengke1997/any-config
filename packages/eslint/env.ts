@@ -10,7 +10,7 @@ export const hasTypeScript = isPackageExists('typescript')
 
 export const hasVue = ['vue', 'nuxt', 'vitepress', '@slidev/cli'].some((t) => isPackageExists(t))
 
-export const hasSvelte = ['svelte', 'svelte-kit'].some((t) => isPackageExists(t))
+export const hasSvelte = ['svelte', 'svelte-kit', '@sveltejs/kit'].some((t) => isPackageExists(t))
 
 export const hasReact = ['react', 'next'].some((t) => isPackageExists(t))
 

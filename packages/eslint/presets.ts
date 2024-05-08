@@ -57,7 +57,7 @@ export async function defineConfig(
     gitignore: boolean
   }> = {},
 ): Promise<FlatESLintConfigItem[]> {
-  const configs = []
+  const configs: FlatESLintConfigItem[] = []
 
   configs.push(...presetBasic)
   if (enableGitignore) {
