@@ -1,5 +1,11 @@
 # @minko-fe/eslint-config
 
+## 3.1.2
+
+### Patch Changes
+
+- replace `eslint-plugin-disable-autofix` with `eslint-plugin-no-autofix`
+
 ## 3.1.1
 
 ### Patch Changes

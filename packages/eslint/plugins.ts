@@ -27,8 +27,8 @@ export const pluginReact = interopDefault(_pluginReact)
 import * as _pluginReactHooks from 'eslint-plugin-react-hooks'
 export const pluginReactHooks = interopDefault(_pluginReactHooks)
 
-import * as _pluginDisableAutofix from 'eslint-plugin-disable-autofix'
-export const pluginDisableAutofix = interopDefault(_pluginDisableAutofix)
+import * as _pluginNoAutofix from 'eslint-plugin-no-autofix'
+export const pluginNoAutofix = interopDefault(_pluginNoAutofix)
 
 export * as pluginImport from 'eslint-plugin-import-x'
 export * as pluginJsonc from 'eslint-plugin-jsonc'

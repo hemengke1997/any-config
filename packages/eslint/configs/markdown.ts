@@ -1,13 +1,13 @@
 import type { FlatESLintConfigItem } from 'eslint-define-config'
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_VUE } from '../globs'
-import { pluginDisableAutofix, pluginMarkdown } from '../plugins'
+import { pluginMarkdown, pluginNoAutofix } from '../plugins'
 
 export const markdown: FlatESLintConfigItem[] = [
   ...pluginMarkdown.configs.recommended,
   {
     files: [`${GLOB_MARKDOWN}/${GLOB_SRC}`, `${GLOB_MARKDOWN}/${GLOB_VUE}`],
     plugins: {
-      'disable-autofix': pluginDisableAutofix,
+      'no-autofix': pluginNoAutofix,
     },
     rules: {
       '@typescript-eslint/comma-dangle': 'off',
@@ -20,8 +20,8 @@ export const markdown: FlatESLintConfigItem[] = [
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-use-before-define': 'off',
       '@typescript-eslint/no-var-requires': 'off',
-      'disable-autofix/unused-imports/no-unused-imports': 'off',
       'no-alert': 'off',
+      'no-autofix/unused-imports/no-unused-imports': 'off',
       'no-console': 'off',
       'no-restricted-imports': 'off',
       'no-undef': 'off',

@@ -1,7 +1,7 @@
 import type { FlatESLintConfigItem } from 'eslint-define-config'
 import globals from 'globals'
 import { isInEditor } from '../env'
-import { pluginDisableAutofix, pluginUnusedImports } from '../plugins'
+import { pluginNoAutofix, pluginUnusedImports } from '../plugins'
 
 export const restrictedSyntaxJs = ['ForInStatement', 'LabeledStatement', 'WithStatement']
 
@@ -22,7 +22,7 @@ export const javascript: FlatESLintConfigItem[] = [
       sourceType: 'module',
     },
     plugins: {
-      'disable-autofix': pluginDisableAutofix,
+      'no-autofix': pluginNoAutofix,
       'unused-imports': pluginUnusedImports,
     },
     rules: {
@@ -30,14 +30,14 @@ export const javascript: FlatESLintConfigItem[] = [
       'block-scoped-var': 'error',
       'consistent-return': 'off',
       'constructor-super': 'error',
-      'disable-autofix/prefer-const': ['warn', { destructuring: 'all', ignoreReadBeforeAssign: true }],
-      'disable-autofix/unused-imports/no-unused-imports': isInEditor ? 'warn' : 'error',
       'dot-notation': 'off',
       'eqeqeq': ['error', 'smart'],
       'for-direction': 'error',
       'getter-return': 'error',
       'no-alert': 'warn',
       'no-async-promise-executor': 'off',
+      'no-autofix/prefer-const': ['warn', { destructuring: 'all', ignoreReadBeforeAssign: true }],
+      'no-autofix/unused-imports/no-unused-imports': isInEditor ? 'warn' : 'error',
       'no-case-declarations': 'error',
       'no-class-assign': 'error',
       'no-compare-neg-zero': 'error',
