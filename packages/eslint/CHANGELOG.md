@@ -1,5 +1,11 @@
 # @minko-fe/eslint-config
 
+## 3.1.3
+
+### Patch Changes
+
+- cjs support
+
 ## 3.1.2
 
 ### Patch Changes
