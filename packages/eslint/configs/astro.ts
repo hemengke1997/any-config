@@ -1,9 +1,7 @@
-import * as parser from 'astro-eslint-parser'
-import { type FlatESLintConfigItem, type Rules } from 'eslint-define-config'
-import eslintPluginAstro from 'eslint-plugin-astro'
+import type { FlatESLintConfigItem, Rules } from 'eslint-define-config'
 import globals from 'globals'
 import { GLOB_ASTRO } from '../globs'
-import { parserTypeScript } from '../plugins'
+import { parserAstro, parserTypeScript, pluginAstro } from '../plugins'
 
 export function resolveAstro(ts?: boolean): FlatESLintConfigItem[] {
   return [
@@ -17,7 +15,7 @@ export function resolveAstro(ts?: boolean): FlatESLintConfigItem[] {
           // JSX Fragment
           Fragment: false,
         },
-        parser,
+        parser: parserAstro,
         parserOptions: {
           extraFileExtensions: ['.astro'],
           parser: parserTypeScript,
@@ -26,13 +24,49 @@ export function resolveAstro(ts?: boolean): FlatESLintConfigItem[] {
         sourceType: 'module',
       },
       plugins: {
-        astro: eslintPluginAstro,
+        astro: pluginAstro,
       },
       processor: ts ? 'astro/client-side-ts' : 'astro/astro',
       rules: {
-        ...eslintPluginAstro.configs.recommended.rules,
+        ...pluginAstro.configs.recommended.rules,
         'astro/no-set-text-directive': ['error'],
       } as Rules,
+    },
+    {
+      // Define the configuration for `<script>` tag.
+      // Script in `<script>` is assigned a virtual file name with the `.js` extension.
+      files: ['**/*.astro/*.js', '*.astro/*.js'],
+      languageOptions: {
+        globals: {
+          ...globals.browser,
+        },
+        sourceType: 'module',
+      },
+      rules: {
+        // If you are using "prettier/prettier" rule,
+        // you don't need to format inside <script> as it will be formatted as a `.astro` file.
+        'prettier/prettier': 'off',
+      },
+    },
+    {
+      // Define the configuration for `<script>` tag when using `client-side-ts` processor.
+      // Script in `<script>` is assigned a virtual file name with the `.ts` extension.
+      files: ['**/*.astro/*.ts', '*.astro/*.ts'],
+      languageOptions: {
+        globals: {
+          ...globals.browser,
+        },
+        parser: parserTypeScript,
+        parserOptions: {
+          project: null,
+        },
+        sourceType: 'module',
+      },
+      rules: {
+        // If you are using "prettier/prettier" rule,
+        // you don't need to format inside <script> as it will be formatted as a `.astro` file.
+        'prettier/prettier': 'off',
+      },
     },
   ]
 }

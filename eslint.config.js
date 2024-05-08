@@ -1,8 +1,6 @@
-import { createRequire } from 'node:module'
-const require = createRequire(import.meta.url)
-require('sucrase/register')
-/** @type {typeof import('./packages/eslint/index.ts')} */
-const { defineConfig } = require('./packages/eslint/index.ts')
+import { require } from 'tsx/cjs/api'
+/** @type {typeof import('./packages/eslint')} */
+const { defineConfig } = require('./packages/eslint', import.meta.url)
 
 export default defineConfig([], {
   gitignore: false,

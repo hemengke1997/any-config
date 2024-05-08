@@ -1,8 +1,9 @@
-import { type FlatESLintConfigItem, type Rules } from 'eslint-define-config'
+import type { FlatESLintConfigItem, Rules } from 'eslint-define-config'
 import { getPackageInfoSync } from 'local-pkg'
+import process from 'node:process'
 import { GLOB_VUE } from '../globs'
-import { parserVue, pluginTypeScript, pluginVue } from '../plugins'
-import { typescript } from './typescript'
+import { parserVue, pluginVue, tseslint } from '../plugins'
+import { typescriptCore } from './typescript'
 
 export function getVueVersion() {
   const pkg = getPackageInfoSync('vue', { paths: [process.cwd()] })
@@ -45,7 +46,7 @@ const vueCustomRules: Rules = {
       html: {
         component: 'always',
         normal: 'always',
-        void: 'always',
+        void: 'any',
       },
       math: 'always',
       svg: 'always',
@@ -69,6 +70,7 @@ const vueCustomRules: Rules = {
       ignoreConstructors: false,
     },
   ],
+  'vue/one-component-per-file': 'off',
   'vue/padding-line-between-blocks': ['error', 'always'],
   'vue/prefer-template': 'error',
   'vue/require-default-prop': 'off',
@@ -90,6 +92,10 @@ const vue2Rules: Rules = {
 }
 
 export const vue: FlatESLintConfigItem[] = [
+  ...(tseslint.config({
+    extends: typescriptCore as any[],
+    files: [GLOB_VUE],
+  }) as any),
   {
     files: [GLOB_VUE],
     languageOptions: {
@@ -104,18 +110,10 @@ export const vue: FlatESLintConfigItem[] = [
       },
     },
     plugins: {
-      '@typescript-eslint': pluginTypeScript,
+      '@typescript-eslint': tseslint.plugin,
       'vue': pluginVue,
     },
     processor: pluginVue.processors['.vue'],
-    rules: {
-      ...typescript[0].rules,
-    },
-  },
-  {
-    plugins: {
-      vue: pluginVue,
-    },
     rules: {
       ...(isVue3 ? vue3Rules : vue2Rules),
       ...vueCustomRules,

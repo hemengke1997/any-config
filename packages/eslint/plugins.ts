@@ -12,9 +12,6 @@ export const pluginComments = interopDefault(_pluginComments)
 import * as _pluginMarkdown from 'eslint-plugin-markdown'
 export const pluginMarkdown = interopDefault(_pluginMarkdown)
 
-import * as _pluginTypeScript from '@typescript-eslint/eslint-plugin'
-export const pluginTypeScript = interopDefault(_pluginTypeScript)
-
 import * as _pluginReactRefresh from 'eslint-plugin-react-refresh'
 export const pluginReactRefresh = interopDefault(_pluginReactRefresh)
 
@@ -33,12 +30,11 @@ export const pluginReactHooks = interopDefault(_pluginReactHooks)
 import * as _pluginDisableAutofix from 'eslint-plugin-disable-autofix'
 export const pluginDisableAutofix = interopDefault(_pluginDisableAutofix)
 
-export * as parserTypeScript from '@typescript-eslint/parser'
-
 export * as pluginImport from 'eslint-plugin-import-x'
 export * as pluginJsonc from 'eslint-plugin-jsonc'
 
-export * as pluginPerfectionist from 'eslint-plugin-perfectionist'
+import * as _pluginPerfectionist from 'eslint-plugin-perfectionist'
+export const pluginPerfectionist = interopDefault(_pluginPerfectionist)
 
 export * as pluginUnusedImports from 'eslint-plugin-unused-imports'
 
@@ -50,3 +46,21 @@ export * as parserYml from 'yaml-eslint-parser'
 
 import * as _pluginNode from 'eslint-plugin-n'
 export const pluginNode = interopDefault(_pluginNode)
+
+import * as _pluginPrettier from 'eslint-plugin-prettier'
+export const pluginPrettier: any = interopDefault(_pluginPrettier)
+
+import * as _configPrettier from 'eslint-config-prettier'
+export const configPrettier: any = interopDefault(_configPrettier)
+
+import tseslint from 'typescript-eslint'
+export { tseslint }
+
+import * as _pluginAstro from 'eslint-plugin-astro'
+export const pluginAstro = interopDefault(_pluginAstro)
+
+import * as _parserTypeScript from '@typescript-eslint/parser'
+export const parserTypeScript = interopDefault(_parserTypeScript)
+
+import * as _parserAstro from 'astro-eslint-parser'
+export const parserAstro = interopDefault(_parserAstro)

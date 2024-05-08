@@ -1,7 +1,9 @@
-import { type FlatESLintConfigItem } from 'eslint-define-config'
+import type { FlatESLintConfigItem } from 'eslint-define-config'
 import globals from 'globals'
 import { isInEditor } from '../env'
 import { pluginDisableAutofix, pluginUnusedImports } from '../plugins'
+
+export const restrictedSyntaxJs = ['ForInStatement', 'LabeledStatement', 'WithStatement']
 
 export const javascript: FlatESLintConfigItem[] = [
   {

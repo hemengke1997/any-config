@@ -10,10 +10,8 @@ export const hasTypeScript = isPackageExists('typescript')
 
 export const hasVue = ['vue', 'nuxt', 'vitepress', '@slidev/cli'].some((t) => isPackageExists(t))
 
-export const hasTailwindcss = isPackageExists('tailwindcss')
-
 export const hasSvelte = ['svelte', 'svelte-kit'].some((t) => isPackageExists(t))
 
 export const hasReact = ['react', 'next'].some((t) => isPackageExists(t))
 
-export const hasAstro = ['astro'].some((t) => isPackageExists(t))
+export const hasAstro = ['astro', '@astrojs/check'].some((t) => isPackageExists(t))

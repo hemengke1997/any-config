@@ -1,13 +1,12 @@
-import { type FlatESLintConfigItem } from 'eslint-define-config'
+import type { FlatESLintConfigItem } from 'eslint-define-config'
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT } from '../globs'
-import { pluginAntfu, pluginImport, pluginPerfectionist } from '../plugins'
+import { pluginAntfu, pluginImport } from '../plugins'
 
 export const imports: FlatESLintConfigItem[] = [
   {
     plugins: {
       antfu: pluginAntfu,
       import: pluginImport,
-      perfectionist: pluginPerfectionist,
     },
     rules: {
       'antfu/import-dedupe': 'error',
@@ -22,36 +21,6 @@ export const imports: FlatESLintConfigItem[] = [
       'import/no-unresolved': 'off',
       'import/no-webpack-loader-syntax': 'error',
       'import/order': 'off',
-      'perfectionist/sort-imports': [
-        'error',
-        {
-          'groups': [
-            'type',
-            'react',
-            'nanostores',
-            ['builtin', 'external'],
-            'internal-type',
-            'internal',
-            ['parent-type', 'sibling-type', 'index-type'],
-            ['parent', 'sibling', 'index'],
-            'side-effect',
-            'style',
-            'object',
-            'unknown',
-          ],
-          'internal-pattern': ['{{@,~}/,#}**'],
-          'newlines-between': 'never',
-          'order': 'asc',
-          'type': 'natural',
-        },
-      ],
-      'perfectionist/sort-named-imports': [
-        'error',
-        {
-          order: 'asc',
-          type: 'natural',
-        },
-      ],
     },
   },
   {

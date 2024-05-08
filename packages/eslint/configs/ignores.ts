@@ -1,4 +1,4 @@
-import { type FlatESLintConfigItem } from 'eslint-define-config'
+import type { FlatESLintConfigItem } from 'eslint-define-config'
 import findUp from 'find-up'
 import fs from 'node:fs'
 // @ts-expect-error missing types

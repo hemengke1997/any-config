@@ -19,11 +19,7 @@ pnpm add eslint @minko-fe/eslint-config -D
 
 #### eslint.config.js
 ```js
-import { createRequire } from 'node:module'
-const require = createRequire(import.meta.url)
-
-const { defineConfig } = require('@minko-fe/eslint-config')
-
+import { defineConfig } from '@minko-fe/eslint-config'
 
 export default defineConfig([
   // your config

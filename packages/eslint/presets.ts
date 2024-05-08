@@ -1,4 +1,4 @@
-import { type FlatESLintConfigItem } from 'eslint-define-config'
+import type { FlatESLintConfigItem } from 'eslint-define-config'
 import {
   _exports,
   asyncSvelte,
@@ -13,6 +13,7 @@ import {
   prettier,
   react,
   resolveAstro,
+  sortKeys,
   sortObjects,
   sortPackageJson,
   sortTsconfig,
@@ -21,18 +22,16 @@ import {
   vue,
   yml,
 } from './configs'
-import { hasAstro, hasReact, hasSvelte, hasTailwindcss, hasTypeScript, hasVue } from './env'
+import { hasAstro, hasReact, hasSvelte, hasTypeScript, hasVue } from './env'
 import logger from './utils/logger'
 
 export const presetJavaScript = [...javascript, ...comments, ...imports, ..._exports, ...unicorn, ...node, ...ignores]
 
 export const presetLangsExtensions = [...markdown, ...yml, ...jsonc, ...sortPackageJson]
 
-export const presetBasic = [...presetJavaScript, ...presetLangsExtensions]
+export const presetBasic = [...presetJavaScript, ...presetLangsExtensions, ...sortKeys]
 
 export const presetTypescript = [...typescript, ...sortTsconfig]
-
-export const presetAll = [...presetBasic, ...vue, ...react, ...prettier]
 
 export async function defineConfig(
   config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],
@@ -44,7 +43,6 @@ export async function defineConfig(
     react: enableReact = hasReact,
     sortObjects: enableSortObjects = false,
     svelte: enableSvelte = hasSvelte,
-    tailwindcss: enableTailwindcss = hasTailwindcss,
     typescript: enableTypescript = hasTypeScript,
     vue: enableVue = hasVue,
   }: Partial<{
@@ -56,7 +54,6 @@ export async function defineConfig(
     sortObjects: boolean
     prettier: boolean
     markdown: boolean
-    tailwindcss: boolean
     gitignore: boolean
   }> = {},
 ): Promise<FlatESLintConfigItem[]> {
@@ -67,32 +64,35 @@ export async function defineConfig(
     configs.push(...gitignores)
   }
   if (enableReact) {
+    logger.debug('React enabled')
     configs.push(...react)
   }
   if (enableVue) {
+    logger.debug('Vue enabled')
     configs.push(...vue)
   }
   if (enableTypescript) {
+    logger.debug('TypeScript enabled')
     configs.push(...presetTypescript)
   }
-  if (enableTailwindcss) {
-    logger.debug('Tailwindcss enabled')
-
-    configs.push(...(await (await import('./configs/tailwindcss')).tailwindcss()))
-  }
   if (enableSortObjects) {
+    logger.debug('Sort objects enabled')
     configs.push(...sortObjects)
   }
   if (enableMarkdown) {
+    logger.debug('Markdown enabled')
     configs.push(...markdown)
   }
   if (enablePrettier) {
+    logger.debug('Prettier enabled')
     configs.push(...prettier)
   }
   if (enableAstro) {
+    logger.debug('Astro enabled')
     configs.push(...resolveAstro(enableTypescript))
   }
   if (enableSvelte) {
+    logger.debug('Svelte enabled')
     configs.push(...(await asyncSvelte()))
   }
 

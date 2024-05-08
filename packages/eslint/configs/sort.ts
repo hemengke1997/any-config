@@ -1,6 +1,5 @@
-import { type FlatESLintConfigItem } from 'eslint-define-config'
-import { GLOB_PACKAGEJSON, GLOB_SRC, GLOB_TSCONFIG } from '../globs'
-import { pluginPerfectionist } from '../plugins'
+import type { FlatESLintConfigItem } from 'eslint-define-config'
+import { GLOB_PACKAGEJSON, GLOB_TSCONFIG } from '../globs'
 
 export const sortPackageJson: FlatESLintConfigItem[] = [
   {
@@ -195,18 +194,6 @@ export const sortTsconfig: FlatESLintConfigItem[] = [
           pathPattern: '^compilerOptions$',
         },
       ],
-    },
-  },
-]
-
-export const sortObjects: FlatESLintConfigItem[] = [
-  {
-    files: [GLOB_SRC],
-    plugins: {
-      perfectionist: pluginPerfectionist,
-    },
-    rules: {
-      'perfectionist/sort-objects': 'error',
     },
   },
 ]

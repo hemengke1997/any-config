@@ -1,6 +1,6 @@
-import { type FlatESLintConfigItem } from 'eslint-define-config'
+import type { FlatESLintConfigItem } from 'eslint-define-config'
 import { GLOB_JSX, GLOB_TSX } from '../globs'
-import { pluginReact, pluginReactHooks, pluginReactRefresh, pluginTypeScript } from '../plugins'
+import { pluginReact, pluginReactHooks, pluginReactRefresh, tseslint } from '../plugins'
 import { typescript } from './typescript'
 
 export const react: FlatESLintConfigItem[] = [
@@ -15,7 +15,7 @@ export const react: FlatESLintConfigItem[] = [
       },
     },
     plugins: {
-      '@typescript-eslint': pluginTypeScript,
+      '@typescript-eslint': tseslint.plugin,
       'react': pluginReact,
       'react-hooks': pluginReactHooks,
       'react-refresh': pluginReactRefresh,

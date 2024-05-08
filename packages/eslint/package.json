@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/eslint-config",
-  "version": "3.0.2",
+  "version": "3.1.0",
   "description": "eslint-config",
   "type": "module",
   "repository": {
@@ -14,26 +14,18 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "exports": {
-    "require": "./dist/index.cjs",
-    "import": "./dist/index.js",
-    "default": "./dist/index.cjs"
-  },
+  "exports": "./dist/index.js",
   "scripts": {
     "dev": "tsup index.ts --watch",
     "build": "tsup index.ts",
     "lint": "eslint .",
-    "up": "pnpm up -i -L",
+    "up": "taze -I -w",
     "release": "pnpm build & pnpm publish --no-git-checks"
   },
   "peerDependencies": {
-    "eslint": "^8.56.0 || ^9.0.0",
-    "tailwindcss": "^3.2.2"
+    "eslint": "^8.56.0 || ^9.0.0"
   },
   "peerDependenciesMeta": {
-    "tailwindcss": {
-      "optional": true
-    },
     "prettier-plugin-astro": {
       "optional": true
     },
@@ -43,55 +35,45 @@
   },
   "dependencies": {
     "@minko-fe/prettier-config": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "^7.7.0",
-    "@typescript-eslint/parser": "^7.7.0",
-    "astro-eslint-parser": "^0.16.3",
+    "@typescript-eslint/parser": "^7.8.0",
+    "astro-eslint-parser": "^1.0.2",
     "consola": "^3.2.3",
     "eslint-config-prettier": "^9.1.0",
     "eslint-define-config": "^1.24.1",
-    "eslint-plugin-antfu": "^2.1.2",
-    "eslint-plugin-astro": "^0.33.1",
+    "eslint-plugin-antfu": "^2.1.3",
+    "eslint-plugin-astro": "^1.1.2",
     "eslint-plugin-disable-autofix": "^4.3.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import-x": "^0.5.0",
     "eslint-plugin-jsonc": "^2.15.1",
     "eslint-plugin-markdown": "^5.0.0",
-    "eslint-plugin-n": "^17.2.1",
-    "eslint-plugin-perfectionist": "^2.9.0",
+    "eslint-plugin-n": "^17.5.1",
+    "eslint-plugin-perfectionist": "^2.10.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.6",
-    "eslint-plugin-svelte": "^2.35.1",
-    "eslint-plugin-tailwindcss": "^3.15.1",
-    "eslint-plugin-tailwindcss-3.11.0": "npm:eslint-plugin-tailwindcss@3.11.0",
-    "eslint-plugin-tailwindcss-3.13.1": "npm:eslint-plugin-tailwindcss@3.13.1",
+    "eslint-plugin-svelte": "^2.38.0",
     "eslint-plugin-unicorn": "^52.0.0",
-    "eslint-plugin-unused-imports": "^3.1.0",
-    "eslint-plugin-vue": "^9.24.0",
+    "eslint-plugin-unused-imports": "^3.2.0",
+    "eslint-plugin-vue": "^9.25.0",
     "eslint-plugin-yml": "^1.14.0",
     "find-up": "5.0.0",
-    "globals": "^13.24.0",
+    "globals": "^15.1.0",
     "jsonc-eslint-parser": "^2.4.0",
     "local-pkg": "^0.5.0",
     "parse-gitignore": "^2.0.0",
-    "prettier": "^3.2.4",
-    "semver": "^7.5.4",
-    "svelte": "^4.2.7",
-    "svelte-eslint-parser": "^0.33.1",
-    "typescript": "^5.4.4",
+    "prettier": "^3.2.5",
+    "semver": "^7.6.1",
+    "svelte": "^4.2.16",
+    "svelte-eslint-parser": "^0.35.0",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.8.0",
+    "vue-eslint-parser": "^9.4.2",
     "yaml-eslint-parser": "^1.2.2"
   },
   "devDependencies": {
-    "@types/semver": "^7.5.6",
-    "sucrase": "^3.35.0",
-    "tailwindcss": "3.3.2"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "allowAny": [
-        "tailwindcss"
-      ]
-    }
+    "@types/semver": "^7.5.8",
+    "sucrase": "^3.35.0"
   }
 }
