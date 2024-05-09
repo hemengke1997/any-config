@@ -55,7 +55,7 @@ module.exports = {
     resolvePeerDependency('prettier-plugin-astro'),
     resolvePeerDependency('prettier-plugin-svelte'),
     resolvePeerDependency('prettier-plugin-tailwindcss'),
-  ],
+  ].filter(Boolean),
   printWidth: 120,
   quoteProps: 'consistent',
   semi: false,

@@ -1,7 +1,7 @@
 import type { FlatESLintConfigItem } from 'eslint-define-config'
 import globals from 'globals'
 import { isInEditor } from '../env'
-import { pluginDisableAutofix, pluginUnusedImports } from '../plugins'
+import { pluginUnusedImports } from '../plugins'
 
 export const javascript: FlatESLintConfigItem[] = [
   {
@@ -20,8 +20,6 @@ export const javascript: FlatESLintConfigItem[] = [
       sourceType: 'module',
     },
     plugins: {
-      // 'no-autofix': pluginNoAutofix,
-      'disable-autofix': pluginDisableAutofix,
       'unused-imports': pluginUnusedImports,
     },
     rules: {
@@ -29,8 +27,6 @@ export const javascript: FlatESLintConfigItem[] = [
       'block-scoped-var': 'error',
       'consistent-return': 'off',
       'constructor-super': 'error',
-      'disable-autofix/prefer-const': ['warn', { destructuring: 'all', ignoreReadBeforeAssign: true }],
-      'disable-autofix/unused-imports/no-unused-imports': isInEditor ? 'warn' : 'error',
       'dot-notation': 'off',
       'eqeqeq': ['error', 'smart'],
       'for-direction': 'error',
@@ -109,7 +105,7 @@ export const javascript: FlatESLintConfigItem[] = [
       'object-shorthand': ['error', 'always', { avoidQuotes: true, ignoreConstructors: false }],
       'operator-linebreak': 'off',
       'prefer-arrow-callback': ['error', { allowNamedFunctions: false, allowUnboundThis: true }],
-      'prefer-const': 'off',
+      'prefer-const': ['warn', { destructuring: 'all', ignoreReadBeforeAssign: true }],
       'prefer-exponentiation-operator': 'error',
       'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
       'prefer-rest-params': 'error',
@@ -118,7 +114,7 @@ export const javascript: FlatESLintConfigItem[] = [
       'require-await': 'off',
       'require-yield': 'error',
       'unicode-bom': ['error', 'never'],
-      'unused-imports/no-unused-imports': 'off',
+      'unused-imports/no-unused-imports': isInEditor ? 'warn' : 'error',
       'unused-imports/no-unused-vars': [
         'warn',
         {

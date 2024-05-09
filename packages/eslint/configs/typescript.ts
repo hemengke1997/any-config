@@ -24,13 +24,13 @@ export const typescriptCore = tseslint.config({
       'error',
       { disallowTypeAnnotations: false, fixStyle: 'inline-type-imports' },
     ],
-
     '@typescript-eslint/explicit-function-return-type': 'off',
 
     '@typescript-eslint/explicit-member-accessibility': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
 
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/method-signature-style': ['error', 'property'], // https://www.totaltypescript.com/method-shorthand-syntax-considered-harmful
+
     '@typescript-eslint/naming-convention': [
       'error',
       {
@@ -43,8 +43,8 @@ export const typescriptCore = tseslint.config({
         selector: ['variable', 'variableLike'],
       },
     ],
-
     '@typescript-eslint/no-dynamic-delete': 'off',
+
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
@@ -67,7 +67,7 @@ export const typescriptCore = tseslint.config({
     '@typescript-eslint/semi': 'off',
     '@typescript-eslint/triple-slash-reference': 'off',
     'no-restricted-syntax': 'off',
-    'prefer-const': 'off',
+    'prefer-const': ['warn', { destructuring: 'all', ignoreReadBeforeAssign: true }],
   },
 }) as FlatESLintConfigItem[]
 

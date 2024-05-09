@@ -1,5 +1,13 @@
 # @minko-fe/eslint-config
 
+## 3.1.6
+
+### Patch Changes
+
+- fix lint error
+- Updated dependencies
+  - @minko-fe/prettier-config@2.2.2
+
 ## 3.1.5
 
 ### Patch Changes

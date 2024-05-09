@@ -9,10 +9,11 @@
 import { type FlatESLintConfigItem, type Rules } from 'eslint-define-config'
 import { GLOB_SVELTE } from '../globs'
 import { tseslint } from '../plugins'
+import { interopDefault } from '../utils'
 
 export async function asyncSvelte(): Promise<FlatESLintConfigItem[]> {
-  const eslintPluginSvelte = (await import('eslint-plugin-svelte')).default
-  const svelteParser = (await import('svelte-eslint-parser')).default
+  const eslintPluginSvelte = interopDefault(await import('eslint-plugin-svelte'))
+  const svelteParser = interopDefault(await import('svelte-eslint-parser'))
   return [
     {
       files: [GLOB_SVELTE],
