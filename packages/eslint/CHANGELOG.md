@@ -1,5 +1,11 @@
 # @minko-fe/eslint-config
 
+## 3.1.7
+
+### Patch Changes
+
+- fallback eslint-plugin-astro to legacy version for supporting old node version
+
 ## 3.1.6
 
 ### Patch Changes
