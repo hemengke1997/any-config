@@ -1,5 +1,11 @@
 # @minko-fe/tsconfig
 
+## 2.1.0
+
+### Minor Changes
+
+- refactor: use .app.json replace .project.json
+
 ## 2.0.9
 
 ### Patch Changes

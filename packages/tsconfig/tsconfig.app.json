@@ -1,10 +1,21 @@
 // tsconfig for project
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "moduleResolution": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "declaration": false,
     "sourceMap": false,
-    "noEmit": true
-  }
+    "noEmit": true,
+    "isolatedModules": false,
+    "strictNullChecks": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noStrictGenericChecks": false
+  },
+  "exclude": [".next", ".nuxt"]
 }

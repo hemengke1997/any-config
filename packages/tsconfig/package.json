@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/tsconfig",
-  "version": "2.0.9",
+  "version": "2.1.0",
   "description": "tsconfig",
   "license": "MIT",
   "repository": {
@@ -11,12 +11,11 @@
   "files": [
     "tsconfig.app.json",
     "tsconfig.base.json",
-    "tsconfig.lib.json",
-    "tsconfig.project.json"
+    "tsconfig.lib.json"
   ],
   "scripts": {},
   "peerDependencies": {
-    "typescript": ">=4.0.0"
+    "typescript": ">=5.0.0"
   },
   "devDependencies": {
     "@tsconfig/next": "^2.0.0",

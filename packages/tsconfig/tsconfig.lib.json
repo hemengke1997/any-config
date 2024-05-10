@@ -1,7 +1,10 @@
-// tsconfig for third-library
+// tsconfig for lib
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "sourceMap": true
   }
 }
