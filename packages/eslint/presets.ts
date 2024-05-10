@@ -1,6 +1,5 @@
 import type { FlatESLintConfigItem } from 'eslint-define-config'
 import {
-  _exports,
   asyncSvelte,
   comments,
   gitignores,
@@ -13,7 +12,7 @@ import {
   prettier,
   react,
   resolveAstro,
-  sortKeys,
+  sortImports,
   sortObjects,
   sortPackageJson,
   sortTsconfig,
@@ -22,46 +21,96 @@ import {
   vue,
   yml,
 } from './configs'
-import { hasAstro, hasReact, hasSvelte, hasTypeScript, hasVue } from './env'
+import {
+  hasAstro,
+  hasAstroPrettier,
+  hasReact,
+  hasSvelte,
+  hasSveltePrettier,
+  hasTailwindcss,
+  hasTailwindcssPrettire,
+  hasTypeScript,
+  hasVue,
+} from './env'
 import logger from './utils/logger'
 
-export const presetJavaScript = [...javascript, ...comments, ...imports, ..._exports, ...unicorn, ...node, ...ignores]
+const presetJavaScript = [...javascript, ...comments, ...imports, ...unicorn, ...node, ...ignores]
 
-export const presetLangsExtensions = [...markdown, ...yml, ...jsonc, ...sortPackageJson]
+const presetJsonc = [...jsonc, ...sortPackageJson]
 
-export const presetBasic = [...presetJavaScript, ...presetLangsExtensions, ...sortKeys]
-
-export const presetTypescript = [...typescript, ...sortTsconfig]
+const presetTypescript = [...typescript, ...sortTsconfig]
 
 export async function defineConfig(
   config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],
   {
     astro: enableAstro = hasAstro,
     gitignore: enableGitignore = true,
+    jsonc: enableJsonc = true,
     markdown: enableMarkdown = true,
     prettier: enablePrettier = true,
     react: enableReact = hasReact,
+    sortImports: enableSortImports = true,
     sortObjects: enableSortObjects = false,
     svelte: enableSvelte = hasSvelte,
     typescript: enableTypescript = hasTypeScript,
     vue: enableVue = hasVue,
+    yml: enableYml = true,
   }: Partial<{
     react: boolean
     vue: boolean
     astro: boolean
     svelte: boolean
     typescript: boolean
+    sortImports: boolean
     sortObjects: boolean
     prettier: boolean
     markdown: boolean
     gitignore: boolean
+    jsonc: boolean
+    yml: boolean
   }> = {},
 ): Promise<FlatESLintConfigItem[]> {
   const configs: FlatESLintConfigItem[] = []
 
-  configs.push(...presetBasic)
+  configs.push(...presetJavaScript)
+
+  if (hasTailwindcss && !hasTailwindcssPrettire) {
+    logger.warn(
+      '[@minko-fe/eslint-config] Tailwindcss detected but "prettier-plugin-tailwindcss" not found, please install it to enable Tailwindcss support.',
+    )
+  }
+
   if (enableGitignore) {
+    logger.debug('Gitignore enabled')
     configs.push(...gitignores)
+  }
+  if (enableTypescript) {
+    logger.debug('TypeScript enabled')
+    configs.push(...presetTypescript)
+  }
+  if (enablePrettier) {
+    logger.debug('Prettier enabled')
+    configs.push(...prettier)
+  }
+  if (enableSortObjects) {
+    logger.debug('Sort objects enabled')
+    configs.push(...sortObjects)
+  }
+  if (enableSortImports) {
+    logger.debug('Sort imports enabled')
+    configs.push(...sortImports)
+  }
+  if (enableMarkdown) {
+    logger.debug('Markdown enabled')
+    configs.push(...markdown)
+  }
+  if (enableJsonc) {
+    logger.debug('Jsonc enabled')
+    configs.push(...presetJsonc)
+  }
+  if (enableYml) {
+    logger.debug('Yml enabled')
+    configs.push(...yml)
   }
   if (enableReact) {
     logger.debug('React enabled')
@@ -71,28 +120,22 @@ export async function defineConfig(
     logger.debug('Vue enabled')
     configs.push(...vue)
   }
-  if (enableTypescript) {
-    logger.debug('TypeScript enabled')
-    configs.push(...presetTypescript)
-  }
-  if (enableSortObjects) {
-    logger.debug('Sort objects enabled')
-    configs.push(...sortObjects)
-  }
-  if (enableMarkdown) {
-    logger.debug('Markdown enabled')
-    configs.push(...markdown)
-  }
-  if (enablePrettier) {
-    logger.debug('Prettier enabled')
-    configs.push(...prettier)
-  }
   if (enableAstro) {
     logger.debug('Astro enabled')
+    if (!hasAstroPrettier) {
+      logger.warn(
+        '[@minko-fe/eslint-config] Astro detected but "prettier-plugin-astro" not found, please install it to enable Astro support.',
+      )
+    }
     configs.push(...resolveAstro(enableTypescript))
   }
   if (enableSvelte) {
     logger.debug('Svelte enabled')
+    if (!hasSveltePrettier) {
+      logger.warn(
+        '[@minko-fe/eslint-config] Svelte detected but "prettier-plugin-svelte" not found, please install it to enable Svelte support.',
+      )
+    }
     configs.push(...(await asyncSvelte()))
   }
 

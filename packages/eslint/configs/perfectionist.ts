@@ -2,7 +2,7 @@ import type { FlatESLintConfigItem } from 'eslint-define-config'
 import { GLOB_SRC } from '../globs'
 import { pluginPerfectionist } from '../plugins'
 
-export const sortKeys: FlatESLintConfigItem[] = [
+export const sortImports: FlatESLintConfigItem[] = [
   {
     plugins: {
       perfectionist: pluginPerfectionist,
@@ -40,30 +40,6 @@ export const sortKeys: FlatESLintConfigItem[] = [
       ],
     },
   },
-]
-
-export const _exports: FlatESLintConfigItem[] = [
-  // {
-  //   plugins: {
-  //     perfectionist: pluginPerfectionist,
-  //   },
-  //   rules: {
-  //     'perfectionist/sort-exports': [
-  //       'error',
-  //       {
-  //         order: 'asc',
-  //         type: 'natural',
-  //       },
-  //     ],
-  //     'perfectionist/sort-named-exports': [
-  //       'error',
-  //       {
-  //         order: 'asc',
-  //         type: 'natural',
-  //       },
-  //     ],
-  //   },
-  // },
 ]
 
 export const sortObjects: FlatESLintConfigItem[] = [

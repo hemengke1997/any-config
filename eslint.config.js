@@ -4,5 +4,7 @@ const { defineConfig } = require('./packages/eslint', import.meta.url)
 
 export default defineConfig([], {
   gitignore: false,
+  react: true,
   sortObjects: true,
+  vue: true,
 })

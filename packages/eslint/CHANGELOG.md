@@ -1,5 +1,11 @@
 # @minko-fe/eslint-config
 
+## 3.2.0
+
+### Minor Changes
+
+- feat: Support self-enable `yml/sortImports/markdown/jsonc`
+
 ## 3.1.7
 
 ### Patch Changes
