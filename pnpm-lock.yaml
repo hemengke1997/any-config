@@ -17,6 +17,9 @@ devDependencies:
   '@minko-fe/eslint-config':
     specifier: workspace:*
     version: link:packages/eslint
+  '@minko-fe/prettier-config':
+    specifier: workspace:*
+    version: link:packages/prettier
   '@minko-fe/tsconfig':
     specifier: workspace:*
     version: link:packages/tsconfig

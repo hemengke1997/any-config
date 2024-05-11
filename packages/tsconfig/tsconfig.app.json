@@ -14,6 +14,9 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noStrictGenericChecks": false
+    // Required in Vue projects
+    //  "jsx": "preserve",
+    //  "jsxImportSource": "vue",
   },
   "exclude": [".next", ".nuxt"]
 }

@@ -2,7 +2,7 @@
   "name": "@minko-fe/any-config",
   "version": "0.0.0",
   "private": true,
-  "description": "minko's project config ✅",
+  "description": "Minko's project config ✅",
   "type": "module",
   "keywords": [
     "eslint",
@@ -21,7 +21,7 @@
     "build": "pnpm -r --filter \"./packages/*\" build",
     "lint": "eslint . --fix",
     "up": "taze -r -w -I",
-    "prepare": "simple-git-hooks",
+    "postinstall": "simple-git-hooks",
     "changeset": "changeset",
     "version": "changeset version && changeset tag"
   },
@@ -30,6 +30,7 @@
     "@commitlint/cli": "^18.6.1",
     "@minko-fe/commitlint-config": "workspace:*",
     "@minko-fe/eslint-config": "workspace:*",
+    "@minko-fe/prettier-config": "workspace:*",
     "@minko-fe/tsconfig": "workspace:*",
     "@types/node": "^20.12.11",
     "eslint": "^9.2.0",
@@ -42,9 +43,16 @@
     "typescript": "^5.4.5"
   },
   "simple-git-hooks": {
+    "pre-commit": "npm run lint",
     "commit-msg": "npx commitlint -e"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "prettier": "@minko-fe/prettier-config",
+  "commitlint": {
+    "extends": [
+      "@minko-fe"
+    ]
+  }
 }
