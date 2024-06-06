@@ -75,6 +75,8 @@ export async function defineConfig(
   configs.push(...presetJavaScript)
 
   if (hasTailwindcss && !hasTailwindcssPrettire) {
+    logger.debug('Tailwindcss enabled')
+
     logger.warn(
       '[@minko-fe/eslint-config] Tailwindcss detected but "prettier-plugin-tailwindcss" not found, please install it to enable Tailwindcss support.',
     )

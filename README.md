@@ -33,10 +33,12 @@ export default defineConfig([
 
 ## <img style="width: 20px; height: 20px" src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/70702eb811036276c75b7ddf33060ee109026fe9/icons/file_type_light_prettier.svg" /> prettier
 
+### install
+```sh
+npm install @minko-fe/prettier -D
+```
 
-如果你安装了 `@minko-fe/eslint-config`，则**无需再安装** `@minko-fe/prettier-config`
-
-如果你的项目中使用到了 `svelte` 或 `astro` 或 `tailwindcss`，请安装其对应的 prettier plugin
+如果你的项目中使用到了 `svelte` 或 `astro` 或 `tailwindcss`，请额外安装其对应的 prettier plugin
 
 例如，你的项目中使用了 tailwindcss，请
 ```sh
@@ -103,16 +105,16 @@ npm install @minko-fe/tsconfig
 
 ### tsconfig.json
 
-#### lib
-```json
-{
-  "extends": "@minko-fe/tsconfig/tsconfig.lib.json"
-}
-```
-
 #### app
 ```json
 {
   "extends": "@minko-fe/tsconfig/tsconfig.app.json"
+}
+```
+
+#### lib
+```json
+{
+  "extends": "@minko-fe/tsconfig/tsconfig.lib.json"
 }
 ```
