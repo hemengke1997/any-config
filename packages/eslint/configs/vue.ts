@@ -75,6 +75,7 @@ const vueCustomRules: Rules = {
   'vue/prefer-template': 'error',
   'vue/require-default-prop': 'off',
   'vue/require-prop-types': 'off',
+  'vue/singleline-html-element-content-newline': 'off',
 }
 
 const vue3Rules: Rules = {
