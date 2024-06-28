@@ -39,7 +39,7 @@ export const javascript: FlatESLintConfigItem[] = [
       'no-cond-assign': 'error',
       'no-console': 'off',
       'no-const-assign': 'error',
-      'no-constant-condition': 'error',
+      'no-constant-condition': 'off',
       'no-control-regex': 'error',
       'no-debugger': 'warn',
       'no-delete-var': 'error',
