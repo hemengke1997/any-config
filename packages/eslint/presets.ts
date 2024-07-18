@@ -1,4 +1,4 @@
-import type { FlatESLintConfigItem } from 'eslint-define-config'
+import { type Linter } from 'eslint'
 import {
   asyncSvelte,
   comments,
@@ -41,7 +41,7 @@ const presetJsonc = [...jsonc, ...sortPackageJson]
 const presetTypescript = [...typescript, ...sortTsconfig]
 
 export async function defineConfig(
-  config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],
+  config: Linter.FlatConfig | Linter.FlatConfig[] = [],
   {
     astro: enableAstro = hasAstro,
     gitignore: enableGitignore = true,
@@ -69,8 +69,8 @@ export async function defineConfig(
     jsonc: boolean
     yml: boolean
   }> = {},
-): Promise<FlatESLintConfigItem[]> {
-  const configs: FlatESLintConfigItem[] = []
+): Promise<Linter.FlatConfig[]> {
+  const configs: Linter.FlatConfig[] = []
 
   configs.push(...presetJavaScript)
 
@@ -129,7 +129,7 @@ export async function defineConfig(
         '[@minko-fe/eslint-config] Astro detected but "prettier-plugin-astro" not found, please install it to enable Astro support.',
       )
     }
-    configs.push(...resolveAstro(enableTypescript))
+    configs.push(...(await resolveAstro()))
   }
   if (enableSvelte) {
     logger.debug('Svelte enabled')

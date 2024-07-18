@@ -1,12 +1,13 @@
-import type { FlatESLintConfigItem } from 'eslint-define-config'
+import type { Linter } from 'eslint'
 import { pluginComments } from '../plugins'
 
-export const comments: FlatESLintConfigItem[] = [
+export const comments: Linter.FlatConfig[] = [
   {
     plugins: {
       'eslint-comments': pluginComments,
     },
     rules: {
+      ...pluginComments.configs.recommended.rules,
       'eslint-comments/disable-enable-pair': 'off',
       'eslint-comments/no-aggregating-enable': 'error',
       'eslint-comments/no-duplicate-disable': 'error',

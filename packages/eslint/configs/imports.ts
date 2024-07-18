@@ -1,12 +1,12 @@
-import type { FlatESLintConfigItem } from 'eslint-define-config'
+import { type Linter } from 'eslint'
 import { GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT } from '../globs'
 import { pluginAntfu, pluginImport } from '../plugins'
 
-export const imports: FlatESLintConfigItem[] = [
+export const imports: Linter.FlatConfig[] = [
   {
     plugins: {
       antfu: pluginAntfu,
-      import: pluginImport,
+      import: pluginImport as any,
     },
     rules: {
       'antfu/import-dedupe': 'error',
@@ -34,7 +34,7 @@ export const imports: FlatESLintConfigItem[] = [
       '**/.prettierrc*',
     ],
     plugins: {
-      import: pluginImport,
+      import: pluginImport as any,
     },
     rules: {
       'import/no-default-export': 'off',

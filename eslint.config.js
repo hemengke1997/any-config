@@ -1,10 +1,8 @@
-import { require } from 'tsx/cjs/api'
+import { tsImport } from 'tsx/esm/api'
 /** @type {typeof import('./packages/eslint')} */
-const { defineConfig } = require('./packages/eslint', import.meta.url)
+const { defineConfig } = await tsImport('./packages/eslint/index.ts', import.meta.url)
 
 export default defineConfig([], {
   gitignore: false,
-  react: true,
   sortObjects: true,
-  vue: true,
 })

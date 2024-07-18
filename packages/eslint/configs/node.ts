@@ -1,7 +1,7 @@
-import type { FlatESLintConfigItem } from 'eslint-define-config'
+import { type Linter } from 'eslint'
 import { pluginNode } from '../plugins'
 
-export const node: FlatESLintConfigItem[] = [
+export const node: Linter.FlatConfig[] = [
   {
     plugins: {
       node: pluginNode,

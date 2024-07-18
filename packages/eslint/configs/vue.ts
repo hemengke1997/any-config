@@ -1,4 +1,4 @@
-import type { FlatESLintConfigItem, Rules } from 'eslint-define-config'
+import { type Linter } from 'eslint'
 import { getPackageInfoSync } from 'local-pkg'
 import process from 'node:process'
 import { GLOB_VUE } from '../globs'
@@ -14,7 +14,7 @@ export function getVueVersion() {
 }
 const isVue3 = getVueVersion() === 3
 
-export const reactivityTransform: FlatESLintConfigItem[] = [
+export const reactivityTransform: Linter.FlatConfig[] = [
   {
     languageOptions: {
       globals: {
@@ -36,7 +36,7 @@ export const reactivityTransform: FlatESLintConfigItem[] = [
   },
 ]
 
-const vueCustomRules: Rules = {
+const vueCustomRules: Linter.RulesRecord = {
   'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
   'vue/custom-event-name-casing': ['error', 'camelCase'],
   'vue/eqeqeq': ['error', 'smart'],
@@ -78,21 +78,21 @@ const vueCustomRules: Rules = {
   'vue/singleline-html-element-content-newline': 'off',
 }
 
-const vue3Rules: Rules = {
+const vue3Rules: Linter.RulesRecord = {
   ...pluginVue.configs.base.rules,
   ...pluginVue.configs['vue3-essential'].rules,
   ...pluginVue.configs['vue3-strongly-recommended'].rules,
   ...pluginVue.configs['vue3-recommended'].rules,
 }
 
-const vue2Rules: Rules = {
+const vue2Rules: Linter.RulesRecord = {
   ...pluginVue.configs.base.rules,
   ...pluginVue.configs.essential.rules,
   ...pluginVue.configs['strongly-recommended'].rules,
   ...pluginVue.configs.recommended.rules,
 }
 
-export const vue: FlatESLintConfigItem[] = [
+export const vue: Linter.FlatConfig[] = [
   ...(tseslint.config({
     extends: typescriptCore as any[],
     files: [GLOB_VUE],

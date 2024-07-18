@@ -1,8 +1,8 @@
-import type { FlatESLintConfigItem } from 'eslint-define-config'
+import { type Linter } from 'eslint'
 import { GLOB_SRC } from '../globs'
 import { pluginPerfectionist } from '../plugins'
 
-export const sortImports: FlatESLintConfigItem[] = [
+export const sortImports: Linter.FlatConfig[] = [
   {
     plugins: {
       perfectionist: pluginPerfectionist,
@@ -42,7 +42,7 @@ export const sortImports: FlatESLintConfigItem[] = [
   },
 ]
 
-export const sortObjects: FlatESLintConfigItem[] = [
+export const sortObjects: Linter.FlatConfig[] = [
   {
     files: [GLOB_SRC],
     plugins: {

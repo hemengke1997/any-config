@@ -33,7 +33,8 @@ export * as pluginJsonc from 'eslint-plugin-jsonc'
 import * as _pluginPerfectionist from 'eslint-plugin-perfectionist'
 export const pluginPerfectionist = interopDefault(_pluginPerfectionist)
 
-export * as pluginUnusedImports from 'eslint-plugin-unused-imports'
+import * as _pluginUnusedImports from 'eslint-plugin-unused-imports'
+export const pluginUnusedImports: any = interopDefault(_pluginUnusedImports)
 
 export * as pluginYml from 'eslint-plugin-yml'
 export * as parserJsonc from 'jsonc-eslint-parser'

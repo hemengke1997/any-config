@@ -1,4 +1,4 @@
-import type { FlatESLintConfigItem } from 'eslint-define-config'
+import { type Linter } from 'eslint'
 import { GLOB_JS, GLOB_TS, GLOB_TSX } from '../globs'
 import { tseslint } from '../plugins'
 
@@ -69,9 +69,9 @@ export const typescriptCore = tseslint.config({
     'no-restricted-syntax': 'off',
     'prefer-const': ['warn', { destructuring: 'all', ignoreReadBeforeAssign: true }],
   },
-}) as FlatESLintConfigItem[]
+}) as Linter.FlatConfig[]
 
-export const typescript: FlatESLintConfigItem[] = [
+export const typescript: Linter.FlatConfig[] = [
   ...typescriptCore,
 
   {
