@@ -2,7 +2,7 @@ import { type Linter } from 'eslint'
 import { GLOB_SRC } from '../globs'
 import { pluginPerfectionist } from '../plugins'
 
-export const sortImports: Linter.FlatConfig[] = [
+export const sortImports: Linter.Config[] = [
   {
     plugins: {
       perfectionist: pluginPerfectionist,
@@ -11,7 +11,7 @@ export const sortImports: Linter.FlatConfig[] = [
       'perfectionist/sort-imports': [
         'error',
         {
-          'groups': [
+          groups: [
             'type',
             'react',
             'nanostores',
@@ -25,10 +25,10 @@ export const sortImports: Linter.FlatConfig[] = [
             'object',
             'unknown',
           ],
-          'internal-pattern': ['{{@,~}/,#}**'],
-          'newlines-between': 'never',
-          'order': 'asc',
-          'type': 'natural',
+          internalPattern: ['~/**', '@/**', '#**'],
+          newlinesBetween: 'never',
+          order: 'asc',
+          type: 'natural',
         },
       ],
       'perfectionist/sort-named-imports': [
@@ -42,7 +42,7 @@ export const sortImports: Linter.FlatConfig[] = [
   },
 ]
 
-export const sortObjects: Linter.FlatConfig[] = [
+export const sortObjects: Linter.Config[] = [
   {
     files: [GLOB_SRC],
     plugins: {

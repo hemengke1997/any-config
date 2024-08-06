@@ -7,6 +7,6 @@ export const tsup = (option: Options): Options => ({
   minify: false,
   shims: true,
   splitting: false,
-  target: 'node16',
+  target: 'node18',
   treeshake: true,
 })

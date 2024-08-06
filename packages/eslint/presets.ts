@@ -41,7 +41,7 @@ const presetJsonc = [...jsonc, ...sortPackageJson]
 const presetTypescript = [...typescript, ...sortTsconfig]
 
 export async function defineConfig(
-  config: Linter.FlatConfig | Linter.FlatConfig[] = [],
+  config: Linter.Config | Linter.Config[] = [],
   {
     astro: enableAstro = hasAstro,
     gitignore: enableGitignore = true,
@@ -69,8 +69,8 @@ export async function defineConfig(
     jsonc: boolean
     yml: boolean
   }> = {},
-): Promise<Linter.FlatConfig[]> {
-  const configs: Linter.FlatConfig[] = []
+): Promise<Linter.Config[]> {
+  const configs: Linter.Config[] = []
 
   configs.push(...presetJavaScript)
 

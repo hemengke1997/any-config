@@ -1,6 +1,10 @@
-import { tsImport } from 'tsx/esm/api'
+import { importx } from 'importx'
+
 /** @type {typeof import('./packages/eslint')} */
-const { defineConfig } = await tsImport('./packages/eslint/index.ts', import.meta.url)
+const { defineConfig } = await importx('./packages/eslint/index.ts', {
+  loader: 'jiti',
+  parentURL: import.meta.url,
+})
 
 export default defineConfig([], {
   gitignore: false,

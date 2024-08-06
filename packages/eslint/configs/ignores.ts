@@ -2,8 +2,11 @@ import { type Linter } from 'eslint'
 import findUp from 'find-up'
 import fs from 'node:fs'
 // @ts-expect-error missing types
-import parse from 'parse-gitignore'
+import parseGitignore from 'parse-gitignore'
 import { GLOB_EXCLUDE } from '../globs'
+import { interopDefault } from '../utils'
+
+const parse = interopDefault(parseGitignore)
 
 interface FlatGitignoreOptions {
   files?: string | string[]
@@ -36,5 +39,5 @@ function gitignore(options: FlatGitignoreOptions = {}): FlatConfigItem {
   }
 }
 
-export const ignores: Linter.FlatConfig[] = [{ ignores: GLOB_EXCLUDE }]
+export const ignores: Linter.Config[] = [{ ignores: GLOB_EXCLUDE }]
 export const gitignores: FlatConfigItem[] = [{ ignores: gitignore().ignores }]

@@ -26,7 +26,7 @@ jobs:
           version: 8.15.1
 
       - name: Install Dependencies
-        run: pnpm instal
+        run: pnpm i
 
       - name: Build
         run: pnpm -r --filter "./packages/*" build

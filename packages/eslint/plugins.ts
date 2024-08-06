@@ -31,7 +31,7 @@ export * as pluginImport from 'eslint-plugin-import-x'
 export * as pluginJsonc from 'eslint-plugin-jsonc'
 
 import * as _pluginPerfectionist from 'eslint-plugin-perfectionist'
-export const pluginPerfectionist = interopDefault(_pluginPerfectionist)
+export const pluginPerfectionist: any = interopDefault(_pluginPerfectionist)
 
 import * as _pluginUnusedImports from 'eslint-plugin-unused-imports'
 export const pluginUnusedImports: any = interopDefault(_pluginUnusedImports)

@@ -34,6 +34,7 @@
     "@minko-fe/tsconfig": "workspace:*",
     "@types/node": "^20.14.11",
     "eslint": "^9.7.0",
+    "importx": "^0.4.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-svelte": "^3.2.6",
     "simple-git-hooks": "^2.11.1",

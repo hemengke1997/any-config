@@ -3,7 +3,7 @@ import { GLOB_JSX, GLOB_TSX } from '../globs'
 import { pluginReact, pluginReactHooks, pluginReactRefresh, tseslint } from '../plugins'
 import { typescript } from './typescript'
 
-export const react: Linter.FlatConfig[] = [
+export const react: Linter.Config[] = [
   {
     files: [GLOB_JSX, GLOB_TSX],
     languageOptions: {

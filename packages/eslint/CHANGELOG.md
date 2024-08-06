@@ -1,5 +1,10 @@
 # @minko-fe/eslint-config
 
+## 3.3.2
+### Patch Changes
+
+- upgrade deps
+
 ## 3.3.0
 ### Minor Changes
 

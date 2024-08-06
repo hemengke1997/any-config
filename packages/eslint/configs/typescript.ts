@@ -69,9 +69,9 @@ export const typescriptCore = tseslint.config({
     'no-restricted-syntax': 'off',
     'prefer-const': ['warn', { destructuring: 'all', ignoreReadBeforeAssign: true }],
   },
-}) as Linter.FlatConfig[]
+}) as Linter.Config[]
 
-export const typescript: Linter.FlatConfig[] = [
+export const typescript: Linter.Config[] = [
   ...typescriptCore,
 
   {
