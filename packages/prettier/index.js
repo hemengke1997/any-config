@@ -70,7 +70,7 @@ module.exports = {
 function resolvePeerDependency(name) {
   try {
     return require.resolve(name)
-  } catch (error) {
+  } catch {
     return ''
   }
 }
