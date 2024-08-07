@@ -25,10 +25,9 @@ export const typescriptCore = tseslint.config({
       { disallowTypeAnnotations: false, fixStyle: 'inline-type-imports' },
     ],
     '@typescript-eslint/explicit-function-return-type': 'off',
-
     '@typescript-eslint/explicit-member-accessibility': 'off',
-
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+
     '@typescript-eslint/method-signature-style': ['error', 'property'], // https://www.totaltypescript.com/method-shorthand-syntax-considered-harmful
 
     '@typescript-eslint/naming-convention': [
@@ -56,6 +55,8 @@ export const typescriptCore = tseslint.config({
     '@typescript-eslint/no-namespace': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-redeclare': 'error',
+    '@typescript-eslint/no-require-imports': 'off',
+    '@typescript-eslint/no-unused-expressions': 'off',
     // handled by unused-imports/no-unused-imports
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
@@ -93,9 +94,6 @@ export const typescript: Linter.Config[] = [
   },
   {
     files: [GLOB_JS, '**/*.cjs'],
-    rules: {
-      '@typescript-eslint/no-require-imports': 'off',
-      '@typescript-eslint/no-var-requires': 'off',
-    },
+    rules: {},
   },
 ]

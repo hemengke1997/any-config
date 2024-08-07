@@ -1,5 +1,10 @@
 # @minko-fe/eslint-config
 
+## 3.3.3
+### Patch Changes
+
+- disable strict rule
+
 ## 3.3.2
 ### Patch Changes
 
