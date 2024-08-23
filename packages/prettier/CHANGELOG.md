@@ -1,5 +1,10 @@
 # @minko-fe/prettier-config
 
+## 2.2.3
+### Patch Changes
+
+- update deps
+
 ## 2.2.2
 
 ### Patch Changes

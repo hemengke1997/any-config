@@ -74,12 +74,13 @@ export async function defineConfig(
 
   configs.push(...presetJavaScript)
 
-  if (hasTailwindcss && !hasTailwindcssPrettire) {
+  if (enablePrettier && hasTailwindcss) {
     logger.debug('Tailwindcss enabled')
-
-    logger.warn(
-      '[@minko-fe/eslint-config] Tailwindcss detected but "prettier-plugin-tailwindcss" not found, please install it to enable Tailwindcss support.',
-    )
+    if (!hasTailwindcssPrettire) {
+      logger.warn(
+        '[@minko-fe/eslint-config] Tailwindcss detected but "prettier-plugin-tailwindcss" not found, please install it to enable Tailwindcss support.',
+      )
+    }
   }
 
   if (enableGitignore) {
