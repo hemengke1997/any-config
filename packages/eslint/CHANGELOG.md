@@ -1,5 +1,10 @@
 # @minko-fe/eslint-config
 
+## 4.0.0
+### Major Changes
+
+- support eslint9 and deprecated support for eslint8
+
 ## 3.3.4
 ### Patch Changes
 

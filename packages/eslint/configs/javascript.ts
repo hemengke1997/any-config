@@ -51,7 +51,7 @@ export const javascript: Linter.Config[] = [
       'no-duplicate-imports': 'off',
       'no-empty': ['error', { allowEmptyCatch: true }],
       'no-empty-character-class': 'error',
-      'no-empty-pattern': 'error',
+      'no-empty-pattern': 'off',
       'no-ex-assign': 'error',
       'no-extra-boolean-cast': 'error',
       'no-fallthrough': ['warn', { commentPattern: 'break[\\s\\w]*omitted' }],

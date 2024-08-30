@@ -56,7 +56,7 @@ const vueCustomRules: Linter.RulesRecord = {
 
   'vue/multi-word-component-names': 'off',
   'vue/no-constant-condition': 'warn',
-  'vue/no-empty-pattern': 'error',
+  'vue/no-empty-pattern': 'off',
   'vue/no-loss-of-precision': 'error',
   'vue/no-unused-refs': 'error',
   'vue/no-useless-v-bind': 'error',

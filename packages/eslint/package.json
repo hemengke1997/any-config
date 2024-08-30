@@ -1,6 +1,6 @@
 {
   "name": "@minko-fe/eslint-config",
-  "version": "3.3.4",
+  "version": "4.0.0",
   "description": "eslint-config",
   "type": "module",
   "repository": {
@@ -26,7 +26,7 @@
     "release": "pnpm build & pnpm publish --no-git-checks"
   },
   "peerDependencies": {
-    "eslint": "^8.56.0 || ^9.0.0"
+    "eslint": ">=9"
   },
   "peerDependenciesMeta": {
     "prettier-plugin-astro": {
@@ -44,14 +44,14 @@
     "eslint-plugin-antfu": "^2.3.6",
     "eslint-plugin-astro": "^1.2.3",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import-x": "^3.1.0",
+    "eslint-plugin-import-x": "^4.1.1",
     "eslint-plugin-jsonc": "^2.16.0",
     "eslint-plugin-markdown": "^5.1.0",
     "eslint-plugin-n": "^17.10.2",
-    "eslint-plugin-perfectionist": "^3.2.0",
+    "eslint-plugin-perfectionist": "^3.3.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.35.0",
-    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-hooks": "5.1.0-rc-a19a8ab4-20240829",
     "eslint-plugin-react-refresh": "^0.4.11",
     "eslint-plugin-svelte": "^2.43.0",
     "eslint-plugin-unicorn": "^55.0.0",
@@ -66,13 +66,13 @@
     "prettier": "^3.3.3",
     "semver": "^7.6.3",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.2.0",
+    "typescript-eslint": "^8.3.0",
     "vue-eslint-parser": "^9.4.3",
     "yaml-eslint-parser": "^1.2.3"
   },
   "devDependencies": {
-    "@types/eslint": "^9.6.0",
+    "@types/eslint": "^9.6.1",
     "@types/semver": "^7.5.8",
-    "eslint": "^9.9.0"
+    "eslint": "^9.9.1"
   }
 }
