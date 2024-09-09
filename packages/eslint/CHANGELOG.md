@@ -1,5 +1,10 @@
 # @minko-fe/eslint-config
 
+## 4.0.2
+### Patch Changes
+
+- cjs support
+
 ## 4.0.1
 ### Patch Changes
 
