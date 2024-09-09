@@ -1,5 +1,5 @@
 import { type Linter } from 'eslint'
-import findUp from 'find-up'
+import { sync } from 'find-up'
 import fs from 'node:fs'
 // @ts-expect-error missing types
 import parseGitignore from 'parse-gitignore'
@@ -23,7 +23,7 @@ function gitignore(options: FlatGitignoreOptions = {}): FlatConfigItem {
   const files = Array.isArray(_files) ? _files : [_files]
 
   for (const file of files) {
-    const _file = findUp.sync(file)
+    const _file = sync(file)
     if (!_file) continue
     const content = fs.readFileSync(_file, 'utf8')
     const parsed = parse(content)

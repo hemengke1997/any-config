@@ -11,10 +11,17 @@ export const sortImports: Linter.Config[] = [
       'perfectionist/sort-imports': [
         'error',
         {
+          customGroups: {
+            type: {
+              react: ['react', 'react-*'],
+            },
+            value: {
+              react: ['react', 'react-*'],
+            },
+          },
           groups: [
             'type',
             'react',
-            'nanostores',
             ['builtin', 'external'],
             'internal-type',
             'internal',

@@ -1,5 +1,10 @@
 # @minko-fe/eslint-config
 
+## 4.0.1
+### Patch Changes
+
+- fix unknown sort-import rule error
+
 ## 4.0.0
 ### Major Changes
 
