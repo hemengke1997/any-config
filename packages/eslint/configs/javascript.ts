@@ -1,5 +1,5 @@
 import { type Linter } from 'eslint'
-import { browser, es2021, node } from 'globals'
+import globals from 'globals'
 import { isInEditor } from '../env'
 import { pluginUnusedImports } from '../plugins'
 
@@ -7,9 +7,9 @@ export const javascript: Linter.Config[] = [
   {
     languageOptions: {
       globals: {
-        ...browser,
-        ...es2021,
-        ...node,
+        ...globals.browser,
+        ...globals.es2021,
+        ...globals.node,
       },
       parserOptions: {
         ecmaFeatures: {
