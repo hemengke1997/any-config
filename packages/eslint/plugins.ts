@@ -12,9 +12,6 @@ export const pluginComments = interopDefault(_pluginComments)
 import * as _pluginMarkdown from 'eslint-plugin-markdown'
 export const pluginMarkdown = interopDefault(_pluginMarkdown)
 
-import * as _pluginReactRefresh from 'eslint-plugin-react-refresh'
-export const pluginReactRefresh = interopDefault(_pluginReactRefresh)
-
 import * as _pluginUnicorn from 'eslint-plugin-unicorn'
 export const pluginUnicorn = interopDefault(_pluginUnicorn)
 

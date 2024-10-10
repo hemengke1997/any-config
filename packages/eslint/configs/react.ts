@@ -1,38 +1,45 @@
 import { type Linter } from 'eslint'
 import { GLOB_JSX, GLOB_TSX } from '../globs'
-import { pluginReact, pluginReactHooks, pluginReactRefresh, tseslint } from '../plugins'
-import { typescript } from './typescript'
+import { pluginReact, pluginReactHooks } from '../plugins'
 
 export const react: Linter.Config[] = [
   {
     files: [GLOB_JSX, GLOB_TSX],
     languageOptions: {
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-        sourceType: 'module',
-      },
+      ...pluginReact.configs.flat['jsx-runtime'].languageOptions,
+      ecmaVersion: 'latest',
+      sourceType: 'module',
     },
     plugins: {
-      '@typescript-eslint': tseslint.plugin as any,
-      'react': pluginReact,
-      'react-hooks': pluginReactHooks,
-      'react-refresh': pluginReactRefresh,
+      ...pluginReact.configs.flat.recommended.plugins,
     },
     rules: {
-      ...typescript[0].rules,
-      'react-hooks/exhaustive-deps': 'off',
-      // 先不用react-refresh plugin，不好用
-      // 但记住：react-refresh的前提是，tsx文件中，必须有一个默认导出的组件
-      'react-refresh/only-export-components': ['off', { allowConstantExport: true, checkJs: false }],
+      ...pluginReact.configs.flat.recommended.rules,
+      ...pluginReact.configs.flat['jsx-runtime'].rules,
       'react/display-name': 'off',
       'react/jsx-child-element-spacing': 'off',
       'react/jsx-closing-tag-location': 'off',
+      'react/jsx-key': 'off',
+      'react/jsx-no-target-blank': 'off',
       'react/no-danger': 'off',
       'react/no-unescaped-entities': 'off',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  } as Linter.Config,
+  {
+    files: [GLOB_JSX, GLOB_TSX],
+    plugins: {
+      'react-hooks': pluginReactHooks,
+    },
+    rules: {
+      ...pluginReactHooks.configs.recommended.rules,
+      'react-hooks/exhaustive-deps': 'off',
     },
   },
 ]

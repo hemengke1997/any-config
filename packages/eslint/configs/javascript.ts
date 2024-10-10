@@ -61,7 +61,7 @@ export const javascript: Linter.Config[] = [
       'no-inner-declarations': 'off',
       'no-invalid-regexp': 'error',
       'no-irregular-whitespace': 'error',
-      'no-lonely-if': 'error',
+      'no-lonely-if': 'off',
       'no-loss-of-precision': 'error',
       'no-misleading-character-class': 'error',
       'no-mixed-spaces-and-tabs': 'error',

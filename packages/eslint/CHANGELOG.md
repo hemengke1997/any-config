@@ -1,5 +1,10 @@
 # @minko-fe/eslint-config
 
+## 4.1.0
+### Minor Changes
+
+- eslint-plugin-react not working as expected
+
 ## 4.0.2
 ### Patch Changes
 
