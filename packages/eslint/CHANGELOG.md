@@ -1,5 +1,10 @@
 # @minko-fe/eslint-config
 
+## 4.1.1
+### Patch Changes
+
+- upgrade deps
+
 ## 4.1.0
 ### Minor Changes
 

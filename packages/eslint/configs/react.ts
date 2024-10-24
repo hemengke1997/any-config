@@ -6,16 +6,16 @@ export const react: Linter.Config[] = [
   {
     files: [GLOB_JSX, GLOB_TSX],
     languageOptions: {
-      ...pluginReact.configs.flat['jsx-runtime'].languageOptions,
+      ...pluginReact.configs.flat?.['jsx-runtime'].languageOptions,
       ecmaVersion: 'latest',
       sourceType: 'module',
     },
     plugins: {
-      ...pluginReact.configs.flat.recommended.plugins,
+      ...pluginReact.configs.flat?.recommended.plugins,
     },
     rules: {
-      ...pluginReact.configs.flat.recommended.rules,
-      ...pluginReact.configs.flat['jsx-runtime'].rules,
+      ...pluginReact.configs.flat?.recommended.rules,
+      ...pluginReact.configs.flat?.['jsx-runtime'].rules,
       'react/display-name': 'off',
       'react/jsx-child-element-spacing': 'off',
       'react/jsx-closing-tag-location': 'off',
