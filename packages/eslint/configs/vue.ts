@@ -83,14 +83,14 @@ const vue3Rules: Linter.RulesRecord = {
   ...pluginVue.configs['vue3-essential'].rules,
   ...pluginVue.configs['vue3-strongly-recommended'].rules,
   ...pluginVue.configs['vue3-recommended'].rules,
-}
+} as Linter.RulesRecord
 
 const vue2Rules: Linter.RulesRecord = {
   ...pluginVue.configs.base.rules,
   ...pluginVue.configs.essential.rules,
   ...pluginVue.configs['strongly-recommended'].rules,
   ...pluginVue.configs.recommended.rules,
-}
+} as Linter.RulesRecord
 
 export const vue: Linter.Config[] = [
   ...(tseslint.config({
